@@ -3,7 +3,7 @@
 *   [superjamie's lazyweb](https://github.com/superjamie/lazyweb/wiki)
     A collection of internet advice and general interesting notes.
 
-*   [HyperCube Frame Calculator](http://superjamie.github.io/hypercube.html)
+*   [HyperCube Calculator](http://superjamie.github.io/hypercube.html)
     A calculator to scale the HyperCube 3D Printer by Tech2C.
 
 *   [Raspberry Pi VPN Router](https://gist.github.com/superjamie/ac55b6d2c080582a3e64)  
