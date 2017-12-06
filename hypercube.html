@@ -64,11 +64,13 @@ function calc_cube() {
     var rod_y = build_y + 100;
     var rod_z = build_z + 195;
 
-    var leadscrew = build_x + 100;
+    var leadscrew = build_z + 100;
 
     ext_z = ext_z + extra_z;
     ext_z = ext_z + offset_z;
     rod_z = rod_z + offset_z;
+
+    var belt_length = 250 + ((rod_x*2)+(rod_y*2))*2;
 
     document.getElementById('extrusion_x').value = ext_x;
     document.getElementById('extrusion_y').value = ext_y;
@@ -80,6 +82,7 @@ function calc_cube() {
     document.getElementById('rod_y').value = rod_y;
     document.getElementById('rod_z').value = rod_z;
     document.getElementById('leadscrew').value = leadscrew;
+    document.getElementById('belt_length').value = belt_length;
 }
 
 --></script>
@@ -117,27 +120,29 @@ function calc_cube() {
                         </div>
 
                         <div class="col-md-6">
-                            <p>X Extrusions: <input type="text" id="extrusion_x" maxlength="4" size="5" value="340" readonly /></p>
-                            <p>Y Extrusions: <input type="text" id="extrusion_y" maxlength="4" size="5" value="303" readonly /></p>
-                            <p>Z Extrusions: <input type="text" id="extrusion_z" maxlength="4" size="5" value="350" readonly /></p>
-                            <p>Bed Y Extrusions: <input type="text" id="extrusion_b2" maxlength="4" size="5" value="285" readonly /></p>
-                            <p>Bed X Extrusion: <input type="text" id="extrusion_b1" maxlength="4" size="5" value="135" readonly /></p>
+                            <p>X Extrusions (4x): <input type="text" id="extrusion_x" maxlength="4" size="5" value="340" readonly /></p>
+                            <p>Y Extrusions (4x): <input type="text" id="extrusion_y" maxlength="4" size="5" value="303" readonly /></p>
+                            <p>Z Extrusions (4x): <input type="text" id="extrusion_z" maxlength="4" size="5" value="350" readonly /></p>
+                            <p>Bed Y Extrusions (2x): <input type="text" id="extrusion_b2" maxlength="4" size="5" value="285" readonly /></p>
+                            <p>Bed X Extrusion  (1x): <input type="text" id="extrusion_b1" maxlength="4" size="5" value="135" readonly /></p>
                             <p></p>
                         </div>
 
                         <div class="col-md-6">
-                            <p>X Rod: <input type="text" id="rod_x" maxlength="4" size="5" value="360" readonly /></p>
-                            <p>Y Rod: <input type="text" id="rod_y" maxlength="4" size="5" value="300" readonly /></p>
-                            <p>Z Rod: <input type="text" id="rod_z" maxlength="4" size="5" value="350" readonly /></p>
-                            <p>Lead Screw: <input type="text" id="leadscrew" maxlength="4" size="5" value="300" readonly /></p>
+                            <p>X Rod (2x): <input type="text" id="rod_x" maxlength="4" size="5" value="360" readonly /></p>
+                            <p>Y Rod (2x): <input type="text" id="rod_y" maxlength="4" size="5" value="300" readonly /></p>
+                            <p>Z Rod (2x): <input type="text" id="rod_z" maxlength="4" size="5" value="350" readonly /></p>
+                            <p>Lead Screw (1x): <input type="text" id="leadscrew" maxlength="4" size="5" value="300" readonly /></p>
+                            <p>Belt Length: <input type="text" id="belt_length" maxlength="5" size="5" value="2890" readonly /></p>
                         </div>
 
                         <div class="col-md-12">
                             <h5>Notes</h5>
                             <ul>
+                                <li>The belt length here is total length for both belts and includes an extra 250mm.</li>
                                 <li>Add 75mm under the printer to flip the Z motor if desired.</li>
                                 <li>Add 100mm under the printer to hold an ATX power supply comfortably.</li>
-                                <li>You can safely take 50mm off the Lead Screw value, especially if using <a href="https://www.thingiverse.com/thing:2092237">Bagwan's Belt Tensioner</a> which will hit the screw at maximum Y travel with a full-height lead screw.</li>
+                                <li>You can safely take 50mm off the Lead Screw value, especially if using <a href="https://www.thingiverse.com/thing:2092237">Bagwan's Belt Tensioner</a> which will hit the screw at maximum Y travel with a full-height lead screw. There is no need to constrain the lead screw at the top with the bearing piece, Tech2C does not use this part as it causes Z wobble.</li>
                             </ul>
                         </div>
                     </div> <!-- row -->
