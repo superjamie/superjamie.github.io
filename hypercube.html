@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>HyperCube Frame Calculator</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+        <style>
+body {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+h3 {
+    margin-top: 1rem;
+}
+
+h5 {
+    margin-top: 1rem;
+}
+
+.row {
+    margin-bottom: 1rem;
+}
+.row .row {
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+[class*="col-"] {
+    padding-top: 1rem;
+    padding-bottom: 0;
+    background-color: rgba(192,192,192,0.1);
+    border: 1px solid rgba(64,64,64,0);
+}
+
+hr {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+        </style>
+
+        <script language="javascript"><!--
+
+function calc_cube() {
+
+    var build_x = parseInt(document.getElementById('build_area_x').value);
+    var build_y = parseInt(document.getElementById('build_area_y').value);
+    var build_z = parseInt(document.getElementById('build_area_z').value);
+    var extra_z = parseInt(document.getElementById('extra_area_z').value);
+
+    var ext_x = build_x + 140;
+    var ext_y = build_y + 103;
+    var ext_z = build_z + 195;
+    var ext_b2 = build_y + 85;
+    var ext_b1 = build_x - 65;
+
+    var rod_x = build_x + 160;
+    var rod_y = build_y + 100;
+    var rod_z = build_z + 195;
+
+    var leadscrew = build_x + 100;
+
+    ext_z = ext_z + extra_z;
+
+    document.getElementById('extrusion_x').value = ext_x;
+    document.getElementById('extrusion_y').value = ext_y;
+    document.getElementById('extrusion_z').value = ext_z;
+    document.getElementById('extrusion_b2').value = ext_b2;
+    document.getElementById('extrusion_b1').value = ext_b1;
+
+    document.getElementById('rod_x').value = rod_x;
+    document.getElementById('rod_y').value = rod_y;
+    document.getElementById('rod_z').value = rod_z;
+    document.getElementById('leadscrew').value = leadscrew;
+}
+
+--></script>
+
+    </head>
+    <body>
+
+        <div class="container">
+            <h2>HyperCube Frame Calculator</h2>
+            <p class="lead">A calculator to scale up/down the frame and rods of the <a href="http://www.thingiverse.com/thing:1752766">HyperCube 3D Printer by Tech2C</a>.</p>
+            <p>Author: <a href="http://superjamie.github.io/">Jamie Bainbridge</a></p>
+
+            <div class="row"> 
+
+                <div class="col-md-6"> 
+                    <h4>Build Area</h4>
+                    <p>Build Area X: <input type="text" id="build_area_x" maxlength="4" size="5" value="200" onblur="calc_cube();" /></p>
+                    <p>Build Area Y: <input type="text" id="build_area_y" maxlength="4" size="5" value="200" onblur="calc_cube();" /></p>
+                    <p>Build Area Z: <input type="text" id="build_area_z" maxlength="4" size="5" value="155" onblur="calc_cube();" /></p>
+                </div>
+
+                <div class="col-md-6"> 
+                    <h4>Optional Parts</h4>
+                    <p>Extra space under printer: <input type="text" id="extra_area_z" maxlength="4" size="5" value="0" onblur="calc_cube();" /></p>
+                    <p>TODO: Add more</p>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4>Frame and Rod Sizes</h4>
+                        </div>
+
+                        <div class="col-md-6">
+                            <p>X Extrusions: <input type="text" id="extrusion_x" maxlength="4" size="5" value="340" readonly /></p>
+                            <p>Y Extrusions: <input type="text" id="extrusion_y" maxlength="4" size="5" value="303" readonly /></p>
+                            <p>Z Extrusions: <input type="text" id="extrusion_z" maxlength="4" size="5" value="350" readonly /></p>
+                            <p>Bed Y Extrusions: <input type="text" id="extrusion_b2" maxlength="4" size="5" value="285" readonly /></p>
+                            <p>Bed X Extrusion: <input type="text" id="extrusion_b1" maxlength="4" size="5" value="135" readonly /></p>
+                            <p></p>
+                        </div>
+
+                        <div class="col-md-6">
+                            <p>X Rod: <input type="text" id="rod_x" maxlength="4" size="5" value="360" readonly /></p>
+                            <p>Y Rod: <input type="text" id="rod_y" maxlength="4" size="5" value="300" readonly /></p>
+                            <p>Z Rod: <input type="text" id="rod_z" maxlength="4" size="5" value="350" readonly /></p>
+                            <p>Lead Screw: <input type="text" id="leadscrew" maxlength="4" size="5" value="300" readonly /></p>
+                        </div>
+
+                        <div class="col-md-12">
+                            <h5>Notes</h5>
+                            <ul>
+                            <li>You can safely take 50mm off the Lead Screw value, especially if using <a href="https://www.thingiverse.com/thing:2092237">Bagwan's Belt Tensioner</a> which will hit the screw at maximum Y travel with a full-height lead screw.</li>
+                            </ul>
+                        </div>
+                    </div> <!-- row -->
+                </div> <!-- col-md-12 -->
+
+            </div> <!-- row  -->
+        </div> <!-- container -->
+
+    </body>
+</html>
