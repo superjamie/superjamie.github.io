@@ -51,6 +51,8 @@ function calc_cube() {
     var build_y = parseInt(document.getElementById('build_area_y').value);
     var build_z = parseInt(document.getElementById('build_area_z').value);
     var extra_z = parseInt(document.getElementById('extra_area_z').value);
+    var z_carriage_offset = document.getElementById("z_carriage_offset");
+    var offset_z = parseInt(z_carriage_offset.options[z_carriage_offset.selectedIndex].value);
 
     var ext_x = build_x + 140;
     var ext_y = build_y + 103;
@@ -65,6 +67,8 @@ function calc_cube() {
     var leadscrew = build_x + 100;
 
     ext_z = ext_z + extra_z;
+    ext_z = ext_z + offset_z;
+    rod_z = rod_z + offset_z;
 
     document.getElementById('extrusion_x').value = ext_x;
     document.getElementById('extrusion_y').value = ext_y;
@@ -100,7 +104,10 @@ function calc_cube() {
                 <div class="col-md-6"> 
                     <h4>Optional Parts</h4>
                     <p>Extra space under printer: <input type="text" id="extra_area_z" maxlength="4" size="5" value="0" onblur="calc_cube();" /></p>
-                    <p>TODO: Add more</p>
+                    <p>Z Carriage: <select id="z_carriage_offset" onchange="calc_cube();">
+                        <option value="0">Tech2C 8mm Rod</option>
+                        <option value="15">henryarnold 10mm Rod</option>
+                    </select>
                 </div>
 
                 <div class="col-md-12">
