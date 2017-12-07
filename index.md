@@ -1,3 +1,7 @@
+---
+title: superjamie.github.io
+---
+
 ## Pages
 
 *   [superjamie's lazyweb](https://github.com/superjamie/lazyweb/wiki)  
