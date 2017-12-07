@@ -3,13 +3,13 @@
 *   [superjamie's lazyweb](https://github.com/superjamie/lazyweb/wiki)
     A collection of internet advice and general interesting notes.
 
-*   [HyperCube Calculator](http://superjamie.github.io/hypercube.html)
+*   [HyperCube Calculator](http://superjamie.github.io/hypercube)
     A calculator to scale the HyperCube 3D Printer by Tech2C.
 
 *   [Raspberry Pi VPN Router](https://gist.github.com/superjamie/ac55b6d2c080582a3e64)  
     A guide to setting up a Raspberry Pi as a "router on a stick" to PrivateInternetAccess VPN.
 
-*   [Which TNG episode?](http://superjamie.github.io/tng.html)  
+*   [Which TNG episode?](http://superjamie.github.io/tng)  
     Randomly picks a Star Trek: The Next Generation episode for you to watch.
 
 ## Posts
