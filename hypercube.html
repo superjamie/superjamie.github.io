@@ -10,6 +10,9 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
         <style>
+html {
+    font-size: 85%;
+}
 body {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -33,8 +36,15 @@ h5 {
 [class*="col-"] {
     padding-top: 1rem;
     padding-bottom: 0;
-    background-color: rgba(192,192,192,0.1);
+    background-color: rgba(192,192,192,0.2);
     border: 1px solid rgba(64,64,64,0);
+}
+[id^="input_label"], [id^="output1_label"], [id^="output2_label"], .inline {
+    display: inline;
+}
+[id^="output0"], [id^="output1_value"], [id^="output2_value"] {
+    display: inline;
+    font-weight: bold;
 }
 
 hr {
@@ -45,111 +55,349 @@ hr {
 
         <script language="javascript"><!--
 
+/* TODO List
+ *
+ * Alvin Gozali - How about rod lenghts as input or Extrusion lengths as inputs
+ * make i/o generic and draw/calculate based on a dropdown selection
+ * 
+ * Alvin Gozali - Also, Build Area X changes Bed X Extrusion. But Bed X Extrusion depends on the hole spacing of the heated bed, not the build area.
+ * add a "bed hole offset" for people making their own plates, default for MK2/MK3 bed is 9mm
+ *
+ * Doug Young - Dual z? Or is there clearance already?
+ * study adrian's hypercube 300 and recalculate the bed extrusions, will need to make text interface for extra parts, not numbers
+ *
+ */
+
 function calc_cube() {
 
-    var build_x = parseInt(document.getElementById('build_area_x').value);
-    var build_y = parseInt(document.getElementById('build_area_y').value);
-    var build_z = parseInt(document.getElementById('build_area_z').value);
-    var extra_z = parseInt(document.getElementById('extra_area_z').value);
-    var z_carriage_offset = document.getElementById("z_carriage_offset");
-    var offset_z = parseInt(z_carriage_offset.options[z_carriage_offset.selectedIndex].value);
+    // build volume
+    var build_x, build_y, build_z;
 
-    var ext_x = build_x + 140;
-    var ext_y = build_y + 103;
-    var ext_z = build_z + 195;
-    var ext_b2 = build_y + 85;
-    var ext_b1 = build_x - 65;
+    // extrusion lengths
+    var ext_x, ext_y, ext_z, ext_bed_x, ext_bed_y;
 
-    var rod_x = build_x + 160;
-    var rod_y = build_y + 100;
-    var rod_z = build_z + 195;
+    // rod lengths
+    var rod_x, rod_y, rod_z;
 
-    var leadscrew = build_z + 100;
+    // extra bits
+    var leadscrew; // length of lead screw used with motor coupler
+    var extra_z;   // space under the printer for storing power supply, boards, etc
+    var belt_length; // length of a single belt which can be cut into two
 
-    ext_z = ext_z + extra_z;
-    ext_z = ext_z + offset_z;
-    rod_z = rod_z + offset_z;
+    // used to read/write to/from the page
+    var input_x, input_y, input_z, output1_x, output1_y, output1_z, output2_x, output2_y, output2_z;
 
-    var belt_length = 250 + ((rod_x*2)+(rod_y*2))*2;
+    // processing for optional parts
+    var part_x, part_y, part_z, part_name_x, part_name_y, part_name_z;
+    
+    // let's get to work!
+    var choice = document.getElementById("calc_sel").options[calc_sel.selectedIndex].value;
 
-    document.getElementById('extrusion_x').value = ext_x;
-    document.getElementById('extrusion_y').value = ext_y;
-    document.getElementById('extrusion_z').value = ext_z;
-    document.getElementById('extrusion_b2').value = ext_b2;
-    document.getElementById('extrusion_b1').value = ext_b1;
+    // get number input
+    input_x = parseInt(document.getElementById('input_value_x').value);
+    input_y = parseInt(document.getElementById('input_value_y').value);
+    input_z = parseInt(document.getElementById('input_value_z').value);
+    extra_z = parseInt(document.getElementById('extra_area_z').value);
 
-    document.getElementById('rod_x').value = rod_x;
-    document.getElementById('rod_y').value = rod_y;
-    document.getElementById('rod_z').value = rod_z;
-    document.getElementById('leadscrew').value = leadscrew;
-    document.getElementById('belt_length').value = belt_length;
+    // part processing
+
+    // constructor for part object
+    // x/y/z values define how much a remix part requires smaller (negative) or larger (positive) axes than tech2c's parts
+    // bed_x/y values are compared to the relevant build area axis
+    var Part = function(){};
+    Part.prototype = { x: 0, y: 0, z: 0, bed_x: -65, bed_y: 85 };
+
+    // properties of parts
+    var part_x_tech2c = new Part();
+    var part_y_tech2c = new Part();
+    var part_z_tech2c = new Part();
+
+    var part_z_henryarnold = new Part();
+    part_z_henryarnold.z = 20;
+
+    var part_z_adrianm = new Part();
+    part_z_adrianm.bed_x = 110;
+    part_z_adrianm.bed_y = -65;
+
+    // get part input
+    part_name_x = document.getElementById("part_sel_x").options[part_sel_x.selectedIndex].value;
+    part_name_y = document.getElementById("part_sel_y").options[part_sel_y.selectedIndex].value;
+    part_name_z = document.getElementById("part_sel_z").options[part_sel_z.selectedIndex].value;
+
+    switch (part_name_x) {
+        default:
+            part_x = part_x_tech2c;
+            break;
+    }
+
+    switch (part_name_y) {
+        default:
+            part_y = part_y_tech2c;
+            break;
+    }
+
+    switch (part_name_z) {
+        case "z_sel_henryarnold":
+            part_z = part_z_henryarnold;
+            break;
+        case "z_sel_adrianm":
+            part_z = part_z_adrianm;
+            break;
+        default:
+            part_z = part_z_tech2c;
+            break;
+    }
+
+    console.log("part_z_tech2c bx = " + part_z_tech2c.bed_x);
+    console.log("part_z bx = " + part_z.bed_x);
+
+    switch (choice) {
+        case "build_area":
+            build_x = input_x;
+            build_y = input_y;
+            build_z = input_z;
+
+            ext_x = build_x + 140 + part_x.x;
+            ext_y = build_y + 103 + part_y.y;
+            ext_z = build_z + 195 + part_z.z + extra_z;
+
+            rod_x = build_x + 160 + part_x.x;
+            rod_y = build_y + 100 + part_y.y;
+            rod_z = build_z + 195 + part_z.z;
+
+            // output1 = extrusions
+            output1_x = ext_x;
+            output1_y = ext_y;
+            output1_z = ext_z;
+            // output2 = rods
+            output2_x = rod_x;
+            output2_y = rod_y;
+            output2_z = rod_z;
+
+            break;
+
+        case "extrusions":
+            ext_x = input_x;
+            ext_y = input_y;
+            ext_z = input_z;
+
+            build_x = ext_x - 140 - part_x.x;
+            build_y = ext_y - 103 - part_y.y;
+            build_z = ext_z - 195 - part_z.z - extra_z;
+
+            rod_x = build_x + 160 + part_x.x;
+            rod_y = build_y + 100 + part_y.y;
+            rod_z = build_z + 195 + part_z.z;
+
+            // output1 = build area
+            output1_x = build_x;
+            output1_y = build_y;
+            output1_z = build_z;
+            // output2 = rods
+            output2_x = rod_x;
+            output2_y = rod_y;
+            output2_z = rod_z;
+
+            break;
+
+        case "rods":
+            rod_x = input_x;
+            rod_y = input_y;
+            rod_z = input_z;
+
+            build_x = rod_x - 160 - part_x.x;
+            build_y = rod_y - 100 - part_y.y;
+            build_z = rod_z - 195 - part_z.z - extra_z;
+
+            ext_x = build_x + 140 + part_x.x;
+            ext_y = build_y + 103 + part_y.y;
+            ext_z = build_z + 195 + part_z.z;
+
+            // output1 = extrusions
+            output1_x = ext_x;
+            output1_y = ext_y;
+            output1_z = ext_z;
+            // output2 = build area
+            output2_x = build_x;
+            output2_y = build_y;
+            output2_z = build_z;
+
+            break;
+    }
+
+    ext_bed_x = build_x + part_z.bed_x;
+    ext_bed_y = build_y + part_z.bed_y;
+    leadscrew = build_z + 100;
+    belt_length = 250 + ((rod_x*2)+(rod_y*2))*2;
+
+    // output processing
+    document.getElementById("output1_value_x").innerHTML = output1_x;
+    document.getElementById("output1_value_y").innerHTML = output1_y;
+    document.getElementById("output1_value_z").innerHTML = output1_z;
+
+    document.getElementById("output2_value_x").innerHTML = output2_x;
+    document.getElementById("output2_value_y").innerHTML = output2_y;
+    document.getElementById("output2_value_z").innerHTML = output2_z;
+
+    document.getElementById("output0_ext_bed_x").innerHTML = ext_bed_x;
+    document.getElementById("output0_ext_bed_y").innerHTML = ext_bed_y;
+    document.getElementById("output0_leadscrew").innerHTML = leadscrew;
+    document.getElementById("output0_belt").innerHTML = belt_length;
+}
+
+function draw_labels() {
+    var choice = document.getElementById("calc_sel").options[calc_sel.selectedIndex].value;
+
+    // labels applied to XYZ of each input/output box
+    var label_area = "Build Area";
+    var label_exts = "Extrusions (4x)";
+    var label_rods = "Rods (2x)";
+
+    // labels for headers above each input/output box
+    var header_exts = "Frame Extrusion";
+    var header_area = label_area;
+    var header_rods = "Rods";
+
+    // fill this depending on which way we're calculating
+    var label = {input: "", output_header: "", output1: "", output2: ""};
+
+    // put labels in here. i can't help but feel there's a better way to do this
+    var input_label_array, output1_label_array, output2_label_array;
+
+    // loop variable
+    var i;
+
+    switch (choice) {
+        case "build_area":
+            label.input = label_area;
+            label.output_header = header_exts + " and " + header_rods;
+            label.output1 = label_exts;
+            label.output2 = label_rods;
+            break;
+        case "extrusions":
+            label.input = label_exts;
+            label.output_header = header_area + " and " + header_rods;
+            label.output1 = label_area;
+            label.output2 = label_rods;
+            break;
+        case "rods":
+            label.input = label_rods;
+            label.output_header = header_exts + " and " + header_area;
+            label.output1 = label_exts;
+            label.output2 = label_area;
+            break;
+    }
+
+    input_label_array = ["input_label_x", "input_label_y", "input_label_z"];
+
+    for (i = 0; i < input_label_array.length; i++) {
+        document.getElementById(input_label_array[i]).innerHTML = label.input;
+    }
+
+    document.getElementById("output_header").innerHTML = label.output_header;
+
+    output1_label_array = ["output1_label_x", "output1_label_y", "output1_label_z"];
+
+    for (i = 0; i < output1_label_array.length; i++) {
+        document.getElementById(output1_label_array[i]).innerHTML = label.output1;
+    }
+
+    output2_label_array = ["output2_label_x", "output2_label_y", "output2_label_z"];
+
+    for (i = 0; i < output2_label_array.length; i++) {
+        document.getElementById(output2_label_array[i]).innerHTML = label.output2;
+    }
+
+}
+
+function engage() {
+    // here's to the finest crew in starfleet - https://www.youtube.com/watch?v=arisT3U-SSc
+    draw_labels();
+    calc_cube();
 }
 
 --></script>
 
     </head>
-    <body>
+    <body onload="engage();">
 
         <div class="container">
             <h2>HyperCube Calculator</h2>
-            <p class="lead">A calculator to scale up/down the frame and rods of the <a href="http://www.thingiverse.com/thing:1752766">HyperCube 3D Printer by Tech2C</a>.</p>
-            <p>Author: <a href="http://superjamie.github.io/">Jamie Bainbridge</a></p>
+            <p class="lead">A calculator to scale up/down the <a href="http://www.thingiverse.com/thing:1752766">HyperCube 3D Printer by Tech2C</a>.</p>
+            <p>Part of the <a href="https://github.com/superjamie/lazyweb/wiki/3D-Printing-HyperCube">HyperCube Community Build Tips</a></p>
 
             <div class="row"> 
 
                 <div class="col-md-6"> 
-                    <h4>Build Area</h4>
-                    <p>Build Area X: <input type="text" id="build_area_x" maxlength="4" size="5" value="200" onblur="calc_cube();" /></p>
-                    <p>Build Area Y: <input type="text" id="build_area_y" maxlength="4" size="5" value="200" onblur="calc_cube();" /></p>
-                    <p>Build Area Z: <input type="text" id="build_area_z" maxlength="4" size="5" value="155" onblur="calc_cube();" /></p>
+                    <h4>Calculate From: <select id="calc_sel" onchange="engage();">
+                            <option value="build_area">Build Area</option>
+                            <option value="extrusions">Extrusions</option>
+                            <option value="rods">Rods</option>
+                        </select></h4>
+                    <p class="inline">X <div id="input_label_x"></div>: <input type="text" id="input_value_x" maxlength="4" size="5" value="200" onblur="engage();" /></p>
+                    <p class="inline">Y <div id="input_label_y"></div>: <input type="text" id="input_value_y" maxlength="4" size="5" value="200" onblur="engage();" /></p>
+                    <p class="inline">Z <div id="input_label_z"></div>: <input type="text" id="input_value_z" maxlength="4" size="5" value="155" onblur="engage();" /></p>
                 </div>
 
                 <div class="col-md-6"> 
                     <h4>Optional Parts</h4>
-                    <p>Extra space under printer: <input type="text" id="extra_area_z" maxlength="4" size="5" value="0" onblur="calc_cube();" /></p>
-                    <p>Z Carriage: <select id="z_carriage_offset" onchange="calc_cube();">
-                        <option value="0">Tech2C 8mm Rod</option>
-                        <option value="20">henryarnold 10mm Rod</option>
-                    </select>
+                    <p>Extra space under printer: <input type="text" id="extra_area_z" maxlength="4" size="5" value="0" onblur="engage();" /></p>
+                    <p>Bed Hole Offset:           <input type="text" id="bed_hole_offset" maxlength="2" size="3" value="9" onblur="engage();" readonly /></p>
+                    <p>X Carriage: <select id="part_sel_x" onchange="engage();">
+                        <option value="x_sel_tech2c">Tech2C 10mm Rod</option>
+                    </select></p>
+                    <p>XY Joiner: <select id="part_sel_y" onchange="engage();">
+                        <option value="y_sel_tech2c">Tech2C 8mm Rod</option>
+                    </select></p>
+                    <p>Z Carriage: <select id="part_sel_z" onchange="engage();">
+                        <option value="z_sel_tech2c">Tech2C 8mm Rod</option>
+                        <option value="z_sel_henryarnold">henryarnold 10mm Rod</option>
+                        <option value="z_sel_adrianm">HyperCube 300 Dual Z 8mm Rod</option>
+                    </select></p>
                 </div>
 
                 <div class="col-md-12">
                     <div class="row">
                         <div class="col-md-12">
-                            <h4>Frame and Rod Sizes</h4>
+                            <h4 id="output_header"></h4>
                         </div>
 
                         <div class="col-md-6">
-                            <p>X Extrusions (4x): <input type="text" id="extrusion_x" maxlength="4" size="5" value="340" readonly /></p>
-                            <p>Y Extrusions (4x): <input type="text" id="extrusion_y" maxlength="4" size="5" value="303" readonly /></p>
-                            <p>Z Extrusions (4x): <input type="text" id="extrusion_z" maxlength="4" size="5" value="350" readonly /></p>
-                            <p>Bed Y Extrusions (2x): <input type="text" id="extrusion_b2" maxlength="4" size="5" value="285" readonly /></p>
-                            <p>Bed X Extrusion  (1x): <input type="text" id="extrusion_b1" maxlength="4" size="5" value="135" readonly /></p>
-                            <p></p>
+                            <p class="inline">X <div id="output1_label_x"></div>: <div id="output1_value_x"></div></p>
+                            <p class="inline">Y <div id="output1_label_y"></div>: <div id="output1_value_y"></div></p>
+                            <p class="inline">Z <div id="output1_label_z"></div>: <div id="output1_value_z"></div></p>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="inline">X <div id="output2_label_x"></div>: <div id="output2_value_x"></div></p>
+                            <p class="inline">Y <div id="output2_label_y"></div>: <div id="output2_value_y"></div></p>
+                            <p class="inline">Z <div id="output2_label_z"></div>: <div id="output2_value_z"></div></p>
                         </div>
 
                         <div class="col-md-6">
-                            <p>X Rod (2x): <input type="text" id="rod_x" maxlength="4" size="5" value="360" readonly /></p>
-                            <p>Y Rod (2x): <input type="text" id="rod_y" maxlength="4" size="5" value="300" readonly /></p>
-                            <p>Z Rod (2x): <input type="text" id="rod_z" maxlength="4" size="5" value="350" readonly /></p>
-                            <p>Lead Screw (1x): <input type="text" id="leadscrew" maxlength="4" size="5" value="300" readonly /></p>
-                            <p>Belt Length: <input type="text" id="belt_length" maxlength="5" size="5" value="2890" readonly /></p>
+                            <p class="inline">Bed X Extrusion  (1x): <div id="output0_ext_bed_x"></div></p>
+                            <p class="inline">Bed Y Extrusions (2x): <div id="output0_ext_bed_y"></div></p>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="inline">Lead Screw:  <div id="output0_leadscrew"  ></div></p>
+                            <p class="inline">Belt Length: <div id="output0_belt"></div></p>
                         </div>
 
                         <div class="col-md-12">
                             <h5>Notes</h5>
                             <ul>
-                                <li>The belt length here is total length for both belts and includes an extra 250mm.</li>
+                                <li>Belt Length is total length for both belts and includes an extra 250mm.</li>
                                 <li>Add 75mm under the printer to flip the Z motor if desired.</li>
                                 <li>Add 100mm under the printer to hold an ATX power supply comfortably.</li>
-                                <li>You can safely take 50mm off the Lead Screw value, especially if using <a href="https://www.thingiverse.com/thing:2092237">Bagwan's Belt Tensioner</a> which will hit the screw at maximum Y travel with a full-height lead screw. There is no need to constrain the lead screw at the top with the bearing piece, Tech2C does not use this part as it causes Z wobble.</li>
+                                <li>You can safely take 50mm off the Lead Screw value, especially if using <a href="https://www.thingiverse.com/thing:2092237">Bagwan's Belt Tensioner</a> which will hit the screw at maximum Y travel with a full-height lead screw. There is no need to constrain the lead screw at the top with the bearing piece, it usually just causes Z wobble.</li>
+                                <li>Optional Parts: <a href="http://www.thingiverse.com/thing:1950819">henryarnold 10mm Z Car</a>, <a href="https://www.thingiverse.com/thing:2517628">adrianm HyperCube 300</a></li>
                             </ul>
+                            <p>Copyright 2017 // Author: <a href="http://superjamie.github.io/">Jamie Bainbridge</a> // License: <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">GNU AGPL v3.0</a></p>
                         </div>
-                    </div> <!-- row -->
-                </div> <!-- col-md-12 -->
+                    </div>
+                </div>
 
-            </div> <!-- row  -->
-        </div> <!-- container -->
+            </div>
+        </div>
 
     </body>
 </html>
