@@ -92,7 +92,7 @@ function calc_cube() {
     // x/y/z values define how much a remix part requires smaller (negative) or larger (positive) axes than tech2c's parts
     // bed_x/y values are compared to the relevant build area axis
     var Part = function(){};
-    Part.prototype = { x: 0, y: 0, z: 0, bed_x: -65, bed_y: 85 };
+    Part.prototype = { ext_x: 0, ext_y: 0, ext_z: 0, rod_x: 0, rod_y: 0, rod_z: 0, bed_x: -65, bed_y: 85 };
 
     // properties of parts
     var part_x_tech2c = new Part();
@@ -100,9 +100,11 @@ function calc_cube() {
     var part_z_tech2c = new Part();
 
     var part_z_henryarnold = new Part();
-    part_z_henryarnold.z = 20;
+    part_z_henryarnold.ext_z = 20;
+    part_z_henryarnold.rod_z = 20;
 
     var part_z_adrianm = new Part();
+    part_z_adrianm.rod_z = -100;
     part_z_adrianm.bed_x = 110;
     part_z_adrianm.bed_y = -65;
 
@@ -141,13 +143,13 @@ function calc_cube() {
             build_y = input_y;
             build_z = input_z;
 
-            ext_x = build_x + 140 + part_x.x;
-            ext_y = build_y + 103 + part_y.y;
-            ext_z = build_z + 195 + part_z.z + extra_z;
+            ext_x = build_x + 140 + part_x.ext_x;
+            ext_y = build_y + 103 + part_y.ext_y;
+            ext_z = build_z + 195 + part_z.ext_z + extra_z;
 
-            rod_x = build_x + 160 + part_x.x;
-            rod_y = build_y + 100 + part_y.y;
-            rod_z = build_z + 195 + part_z.z;
+            rod_x = build_x + 160 + part_x.rod_x;
+            rod_y = build_y + 100 + part_y.rod_y;
+            rod_z = build_z + 195 + part_z.rod_z;
 
             // output1 = extrusions
             output1_x = ext_x;
@@ -165,13 +167,13 @@ function calc_cube() {
             ext_y = input_y;
             ext_z = input_z;
 
-            build_x = ext_x - 140 - part_x.x;
-            build_y = ext_y - 103 - part_y.y;
-            build_z = ext_z - 195 - part_z.z - extra_z;
+            build_x = ext_x - 140 - part_x.ext_x;
+            build_y = ext_y - 103 - part_y.ext_y;
+            build_z = ext_z - 195 - part_z.ext_z - extra_z;
 
-            rod_x = build_x + 160 + part_x.x;
-            rod_y = build_y + 100 + part_y.y;
-            rod_z = build_z + 195 + part_z.z;
+            rod_x = build_x + 160 + part_x.rod_x;
+            rod_y = build_y + 100 + part_y.rod_y;
+            rod_z = build_z + 195 + part_z.rod_z;
 
             // output1 = build area
             output1_x = build_x;
@@ -189,13 +191,13 @@ function calc_cube() {
             rod_y = input_y;
             rod_z = input_z;
 
-            build_x = rod_x - 160 - part_x.x;
-            build_y = rod_y - 100 - part_y.y;
-            build_z = rod_z - 195 - part_z.z - extra_z;
+            build_x = rod_x - 160 - part_x.rod_x;
+            build_y = rod_y - 100 - part_y.rod_y;
+            build_z = rod_z - 195 - part_z.rod_z - extra_z;
 
-            ext_x = build_x + 140 + part_x.x;
-            ext_y = build_y + 103 + part_y.y;
-            ext_z = build_z + 195 + part_z.z + extra_z;
+            ext_x = build_x + 140 + part_x.ext_x;
+            ext_y = build_y + 103 + part_y.ext_y;
+            ext_z = build_z + 195 + part_z.ext_z + extra_z;
 
             // output1 = extrusions
             output1_x = ext_x;
