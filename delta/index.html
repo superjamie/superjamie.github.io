@@ -1,0 +1,136 @@
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Delta Calculator</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+        <style>
+html {
+    font-size: 85%;
+}
+body {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+h3 {
+    margin-top: 1rem;
+}
+
+h5 {
+    margin-top: 1rem;
+}
+
+.row {
+    margin-bottom: 1rem;
+}
+.row .row {
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+[class*="col-"] {
+    padding-top: 1rem;
+    padding-bottom: 0;
+    background-color: rgba(192,192,192,0.2);
+    border: 1px solid rgba(64,64,64,0);
+}
+[id^="input_label"], [id^="output1_label"], [id^="output2_label"], .inline {
+    display: inline;
+}
+[id^="output0"], [id^="output1_value"], [id^="output2_value"] {
+    display: inline;
+    font-weight: bold;
+}
+
+hr {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+        </style>
+
+<script language="javascript"><!--
+
+function engage() {
+    // here's to the finest crew in starfleet - https://www.youtube.com/watch?v=X6oUz1v17Uo
+}
+
+--></script>
+
+    </head>
+    <body onload="engage();">
+
+        <div class="container">
+            <h2>Delta Calculator</h2>
+            <p class="lead">A webpage to inspect the design of delta robot 3D printers</p>
+
+            <div class="row"> 
+
+                <div class="col-md-6"> 
+                    <h4>Input</h4>
+                    <p>Corners: <select id="corner_sel" onchange="engage();">
+                            <option value="corner_ultibots2020">Ultibots 2020</option>
+                            <option value="corner_jaydm2020">jaydmdigital 2020</option>
+                            <option value="corner_mming2020">mming 2020</option>
+                            <option value="corner_griffin2020">Griffin 2020</option>
+                        </select></p>
+                    <p>Horizontal Extrusion: <input type="text" id="input_horiz" maxlength="5" size="5" value="240" onblur="engage();" /></p>
+                    <p>Vertical Extrusion: <input type="text" id="input_vert" maxlength="5" size="5" value="600" onblur="engage();" /></p>
+                    <p>Arm Length: <input type="text" id="input_arms" maxlength="4" size="5" value="215" onblur="engage();" /></p>
+                </div>
+
+                <div class="col-md-6"> 
+                    <h4>&nbsp;</h4>
+                    <p class="text-warning">TODO: Make this selection set EFFECTOR_OFFSET and hides the input box, but allow a custom offset which un-hides the below input box</p>
+                    <p>Effector: <select id="effector_sel" onchange="engage();">
+                        <option value="effector_kosselmini">Kossel Mini</option>
+                        <option value="effector_smarteffector">Duet3D SmartEffector</option>
+                        <option value="effector_custom">Custom</option>
+                    </select></p>
+                    <p>Effector Offset: <input type="text" id="input_effector_offset" maxlength="6" size="6" value="20" onblur="engage();" /></p>
+
+                    <p class="text-warning">TODO: Make this selection set CARRIAGE_OFFSET and hide the inpit box, but allow a custom offset which un-hides the below input box</p>
+                    <p>Vertical Carriage: <select id="carriage_sel" onchange="engage();">
+                        <option value="carriage_mgn12_16mm">MGN12 plus Johann-style 16mm Carriage</option>
+                        <option value="carriage_custom">Custom</option>
+                    </select></p>
+                    <p>Carriage Offset: <input type="text" id="input_carriage_offset" maxlength="6" size="6" value="29.5" onblur="engage();" /></p>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4>Output</h4>
+                            <p class="text-warning">TODO: Actually implement the maths and output :P</p>
+                        </div>
+
+                        <div class="col-md-6">
+                            <p>Smooth Rod Offset: <div id="output_smooth_rod_offset"></div></p>
+                            <p>Delta Radius: <div id="output_delta_radius"></div></p>
+                            <p>Arm Angle at 0,0: <div id="output_arm_angle_rest"></div></p>
+                        </div>
+                        <div class="col-md-6">
+                            <p>Diameter with Arm at 20°: <div id="output_diam_arm_20deg"></div></p>
+                            <p>Diameter with Arm at 1°: <div id="output_diam_arm_20deg"></div></p>
+                        </div>
+
+                        <div class="col-md-12">
+                            <h5>Notes</h5>
+                            <ul>
+                                <li>Blah Blah Blah.</li>
+                            </ul>
+                            <p>Copyright 2017 // Author: <a href="http://superjamie.github.io/">Jamie Bainbridge</a> // License: <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">GNU AGPL v3.0</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </body>
+</html>
