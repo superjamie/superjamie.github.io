@@ -22,64 +22,81 @@
 
             <div class="row"> 
 
-                <div class="col-md-6"> 
+                <div class="col-md-12">
                     <h4>Input</h4>
+                </div>
+                <div class="col-md-6"> 
                     <p>Corners: <select id="corner_sel" onchange="engage();">
-                            <option value="corner_sel_ultibots">Ultibots 2020</option>
-                            <option value="corner_sel_jaydm">jaydmdigital 2020</option>
-                            <option value="corner_sel_mming">mming 2020</option>
-                            <option value="corner_sel_griffin">Griffin 2020</option>
-                        </select></p>
+                        <option value="corner_sel_ultibots">Ultibots 2020</option>
+                        <option value="corner_sel_jaydm">jaydmdigital 2020</option>
+                        <option value="corner_sel_mming_2020">mming 2020</option>
+                        <option value="corner_sel_griffin">Griffin 2020</option>
+                        <option value="corner_sel_mming_2040">mming 2040</option>
+                        <option value="corner_sel_hyperair_2040">hyperair 2040</option>
+                        <option value="corner_sel_kosselmax_2040">Kossel MAX 2040</option>
+                    </select></p>
                     <p>Horizontal Extrusion: <input type="text" id="input_horiz" maxlength="5" size="5" value="240" onblur="engage();" /></p>
                     <p>Vertical Extrusion: <input type="text" id="input_vert" maxlength="5" size="5" value="600" onblur="engage();" /></p>
                     <p>Arm Length: <input type="text" id="input_arm" maxlength="4" size="5" value="215" onblur="engage();" /></p>
                 </div>
 
                 <div class="col-md-6"> 
-                    <h4>&nbsp;</h4>
                     <p>Effector Offset: <select id="effector_sel" onchange="engage();">
                         <option value="effector_sel_kosselmini">Kossel Mini</option>
                         <option value="effector_sel_calvinibav8">Calvin Iba V8</option>
                         <option value="effector_sel_smarteffector">Duet3D SmartEffector</option>
                         <option value="effector_sel_custom">Custom</option>
-                    </select> <input type="text" id="input_effector_offset" maxlength="6" size="6" value="20" onblur="engage();" /></p>
+                    </select> <input type="text" id="input_effector_offset" maxlength="6" size="6" value="0" onblur="engage();" /></p>
 
-                    <p>Vertical Carriage Offset: <select id="carriage_sel" onchange="engage();">
-                        <option value="carriage_sel_mgn12_16mm">MGN12 with Johann-style 16mm Arm Carriage</option>
+                    <p>Carriage Offset: <select id="carriage_sel" onchange="engage();">
+                        <option value="carriage_sel_mgn12_16mm">MGN12 with Johann arms</option>
+                        <option value="carriage_sel_ultibots_mk">Ultibots MKVS/K250</option>
                         <option value="carriage_sel_custom">Custom</option>
-                    </select> <input type="text" id="input_carriage_offset" maxlength="6" size="6" value="29.5" onblur="engage();" /></p>
+                    </select> <input type="text" id="input_carriage_offset" maxlength="6" size="6" value="0" onblur="engage();" /></p>
                 </div>
 
                 <div class="col-md-12">
                     <div class="row">
                         <div class="col-md-12">
                             <h4>Output</h4>
-                            <p class="text-warning">TODO: Actually implement the maths and output :P</p>
                         </div>
 
                         <div class="col-md-6">
-                            <p>Smooth Rod Offset: <div id="output_smooth_rod_offset"></div></p>
-                            <p>Delta Radius: <div id="output_delta_radius"></div></p>
-                            <p>Arm Angle at 0,0: <div id="output_arm_angle_rest"></div></p>
-                            <p>Diameter with Arm at 20°: <div id="output_diam_arm_20deg"></div></p>
-                            <p>Diameter with Arm at 1°: <div id="output_diam_arm_20deg"></div></p>
+                            <p class="inline">Smooth Rod Offset: <div id="output_smooth_rod_offset"></div> mm</p>
+                            <p class="inline">Delta Radius: <div id="output_delta_radius"></div> mm</p>
+                            <p class="inline">Arm Angle at 0,0: <div id="output_arm_angle_origin"></div> °</p>
+                            <p class="inline">Delta Radius with Arm at 20°: <div id="output_delta_radius_at_20deg"></div> mm</p>
+                            <p class="inline">Delta Radius with Arm at 0°: <div id="output_delta_radius_at_0deg"></div> mm</p>
+                            <p class="inline">"Ideal" Arm Length at 0,0: <div id="output_arm_length_ideal"></div> mm</p>
+                            <!-- <p class="inline">Effector Printable Diameter: <div id="output_print_diam_effector"></div></p> -->
+                            <!-- <p class="inline">Nozzle Printable Diameter: <div id="output_print_diam_nozzle"></div></p> -->
+                            <p>&nbsp;</p>
+                            <p class="inline">Corner Note: <small class="inline"><div id="label_corner_html"></div></small></p>
+                            <p class="inline">Effector Note: <small class="inline"><div id="label_effector_html"></div></small></p>
+                            <p class="inline">Carriage Note: <small class="inline"><div id="label_carriage_html"></div></small></p>
                         </div>
                         <div class="col-md-6">
-                            <p>Canvas goes here.</p>
+                            <p><!-- Canvas goes here --></p>
                         </div>
 
                         <div class="col-md-12">
                             <h5>Notes</h5>
                             <ul>
-                                <li>Blah Blah Blah.</li>
+                                <li><strong>Effector Offset</strong> measures the distance from effector centre (nozzle) to the arm joint axle.</li>
+                                <li><strong>Carriage Offset</strong> measures the distance from the <em>extrusion face</em> to the arm axle. Extrusion offset is added depending on which corner is in use.</li>
+                                <li><strong>"Ideal" Arm Length</strong> is the shortest arm which still achieves 60° arm angle at origin.</li>
+                                <li>TODO: Learn Canvas and draw a 2D represenattion of the effector, an arm, and a tower.</li>
+                                <li>TODO: Use vertical extrusions to work out max full printable height, and max total printable height.</li>
                             </ul>
-                            <p>Copyright 2017 // Author: <a href="http://superjamie.github.io/">Jamie Bainbridge</a> // License: <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">GNU AGPL v3.0</a></p>
                         </div>
                     </div>
                 </div>
 
-            </div>
-        </div>
+                <div class="col-md-12">
+                    <p class="text-muted">Copyright 2017 // Author: <a href="http://superjamie.github.io/">Jamie Bainbridge</a> // License: <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">GNU AGPL v3.0</a></p>
+                </div>
 
+            </div> <!-- row -->
+        </div> <!-- container -->
     </body>
 </html>
