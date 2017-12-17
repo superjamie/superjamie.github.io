@@ -65,18 +65,24 @@
                             <p class="inline">Smooth Rod Offset: <div id="output_smooth_rod_offset"></div> mm</p>
                             <p class="inline">Delta Radius: <div id="output_delta_radius"></div> mm</p>
                             <p class="inline">Arm Angle at 0,0: <div id="output_arm_angle_origin"></div> °</p>
-                            <p class="inline">Delta Radius with Arm at 20°: <div id="output_delta_radius_at_20deg"></div> mm</p>
-                            <p class="inline">Delta Radius with Arm at 0°: <div id="output_delta_radius_at_0deg"></div> mm</p>
-                            <p class="inline">"Ideal" Arm Length at 0,0: <div id="output_arm_length_ideal"></div> mm</p>
-                            <!-- <p class="inline">Effector Printable Diameter: <div id="output_print_diam_effector"></div></p> -->
-                            <!-- <p class="inline">Nozzle Printable Diameter: <div id="output_print_diam_nozzle"></div></p> -->
-                            <p>&nbsp;</p>
+                            <p class="inline">Movement Diameter with Arms at 20°: <div id="output_movement_diam_at_20deg"></div> mm</p>
+                            <!-- <p class="inline">Tower Clearance with Arms at 20°: <div id="output_clearance_at_20deg"></div> mm</p> -->
+                            <p class="inline">Movement Diameter with Arm at 0°: <div id="output_movement_diam_at_0deg"></div> mm</p>
+                            <!-- <p class="inline">Tower Clearance with Arm at 0°: <div id="output_clearance_at_0deg"></div> mm</p> -->
+                        </div>
+                        <div class="col-md-6">
+                            <p class="inline">Maximum Arm Length: <div id="output_arm_length_max"></div> mm</p>
+                            <p class="inline">Minimum Arm Length: <div id="output_arm_length_min"></div> mm</p>
                             <p class="inline">Corner Note: <small class="inline"><div id="label_corner_html"></div></small></p>
                             <p class="inline">Effector Note: <small class="inline"><div id="label_effector_html"></div></small></p>
                             <p class="inline">Carriage Note: <small class="inline"><div id="label_carriage_html"></div></small></p>
                         </div>
+
                         <div class="col-md-6">
-                            <p><!-- Canvas goes here --></p>
+                            <!-- side canvas here -->
+                        </div>
+                        <div class="col-md-6">
+                            <!-- top canvas here -->
                         </div>
 
                         <div class="col-md-12">
@@ -84,8 +90,9 @@
                             <ul>
                                 <li><strong>Effector Offset</strong> measures the distance from effector centre (nozzle) to the arm joint axle.</li>
                                 <li><strong>Carriage Offset</strong> measures the distance from the <em>extrusion face</em> to the arm axle. Extrusion offset is added depending on which corner is in use.</li>
-                                <li><strong>"Ideal" Arm Length</strong> is the shortest arm which still achieves 60° arm angle at origin.</li>
-                                <li>TODO: Learn Canvas and draw a 2D represenattion of the effector, an arm, and a tower.</li>
+                                <li><strong>Maximum Arm Length</strong> is the arm which achieves 60° arm angle at origin.</li>
+                                <li><strong>Minimum Arm Length</strong> is the arm which achieves 20° arm angle at the far edge of movement.</li>
+                                <li>TODO: Learn Canvas and draw a 2D represenation of the effector, an arm, and a tower.</li>
                                 <li>TODO: Use vertical extrusions to work out max full printable height, and max total printable height.</li>
                             </ul>
                         </div>

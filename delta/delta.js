@@ -2,8 +2,9 @@ function calc_delta() {
 
     /* declare and type variables */
 
-    var ext_horizontal = 0, ext_vertical = 0, arm_length = 0, effector_offset = 0, carriage_offset = 0, delta_smooth_rod_offset = 0, delta_radius = 0;
-    var arm_angle_origin = 0, delta_radius_at_20deg = 0, delta_radius_at_0deg = 0, print_diam_effector = 0, print_diam_nozzle = 0;
+    var ext_horizontal = 0, ext_vertical = 0, arm_length = 0, effector_offset = 0, carriage_offset = 0, smooth_rod_offset = 0, delta_radius = 0;
+    var arm_angle_origin = 0, movement_radius_at_20deg = 0, movement_radius_at_0deg = 0, arm_length_max = 0, arm_length_min = 0, biggest_print_bed = 0;
+    var arm_span_other_tower = 0, tower_clearance_at_20deg = 0, tower_clearance_at_0deg = 0;
     var corner_name = "", effector_name = "", carriage_name = "";
     var current_corner = {}, current_effector = {}, current_carriage = {};
 
@@ -93,7 +94,7 @@ function calc_delta() {
     effector_calvinibav8.effector_offset = 30;
     effector_calvinibav8.html = "<a href='https://www.thingiverse.com/thing:2297083'>Kossel Pro Effector V8 by calviniba</a>";
 
-    effector_smarteffector.effector_offset = 35.22; // from kicad sources, 35.218394
+    effector_smarteffector.effector_offset = 22.805; // from kicad sources. 123.768043 - 100.962688 = 22.805355
     effector_smarteffector.html = "<a href='https://duet3d.com/wiki/Smart_effector_and_carriage_adapters_for_delta_printer'>Smart Effector by Duet3D</a>";
 
     effector_custom.html = "This is the distance from the effector centre to the axle axis.";
@@ -190,20 +191,35 @@ function calc_delta() {
 
     delta_radius = smooth_rod_offset - effector_offset - carriage_offset;
 
-    function radians(r) {
-        return r * (Math.PI / 180);
+    // converts degrees to radians
+    function radians(deg) {
+        return deg * (Math.PI / 180);
     }
 
-    function degrees(d) {
-        return d / (Math.PI / 180);
+    // converts radians to degrees
+    function degrees(rad) {
+        return rad / (Math.PI / 180);
     }
 
     arm_angle_origin = degrees(Math.acos(delta_radius/arm_length));
-    delta_radius_at_20deg = Math.cos(radians(20)) * arm_length;
-    delta_radius_at_0deg = Math.cos(radians(0)) * arm_length;
-    arm_length_ideal = delta_radius / Math.cos(radians(60));
-    print_diam_effector = delta_radius * 2;
-    print_diam_nozzle = (delta_radius * 2) + effector_offset;
+    movement_radius_at_20deg = (Math.cos(radians(20)) * arm_length) - delta_radius;
+    movement_radius_at_0deg = (Math.cos(radians(0)) * arm_length) - delta_radius;
+    arm_length_max = delta_radius / Math.cos(radians(60));
+    // as explained in johann/jaydm mk_visual_calc
+    arm_length_min = ((delta_radius * 2) - effector_offset) / Math.cos(radians(20));
+    // also from mk_visual_calc
+    biggest_print_bed = ((smooth_rod_offset * Math.sin(radians(30))) + effector_offset - (current_corner.extrusion / 2) - 4) * 2;
+
+    /* Top down view, if the rods between two towers are straight, they'll be
+     * 30° from their position at origin. Calculate this span and we can work
+     * out effector tower clearance at 20° or 0°.
+     */
+
+    arm_span_other_tower = delta_radius / Math.cos(radians(30));
+    // these measurements when the OTHER tower has arms at 20 or 0
+    // that doesn't seem right. time for bed
+    tower_clearance_at_20deg = arm_span_other_tower - movement_radius_at_20deg;
+    tower_clearance_at_0deg = arm_span_other_tower - movement_radius_at_0deg;
 
     /* output */
 
@@ -211,13 +227,11 @@ function calc_delta() {
     document.getElementById("output_delta_radius").innerHTML = delta_radius.toFixed(3);
 
     document.getElementById("output_arm_angle_origin").innerHTML = arm_angle_origin.toFixed(2);
-    document.getElementById("output_delta_radius_at_20deg").innerHTML = delta_radius_at_20deg.toFixed(2);
-    document.getElementById("output_delta_radius_at_0deg").innerHTML = delta_radius_at_0deg.toFixed(2);
-    document.getElementById("output_arm_length_ideal").innerHTML = arm_length_ideal.toFixed(1);
+    document.getElementById("output_movement_diam_at_20deg").innerHTML = movement_radius_at_20deg.toFixed(1) * 2;
+    document.getElementById("output_movement_diam_at_0deg").innerHTML = movement_radius_at_0deg.toFixed(1) * 2;
+    document.getElementById("output_arm_length_max").innerHTML = arm_length_max.toFixed(1);
+    document.getElementById("output_arm_length_min").innerHTML = arm_length_min.toFixed(1);
 
-    //document.getElementById("output_print_diam_effector").innerHTML = print_diam_effector.toFixed(2);
-    //document.getElementById("output_print_diam_nozzle").innerHTML = print_diam_nozzle.toFixed(2);
-    
     function console_clear() {
         // https://stackoverflow.com/questions/31261667/how-to-clear-the-javascript-console-programmatically
         console.API;
@@ -249,11 +263,14 @@ function calc_delta() {
         console.log("smooth_rod_offset = " + smooth_rod_offset.toFixed(3));
         console.log("delta_radius = " + delta_radius.toFixed(3));
         console.log("arm_angle_origin = " + arm_angle_origin.toFixed(2));
-        console.log("delta_radius_at_20deg = " + delta_radius_at_20deg.toFixed(2));
-        console.log("delta_radius_at_0deg = " + delta_radius_at_0deg.toFixed(2));
-        console.log("arm_length_ideal = " + arm_length_ideal.toFixed(2));
-        console.log("print_diam_effector = " + print_diam_effector.toFixed(2));
-        console.log("print_diam_nozzle = " + print_diam_nozzle.toFixed(2));
+        console.log("movement_radius_at_20deg = " + movement_radius_at_20deg.toFixed(2));
+        console.log("movement_radius_at_0deg = " + movement_radius_at_0deg.toFixed(2));
+        console.log("arm_length_max = " + arm_length_max.toFixed(2));
+        console.log("arm_length_min = " + arm_length_min.toFixed(2));
+        console.log("arm_span_other_tower = " + arm_span_other_tower.toFixed(2));
+        console.log("tower_clearance_at_20deg = " + tower_clearance_at_20deg.toFixed(2));
+        console.log("tower_clearance_at_0deg = " + tower_clearance_at_0deg.toFixed(2));
+        console.log("biggest_print_bed = " + biggest_print_bed.toFixed(2));
     }
 
     // TODO: figure out canvas and draw a horizontal representation
