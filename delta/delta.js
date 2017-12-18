@@ -85,6 +85,7 @@ function calc_delta() {
 
     var effector_kosselmini = new DeltaEffector();
     var effector_calvinibav8 = new DeltaEffector();
+    var effector_haydn = new DeltaEffector();
     var effector_smarteffector = new DeltaEffector();
     var effector_custom = new DeltaEffector();
 
@@ -94,13 +95,16 @@ function calc_delta() {
     effector_calvinibav8.effector_offset = 30;
     effector_calvinibav8.html = "<a href='https://www.thingiverse.com/thing:2297083'>Kossel Pro Effector V8 by calviniba</a>";
 
+    effector_haydn.effector_offset = 33;
+    effector_haydn.html = "<a href='https://www.youmagine.com/designs/kossel-plus-magnetic-effector'>Haydn Huntley Magnetic Effector</a>";
+
     effector_smarteffector.effector_offset = 22.805; // from kicad sources. 123.768043 - 100.962688 = 22.805355
     effector_smarteffector.html = "<a href='https://duet3d.com/wiki/Smart_effector_and_carriage_adapters_for_delta_printer'>Smart Effector by Duet3D</a>";
 
     effector_custom.html = "This is the distance from the effector centre to the axle axis.";
     effector_custom.readonly = false;
 
-    effectors = { "effector_sel_kosselmini": effector_kosselmini, "effector_sel_calvinibav8": effector_calvinibav8, "effector_sel_smarteffector": effector_smarteffector, "effector_sel_custom": effector_custom };
+    effectors = { "effector_sel_kosselmini": effector_kosselmini, "effector_sel_calvinibav8": effector_calvinibav8, "effector_sel_haydn": effector_haydn, "effector_sel_smarteffector": effector_smarteffector, "effector_sel_custom": effector_custom };
 
     /* carriage objects */
 
@@ -109,6 +113,7 @@ function calc_delta() {
 
     var carriage_mgn12_16mm = new DeltaCarriage();
     var carriage_ultibots_mk = new DeltaCarriage();
+    var carriage_haydn = new DeltaCarriage();
     var carriage_custom = new DeltaCarriage();
 
     carriage_mgn12_16mm.carriage_offset = 19.5;
@@ -116,6 +121,9 @@ function calc_delta() {
 
     carriage_ultibots_mk.carriage_offset = 17;
     carriage_ultibots_mk.html = "<a href='https://github.com/UltiBots/MKVS'>Ultibots GitHub</a>";
+
+    carriage_haydn.carriage_offset = 18;
+    carriage_haydn.html = "<a href='https://www.youmagine.com/designs/kossel-plus-magnetic-carriage--2'>Haydn Huntley Magnetic Carriage</a>";
 
     carriage_custom.html = "This is the distance from the extrusion face to the arm axle.";
     carriage_custom.readonly = false;
@@ -215,9 +223,13 @@ function calc_delta() {
      * out effector tower clearance at 20° or 0°.
      */
 
-    arm_span_other_tower = delta_radius / Math.cos(radians(30));
-    // these measurements when the OTHER tower has arms at 20 or 0
-    // that doesn't seem right. time for bed
+    arm_span_other_tower = delta_radius * Math.cos(radians(30));
+    // radius to other tower
+    var movement_span_other_tower = (arm_span_other_tower * 2);
+    var y_distance_to_other_tower = movement_span_other_tower * Math.cos(radians(30)) - delta_radius;
+    var x_distance_to_other_tower = movement_span_other_tower * Math.sin(radians(30));
+    var diameter_to_other_tower = Math.sqrt(Math.pow(x_distance_to_other_tower,2) + Math.pow(y_distance_to_other_tower, 2)) * 2;
+    // clearance when the OTHER tower has arms at 20 or 0, these don't seem right
     tower_clearance_at_20deg = arm_span_other_tower - movement_radius_at_20deg;
     tower_clearance_at_0deg = arm_span_other_tower - movement_radius_at_0deg;
 
@@ -271,6 +283,10 @@ function calc_delta() {
         console.log("tower_clearance_at_20deg = " + tower_clearance_at_20deg.toFixed(2));
         console.log("tower_clearance_at_0deg = " + tower_clearance_at_0deg.toFixed(2));
         console.log("biggest_print_bed = " + biggest_print_bed.toFixed(2));
+        console.log("movement_span_other_tower = " + movement_span_other_tower);
+        console.log("x_distance_to_other_tower = " + x_distance_to_other_tower);
+        console.log("y_distance_to_other_tower = " + y_distance_to_other_tower);
+        console.log("diameter_to_other_tower = " + diameter_to_other_tower);
     }
 
     // TODO: figure out canvas and draw a horizontal representation

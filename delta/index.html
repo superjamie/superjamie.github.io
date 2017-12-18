@@ -44,6 +44,7 @@
                     <p>Effector Offset: <select id="effector_sel" onchange="engage();">
                         <option value="effector_sel_kosselmini">Kossel Mini</option>
                         <option value="effector_sel_calvinibav8">Calvin Iba V8</option>
+                        <option value="effector_sel_haydn">Haydn Huntley Magnetic</option>
                         <option value="effector_sel_smarteffector">Duet3D SmartEffector</option>
                         <option value="effector_sel_custom">Custom</option>
                     </select> <input type="text" id="input_effector_offset" maxlength="6" size="6" value="0" onblur="engage();" /></p>
@@ -51,6 +52,7 @@
                     <p>Carriage Offset: <select id="carriage_sel" onchange="engage();">
                         <option value="carriage_sel_mgn12_16mm">MGN12 with Johann arms</option>
                         <option value="carriage_sel_ultibots_mk">Ultibots MKVS/K250</option>
+                        <option value="carriage_sel_haydn">Haydn Huntley Magnetic</option>
                         <option value="carriage_sel_custom">Custom</option>
                     </select> <input type="text" id="input_carriage_offset" maxlength="6" size="6" value="0" onblur="engage();" /></p>
                 </div>
@@ -92,6 +94,7 @@
                                 <li><strong>Carriage Offset</strong> measures the distance from the <em>extrusion face</em> to the arm axle. Extrusion offset is added depending on which corner is in use.</li>
                                 <li><strong>Maximum Arm Length</strong> is the arm which achieves 60° arm angle at origin.</li>
                                 <li><strong>Minimum Arm Length</strong> is the arm which achieves 20° arm angle at the far edge of movement.</li>
+                                <li><strong>Movement Diameter</strong> just describes where the <em>arms</em> can reach, you'll probably hit the towers first.
                                 <li>TODO: Learn Canvas and draw a 2D represenation of the effector, an arm, and a tower.</li>
                                 <li>TODO: Use vertical extrusions to work out max full printable height, and max total printable height.</li>
                             </ul>
