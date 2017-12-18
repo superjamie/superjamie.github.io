@@ -128,7 +128,7 @@ function calc_delta() {
     carriage_custom.html = "This is the distance from the extrusion face to the arm axle.";
     carriage_custom.readonly = false;
 
-    carriages = { "carriage_sel_mgn12_16mm": carriage_mgn12_16mm, "carriage_sel_ultibots_mk": carriage_ultibots_mk, "carriage_sel_custom": carriage_custom };
+    carriages = { "carriage_sel_mgn12_16mm": carriage_mgn12_16mm, "carriage_sel_ultibots_mk": carriage_ultibots_mk, "carriage_sel_haydn": carriage_haydn, "carriage_sel_custom": carriage_custom };
     
     /* parse input */
 
