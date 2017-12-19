@@ -14,7 +14,7 @@
         <script src="delta.js"></script>
 
     </head>
-    <body onload="engage();">
+    <body onload="delta.init();">
 
         <div class="container">
             <h2>Delta Calculator</h2>
@@ -26,35 +26,15 @@
                     <h4>Input</h4>
                 </div>
                 <div class="col-md-6"> 
-                    <p>Corners: <select id="corner_sel" onchange="engage();">
-                        <option value="corner_sel_ultibots">Ultibots 2020</option>
-                        <option value="corner_sel_jaydm">jaydmdigital 2020</option>
-                        <option value="corner_sel_mming_2020">mming 2020</option>
-                        <option value="corner_sel_griffin">Griffin 2020</option>
-                        <option value="corner_sel_mming_2040">mming 2040</option>
-                        <option value="corner_sel_hyperair_2040">hyperair 2040</option>
-                        <option value="corner_sel_kosselmax_2040">Kossel MAX 2040</option>
-                    </select></p>
-                    <p>Horizontal Extrusion: <input type="text" id="input_horiz" maxlength="5" size="5" value="240" onblur="engage();" /></p>
-                    <p>Vertical Extrusion: <input type="text" id="input_vert" maxlength="5" size="5" value="600" onblur="engage();" /></p>
-                    <p>Arm Length: <input type="text" id="input_arm" maxlength="4" size="5" value="215" onblur="engage();" /></p>
+                    <p>Horizontal Extrusion: <input type="text" id="input_horiz" maxlength="5" size="5" value="240" onblur="delta.calc();" /></p>
+                    <p>Vertical Extrusion: <input type="text" id="input_vert" maxlength="5" size="5" value="600" onblur="delta.calc();" /></p>
+                    <p>Arm Length: <input type="text" id="input_arm" maxlength="4" size="5" value="215" onblur="delta.calc();" /></p>
                 </div>
 
                 <div class="col-md-6"> 
-                    <p>Effector Offset: <select id="effector_sel" onchange="engage();">
-                        <option value="effector_sel_kosselmini">Kossel Mini</option>
-                        <option value="effector_sel_calvinibav8">Calvin Iba V8</option>
-                        <option value="effector_sel_haydn">Haydn Huntley Magnetic</option>
-                        <option value="effector_sel_smarteffector">Duet3D SmartEffector</option>
-                        <option value="effector_sel_custom">Custom</option>
-                    </select> <input type="text" id="input_effector_offset" maxlength="6" size="6" value="0" onblur="engage();" /></p>
-
-                    <p>Carriage Offset: <select id="carriage_sel" onchange="engage();">
-                        <option value="carriage_sel_mgn12_16mm">MGN12 with Johann arms</option>
-                        <option value="carriage_sel_ultibots_mk">Ultibots MKVS/K250</option>
-                        <option value="carriage_sel_haydn">Haydn Huntley Magnetic</option>
-                        <option value="carriage_sel_custom">Custom</option>
-                    </select> <input type="text" id="input_carriage_offset" maxlength="6" size="6" value="0" onblur="engage();" /></p>
+                    <p class="inline">Corners: <div id="corner_sel_div" class="inline"></div></p>
+                    <p class="inline">Effector Offset: <div id="effector_sel_div" class="inline"></div> <input type="text" id="input_effector_offset" maxlength="6" size="6" value="0" onblur="delta.calc();" /></p>
+                    <p class="inline">Carriage Offset: <div id="carriage_sel_div" class="inline"></div> <input type="text" id="input_carriage_offset" maxlength="6" size="6" value="0" onblur="delta.calc();" /></p>
                 </div>
 
                 <div class="col-md-12">
