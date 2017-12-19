@@ -41,7 +41,7 @@ var delta = (function() {
      */
            
     var DeltaCorner = function(){};
-    DeltaCorner.prototype = { name: "", selector: "", x_width: 0, y_offset: 0, extrusion: 20, html: "" };
+    DeltaCorner.prototype = { name: "", x_width: 0, y_offset: 0, extrusion: 20, html: "" };
     
     var corner_ultibots = new DeltaCorner();
     var corner_jaydm = new DeltaCorner();
@@ -57,44 +57,44 @@ var delta = (function() {
     corner_ultibots.name = "Ultibots 2020";
     corner_ultibots.x_width = 35.65 * 2;
     corner_ultibots.y_offset = 1.5;
-    corner_ultibots.html = "<a href='https://github.com/UltiBots/MKVS'>Ultibots GitHub</a>";
+    corner_ultibots.html = "<a href=\"https://github.com/UltiBots/MKVS\">Ultibots GitHub</a>";
 
     corner_jaydm.name = "jaydmdigital 2020";
     corner_jaydm.x_width = 34.1757 * 2;
     corner_jaydm.y_offset = 2.76866;
-    corner_jaydm.html = "<a href='https://github.com/Jaydmdigital/Kossel_2020'>jaydmdigital GitHub</a>";
+    corner_jaydm.html = "<a href=\"https://github.com/Jaydmdigital/Kossel_2020\">jaydmdigital GitHub</a>";
 
     corner_mming_2020.name = "mming 2020";
     corner_mming_2020.x_width = 32.6479 * 2;
     corner_mming_2020.y_offset = 2.2271;
-    corner_mming_2020.html = "<a href='https://www.thingiverse.com/thing:208458'>Kossel Frame 2020 by mming1106</a>";
+    corner_mming_2020.html = "<a href=\"https://www.thingiverse.com/thing:208458\">Kossel Frame 2020 by mming1106</a>";
 
     corner_griffin.name = "Griffin 2020";
     corner_griffin.x_width = 28.6144 * 2; // averaged this as griffin corners aren't perfectly square!
     corner_griffin.y_offset = -10.1103; // this seems a bad design choice, you lose like 20mm printable diameter over johann's corners!
-    corner_griffin.html = "<a href='https://www.thingiverse.com/thing:259238'>Griffin 3D Delta Printer by Sheepdog</a>";
+    corner_griffin.html = "<a href=\"https://www.thingiverse.com/thing:259238\">Griffin 3D Delta Printer by Sheepdog</a>";
 
     corner_cossel.name = "c0ssel 2020";
     corner_cossel.x_width = 49.651 * 2;
     corner_cossel.y_offset = 47.996; // nice
-    corner_cossel.html = "<a href='https://www.thingiverse.com/thing:244893'>cOssel by cdaringe</a>";
+    corner_cossel.html = "<a href=\"https://www.thingiverse.com/thing:244893\">cOssel by cdaringe</a>";
 
     corner_mming_2040.name = "mming 2040";
     corner_mming_2040.x_width = 32.6497 * 2;
     corner_mming_2040.y_offset = 12.2271;
     corner_mming_2040.extrusion = 40;
-    corner_mming_2040.html = "<a href='https://www.thingiverse.com/thing:334838'>Kossel 2040 Kit by mming1106</a>";
+    corner_mming_2040.html = "<a href=\"https://www.thingiverse.com/thing:334838\">Kossel 2040 Kit by mming1106</a>";
 
     corner_hyperair_2040.name = "hyperair 2040";
     corner_hyperair_2040.x_width = 25 * 2;
     corner_hyperair_2040.y_offset = 10.1;
-    corner_hyperair_2040.html = "<a href='https://www.thingiverse.com/thing:749151'>2040 Kossel Corner by hyperair</a>";
+    corner_hyperair_2040.html = "<a href=\"https://www.thingiverse.com/thing:749151\">2040 Kossel Corner by hyperair</a>";
 
     corner_kosselmax_2040.name = "Kossel MAX 2040";
     corner_kosselmax_2040.x_width = 36.5722 * 2;
     corner_kosselmax_2040.y_offset = 13.6;
     corner_kosselmax_2040.extrusion = 40;
-    corner_kosselmax_2040.html = "<a href='https://www.thingiverse.com/thing:668577'>Kossel MAX by wfcook</a>";
+    corner_kosselmax_2040.html = "<a href=\"https://www.thingiverse.com/thing:668577\">Kossel MAX by wfcook</a>";
 
     /* effector objects */
 
@@ -111,19 +111,19 @@ var delta = (function() {
 
     effector_kosselmini.name = "Kossel Mini";
     effector_kosselmini.effector_offset = 20;
-    effector_kosselmini.html = "<a href='https://github.com/jcrocholl/kossel'>jcrocholl GitHub</a>";
+    effector_kosselmini.html = "<a href=\"https://github.com/jcrocholl/kossel\">jcrocholl GitHub</a>";
 
     effector_calvinibav8.name = "Calvin Iba V8";
     effector_calvinibav8.effector_offset = 30;
-    effector_calvinibav8.html = "<a href='https://www.thingiverse.com/thing:2297083'>Kossel Pro Effector V8 by calviniba</a>";
+    effector_calvinibav8.html = "<a href=\"https://www.thingiverse.com/thing:2297083\">Kossel Pro Effector V8 by calviniba</a>";
 
     effector_haydn.name = "Haydn Huntley Magnetic";
     effector_haydn.effector_offset = 33;
-    effector_haydn.html = "<a href='https://www.youmagine.com/designs/kossel-plus-magnetic-effector'>Haydn Huntley Magnetic Effector</a>";
+    effector_haydn.html = "<a href=\"https://www.youmagine.com/designs/kossel-plus-magnetic-effector\">Haydn Huntley Magnetic Effector</a>";
 
     effector_smarteffector.name = "Duet3D SmartEffector";
     effector_smarteffector.effector_offset = 22.805; // from kicad sources. 123.768043 - 100.962688 = 22.805355
-    effector_smarteffector.html = "<a href='https://duet3d.com/wiki/Smart_effector_and_carriage_adapters_for_delta_printer'>Smart Effector by Duet3D</a>";
+    effector_smarteffector.html = "<a href=\"https://duet3d.com/wiki/Smart_effector_and_carriage_adapters_for_delta_printer\">Smart Effector by Duet3D</a>";
 
     effector_custom.name = "Custom";
     effector_custom.html = "Custom";
@@ -143,15 +143,15 @@ var delta = (function() {
 
     carriage_mgn12_16mm.name = "MGN12 with Johann Arms";
     carriage_mgn12_16mm.carriage_offset = 19.5;
-    carriage_mgn12_16mm.html = "<a href='https://github.com/jcrocholl/kossel'>jcrocholl GitHub</a>";
+    carriage_mgn12_16mm.html = "<a href=\"https://github.com/jcrocholl/kossel\">jcrocholl GitHub</a>";
 
     carriage_ultibots_mk.name = "Ultibots MKVS/K250VS";
     carriage_ultibots_mk.carriage_offset = 17;
-    carriage_ultibots_mk.html = "<a href='https://github.com/UltiBots/MKVS'>Ultibots GitHub</a>";
+    carriage_ultibots_mk.html = "<a href=\"https://github.com/UltiBots/MKVS\">Ultibots GitHub</a>";
 
     carriage_haydn.name = "Haydn Huntley Magnetic";
     carriage_haydn.carriage_offset = 18;
-    carriage_haydn.html = "<a href='https://www.youmagine.com/designs/kossel-plus-magnetic-carriage--2'>Haydn Huntley Magnetic Carriage</a>";
+    carriage_haydn.html = "<a href=\"https://www.youmagine.com/designs/kossel-plus-magnetic-carriage--2\">Haydn Huntley Magnetic Carriage</a>";
 
     carriage_custom.name = "Custom";
     carriage_custom.html = "Custom";
@@ -262,14 +262,14 @@ var delta = (function() {
         current_effector = effectors[effector_type];
 
         document.getElementById("input_effector_offset").value = current_effector.effector_offset;
-        current_effector.readonly === true ? document.getElementById("input_effector_offset").setAttribute('readonly', 'readonly') : document.getElementById("input_effector_offset").removeAttribute('readonly');
+        current_effector.readonly === true ? document.getElementById("input_effector_offset").setAttribute("readonly", "readonly") : document.getElementById("input_effector_offset").removeAttribute("readonly");
         document.getElementById("label_effector_html").innerHTML = current_effector.html;
 
         // carriage selector
         
         current_carriage = carriages[carriage_type];
         document.getElementById("input_carriage_offset").value = current_carriage.carriage_offset;
-        current_carriage.readonly === true ? document.getElementById("input_carriage_offset").setAttribute('readonly', 'readonly') : document.getElementById("input_carriage_offset").removeAttribute('readonly');
+        current_carriage.readonly === true ? document.getElementById("input_carriage_offset").setAttribute("readonly", "readonly") : document.getElementById("input_carriage_offset").removeAttribute("readonly");
         document.getElementById("label_carriage_html").innerHTML = current_carriage.html;
 
         /* parse remaining input */
