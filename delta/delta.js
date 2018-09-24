@@ -137,9 +137,10 @@ var delta = (function() {
     var carriage_mgn12_16mm = new DeltaCarriage();
     var carriage_ultibots_mk = new DeltaCarriage();
     var carriage_haydn = new DeltaCarriage();
+    var carriage_leaf = new DeltaCarriage();
     var carriage_custom = new DeltaCarriage();
 
-    carriage_list = [ carriage_mgn12_16mm, carriage_ultibots_mk, carriage_haydn, carriage_custom ];
+    carriage_list = [ carriage_mgn12_16mm, carriage_ultibots_mk, carriage_haydn, carriage_leaf, carriage_custom ];
 
     carriage_mgn12_16mm.name = "MGN12 with Johann Arms";
     carriage_mgn12_16mm.carriage_offset = 19.5;
@@ -152,6 +153,10 @@ var delta = (function() {
     carriage_haydn.name = "Haydn Huntley Magnetic";
     carriage_haydn.carriage_offset = 18;
     carriage_haydn.html = "<a href=\"https://www.youmagine.com/designs/kossel-plus-magnetic-carriage--2\">Haydn Huntley Magnetic Carriage</a>";
+
+    carriage_leaf.name = "Kossel Leaf";
+    carriage_leaf.carriage_offset = 19.45;
+    carriage_leaf.html = "<a href=\"https://github.com/superjamie/kossel-leaf\">Kossel Leaf</a>";
 
     carriage_custom.name = "Custom";
     carriage_custom.html = "Custom";
