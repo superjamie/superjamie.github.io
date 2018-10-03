@@ -249,9 +249,9 @@ var delta = (function() {
 
         /* parse input */
 
-        ext_horizontal = parseInt(document.getElementById("input_horiz").value);
-        ext_vertical = parseInt(document.getElementById("input_vert").value);
-        arm_length = parseInt(document.getElementById("input_arm").value);
+        ext_horizontal = parseFloat(document.getElementById("input_horiz").value);
+        ext_vertical = parseFloat(document.getElementById("input_vert").value);
+        arm_length = parseFloat(document.getElementById("input_arm").value);
 
         corner_type = document.getElementById("corner_sel").options[corner_sel.selectedIndex].value;
         effector_type = document.getElementById("effector_sel").options[effector_sel.selectedIndex].value;
@@ -279,8 +279,8 @@ var delta = (function() {
 
         /* parse remaining input */
 
-        effector_offset = parseInt(document.getElementById("input_effector_offset").value);
-        carriage_offset = parseInt(document.getElementById("input_carriage_offset").value);
+        effector_offset = parseFloat(document.getElementById("input_effector_offset").value);
+        carriage_offset = parseFloat(document.getElementById("input_carriage_offset").value);
         carriage_offset = carriage_offset + (current_corner.extrusion / 2);
 
         /* calculations */
