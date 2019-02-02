@@ -49,19 +49,19 @@ var gacha = (function() {
 
         /* Super Rare */
         hit += build_type.pct_sr;
-        if (spin <= hit) {
+        if (spin < hit) {
             return("<span style=\"background-color: #EEE8AA\">&nbsp;SR&nbsp;</span>");
         }
 
         /* Elite */
         hit += build_type.pct_e;
-        if (spin <= hit) {
+        if (spin < hit) {
             return("<span style=\"background-color: #DDA0DD\">&nbsp;E&nbsp;</span>");
         }
 
         /* Rare */
         hit += build_type.pct_r;
-        if (spin <= hit) {
+        if (spin < hit) {
             return("<span style=\"background-color: #B0E0E6\">&nbsp;R&nbsp;</span>");
         }
 
