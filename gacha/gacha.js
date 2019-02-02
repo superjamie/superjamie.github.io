@@ -119,7 +119,7 @@ var gacha = (function() {
         /* output */
 
         document.getElementById("output_results").innerHTML = html;
-
+        document.getElementById("input_number_of_builds").value = number_of_builds;
     };
 
     return {
