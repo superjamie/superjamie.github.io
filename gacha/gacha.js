@@ -1,15 +1,14 @@
 /* namespace */
 var gacha = (function() {
     
-    /* declare and type variables */
+    /* declarations and types */
 
     var number_of_builds = 0;
     var build_type = {}, builds = {};
     var build_list = [];
-    var build_name = "";
 
     var BuildType = function(){};
-    BuildType.prototype = { name: "", pct_sr: 0, pct_e: 0, pct_r: 0, pct_c: 0 };
+    BuildType.prototype = { name: "", rarity: [], rarity_name: [ "SR", "E", "R", "C" ], rarity_color: [ "EEE8AA", "DDA0DD", "B0E0E6", "DCDCDC" ], threshold: [] };
 
     /* variables */
 
@@ -20,53 +19,37 @@ var gacha = (function() {
     build_list = [ build_light, build_heavy, build_special ];
 
     build_light.name   = "Light";
-    build_light.pct_sr =  7;
-    build_light.pct_e  = 12;
-    build_light.pct_r  = 26;
-    build_light.pct_c  = 55;
+    build_light.rarity = [ 7, 12, 26, 55 ];
 
     build_heavy.name   = "Heavy";
-    build_heavy.pct_sr =  7;
-    build_heavy.pct_e  = 12;
-    build_heavy.pct_r  = 51;
-    build_heavy.pct_c  = 30;
+    build_heavy.rarity = [ 7, 12, 51, 30 ];
 
     build_special.name   = "Special";
-    build_special.pct_sr =  7;
-    build_special.pct_e  = 12;
-    build_special.pct_r  = 51;
-    build_special.pct_c  = 30;
+    build_special.rarity = [ 7, 12, 51, 30 ];
 
     /* functions */
 
-    function random_percent() {
-        return Math.floor(Math.random() * 100);
+    function make_thresholds(build_type) {
+        var i = 0;
+
+        console.log("thresh type = " + build_type.name);
+        for (i = 0; i < build_type.rarity.length; i++) {
+            build_type.threshold[i] = build_type.rarity[i];
+            if (i > 0) {
+                build_type.threshold[i] += build_type.threshold[i-1];
+            };
+        };
     };
 
     function build_one(build_type) {
-        var spin = random_percent();
-        var hit = 0;
+        var spin = Math.random() * 100;
+        var i = 0;
 
-        /* Super Rare */
-        hit += build_type.pct_sr;
-        if (spin < hit) {
-            return("<span style=\"background-color: #EEE8AA\">&nbsp;SR&nbsp;</span>");
-        }
-
-        /* Elite */
-        hit += build_type.pct_e;
-        if (spin < hit) {
-            return("<span style=\"background-color: #DDA0DD\">&nbsp;E&nbsp;</span>");
-        }
-
-        /* Rare */
-        hit += build_type.pct_r;
-        if (spin < hit) {
-            return("<span style=\"background-color: #B0E0E6\">&nbsp;R&nbsp;</span>");
-        }
-
-        /* Common */
-            return("<span style=\"background-color: #DCDCDC\">&nbsp;C&nbsp;</span>");
+        for (i = 0; i < build_type.threshold.length; i++) {
+            if (spin < build_type.threshold[i]) {
+                return("<span style=\"background-color: #" + build_type.rarity_color[i] + "\">&nbsp;" + build_type.rarity_name[i] + "&nbsp;</span>");
+            };
+        };
     };
 
     /* draw page stuff */
@@ -80,7 +63,7 @@ var gacha = (function() {
             for (i = 0; i < array.length; ++i) {
                 html += "<option value=\"" + array[i].name + "\">" + array[i].name + "</option>";
                 object[array[i].name] = array[i];
-            }
+            };
 
         html += "</select>";
         document.getElementById(div_id).innerHTML = html;
@@ -89,8 +72,13 @@ var gacha = (function() {
    /* namespace public interfaces */
 
     function init() {
+        var i = 0;
+
         Math.seedrandom();
         draw_selector("build_sel_div", "build_sel", build_list, builds);
+        for (i = 0; i < build_list.length; i++) {
+            make_thresholds(build_list[i]);
+        };
     };
 
     function build() {
@@ -99,9 +87,7 @@ var gacha = (function() {
 
         /* input */
 
-        build_name = document.getElementById("build_sel").options[build_sel.selectedIndex].value;
-        build_type = builds[build_name];
-
+        build_type = builds[document.getElementById("build_sel").options[build_sel.selectedIndex].value];
         number_of_builds = parseInt(document.getElementById("input_number_of_builds").value);
 
         if (number_of_builds < 1) {
