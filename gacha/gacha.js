@@ -60,10 +60,10 @@ var gacha = (function() {
 
         html = "<select id=\"" + select_id + "\">"
 
-            for (i = 0; i < array.length; ++i) {
-                html += "<option value=\"" + array[i].name + "\">" + array[i].name + "</option>";
-                object[array[i].name] = array[i];
-            };
+        for (i = 0; i < array.length; ++i) {
+            html += "<option value=\"" + array[i].name + "\">" + array[i].name + "</option>";
+            object[array[i].name] = array[i];
+        };
 
         html += "</select>";
         document.getElementById(div_id).innerHTML = html;
