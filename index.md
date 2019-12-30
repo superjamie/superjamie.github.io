@@ -10,23 +10,18 @@ title: superjamie.github.io
 *   [Azur Lane Gacha Simulator](http://superjamie.github.io/gacha)  
     Simulates Azur Lane builds to indicate which rarity will be received.
 
-*   [HyperCube Calculator](http://superjamie.github.io/hypercube)  
-    A calculator to scale the HyperCube 3D Printer by Tech2C.
-
-*   [Raspberry Pi VPN Router](https://gist.github.com/superjamie/ac55b6d2c080582a3e64)  
-    A guide to setting up a Raspberry Pi as a "router on a stick" to PrivateInternetAccess VPN.
-
 *   [Which TNG episode?](http://superjamie.github.io/tng)  
     Randomly picks a Star Trek: The Next Generation episode for you to watch.
 
-*   [Linux Aleph](http://linuxaleph.blogspot.com/)  
-    A blog about Linux
+*   [HyperCube Calculator](http://superjamie.github.io/hypercube)  
+    A calculator to scale the HyperCube 3D Printer by Tech2C.
 
+*   [Raspberry Pi VPN Router (Oct 2015)](https://gist.github.com/superjamie/ac55b6d2c080582a3e64)  
+    A guide to setting up a Raspberry Pi as a "router on a stick" to PrivateInternetAccess VPN.
 
 ## Posts
 
-Using gists as a blog was trendy for a while. Nowadays all the cool kids are using raw [pastebin](https://pastebin.com/)s.
-
+*   2008 onwards - [Linux Aleph](https://linuxaleph.blogspot.com/) - A blog of Linux hints, tips, and tricks
 *   2014-10-31 - [Running a Python script only if it's not already running](https://gist.github.com/superjamie/9c5672722a1f3d84a692)
 *   2014-09-21 - [The 8-Byte Two-Step Redux](https://gist.github.com/superjamie/72f7bf3b6a22371d24f7)
 
@@ -78,6 +73,50 @@ Using gists as a blog was trendy for a while. Nowadays all the cool kids are usi
     [cdp: Print checksum in hex, and print the actual checksum, plus cleanup](https://github.com/the-tcpdump-group/tcpdump/commit/24007a9a1249ed8733ff0039812ba92544a38bbe)
 *   2014-05-07 - stjerm, C, GTK libvte dropdown terminal  
     [Added hide terminal on child exit](https://github.com/stjerm/stjerm/commit/dff865795e8cf223eca9eb87c8a7c1e33e9a543c)
+
+RHEL/CentOS 7 kernel
+
+~~~
+# rpm -q --changelog kernel
+
+* Thu Dec 06 2018 [3.10.0-973.el7]
+- [mm] madvise(madv_dodump): allow hugetlbfs pages (Jamie Bainbridge) [1641227]
+
+* Fri Jun 22 2018 [3.10.0-915.el7]
+- [net] ifb: fix packets checksum (Jamie Bainbridge) [1571027]
+
+* Tue Sep 19 2017 [3.10.0-710.el7]
+- [net] tcp: reset sk_rx_dst in tcp_disconnect() (Jamie Bainbridge) [1467770]
+
+* Wed Aug 16 2017 [3.10.0-702.el7]
+- [net] ipv6: check raw payload size correctly in ioctl (Jamie Bainbridge) [1447240]
+
+* Tue Feb 23 2016 [3.10.0-351.el7]
+- [fs] cifs: Ratelimit kernel log messages (Jamie Bainbridge) [1264251]
+- [fs] cifs: convert printk(LEVEL...) to pr_<level> (Jamie Bainbridge) [1264251]
+
+* Wed Nov 11 2015 [3.10.0-329.el7]
+- [net] sctp: Fix race between OOTB responce and route removal (Jamie Bainbridge) [1277309]
+~~~
+
+RHEL/CentOS 6 kernel
+
+~~~
+# rpm -q --changelog kernel
+
+* Fri May 12 2017 [2.6.32-704.el6]
+- [net] ipv6: check raw payload size correctly in ioctl (Jamie Bainbridge) [1441909]
+
+* Thu Aug 18 2016 [2.6.32-655.el6]
+- [netdrv] vmxnet3: avoid calling pskb_may_pull with interrupts disabled (Jamie Bainbridge) [1340684]
+- [netdrv] vmxnet3: fix checks for dma mapping errors (Jamie Bainbridge) [1340684]
+
+* Mon Nov 09 2015 [2.6.32-585.el6]
+- [net] ethtool: allow non-netadmin to query settings (Jamie Bainbridge) [1219731]
+
+* Tue Oct 13 2015 [2.6.32-581.el6]
+- [fs] sunrpc: Report connection error values to rpc_tasks on the pending queue (Jamie Bainbridge) [1206555]
+~~~
 
 ## Contact
 
