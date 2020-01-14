@@ -22,6 +22,7 @@ title: superjamie.github.io
 ## Posts
 
 *   2008 onwards - [Linux Aleph](https://linuxaleph.blogspot.com/) - A blog of Linux hints, tips, and tricks
+*   2020-01-14 - [Delay Loop in 6502 Assembly](https://gist.github.com/superjamie/fd80fabadf39199c97de400213f614e9)
 *   2014-10-31 - [Running a Python script only if it's not already running](https://gist.github.com/superjamie/9c5672722a1f3d84a692)
 *   2014-09-21 - [The 8-Byte Two-Step Redux](https://gist.github.com/superjamie/72f7bf3b6a22371d24f7)
 
