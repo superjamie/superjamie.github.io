@@ -38,6 +38,8 @@ title: superjamie.github.io
     [examples: add timestamp to dropwatch.stp](https://sourceware.org/git/?p=systemtap.git;a=commit;h=c77a9824dc8397973ed4498ce6a8c4e85f15556f)
 *   2019-11-08 - pystray, Python, graphical system tray toolkit  
     [appindicator: remove tempfile on close](https://github.com/moses-palmer/pystray/commit/f6babe2f2b4790ab9dfcaabfe9d5ae22c49e0cf8)
+*   2019-05-17 - net-tools, C, Linux networking base tools  
+    [statistics: fix packets typo](https://sourceforge.net/p/net-tools/code/ci/bc3d7dc9bd7741527dddfa4d1c1dec89a2b60512/)
 *   2019 - xsos, bash, sosreport analyser  
     [various, I am a co-maintainer](https://github.com/ryran/xsos/commits/master)
 *   2018-10-15 - sos, Python, Linux system troubleshooting tool  
