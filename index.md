@@ -22,6 +22,7 @@ title: superjamie.github.io
 ## Posts
 
 *   2008 onwards - [Linux Aleph](https://linuxaleph.blogspot.com/) - A blog of Linux hints, tips, and tricks
+*   2021-11-25 - [How to install Ubuntu 20.04 with LUKS Encryption on LVM](https://gist.github.com/superjamie/d56d8bc3c9261ad603194726e3fef50f)
 *   2020-01-14 - [Delay Loop in 6502 Assembly](https://gist.github.com/superjamie/fd80fabadf39199c97de400213f614e9)
 *   2016-04-28 - [Reversing for Dummies - Brisbane SecTalks 0x09](https://gist.github.com/superjamie/7c6f5c1c2ed728f2e06d4b64dc529116)
 *   2014-10-31 - [Running a Python script only if it's not already running](https://gist.github.com/superjamie/9c5672722a1f3d84a692)
