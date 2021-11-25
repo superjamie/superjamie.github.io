@@ -34,6 +34,8 @@ title: superjamie.github.io
     [gutils: Avoid segfault in g_get_user_database_entry](https://gitlab.gnome.org/GNOME/glib/-/commit/bb40105fe95b5d95e31715ddb210380d381a1e26)
 *   2021-04-15 - libteam, C, Linux network link aggregation  
     [utils/bond2team: convert resend_igmp to mcast_rejoin.count](https://lists.fedorahosted.org/archives/list/libteam@lists.fedorahosted.org/message/5GCI7UJI325NQZLC4PCZZABAOBBLVAPN/)
+*   2021-04-04 - AlphaMan, QuickBasic/C/Assembly, DOS roguelike game  
+    [Source code to the 1995 DOS roguelike game Alphaman](https://github.com/superjamie/alphaman-src)
 *   2020-11-17 - SystemTap, C, Linux kernel instrumentation  
     [examples: add timestamp to dropwatch.stp](https://sourceware.org/git/?p=systemtap.git;a=commit;h=c77a9824dc8397973ed4498ce6a8c4e85f15556f)
 *   2019-11-08 - pystray, Python, graphical system tray toolkit  
