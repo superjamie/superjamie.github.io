@@ -7,17 +7,14 @@ title: superjamie.github.io
 *   [superjamie's lazyweb](https://github.com/superjamie/lazyweb/wiki)  
     A collection of internet advice and general interesting notes.
 
-*   [Azur Lane Gacha Simulator](http://superjamie.github.io/gacha)  
-    Simulates Azur Lane builds to indicate which rarity will be received.
-
 *   [Which TNG episode?](http://superjamie.github.io/tng)  
     Randomly picks a Star Trek: The Next Generation episode for you to watch.
 
+*   [Azur Lane Gacha Simulator](http://superjamie.github.io/gacha)  
+    Simulates Azur Lane builds to indicate which rarity will be received.
+
 *   [HyperCube Calculator](http://superjamie.github.io/hypercube)  
     A calculator to scale the HyperCube 3D Printer by Tech2C.
-
-*   [Raspberry Pi VPN Router (Oct 2015)](https://gist.github.com/superjamie/ac55b6d2c080582a3e64)  
-    A guide to setting up a Raspberry Pi as a "router on a stick" to PrivateInternetAccess VPN.
 
 ## Posts
 
@@ -25,6 +22,7 @@ title: superjamie.github.io
 *   2021-11-25 - [How to install Ubuntu 20.04 with LUKS Encryption on LVM](https://gist.github.com/superjamie/d56d8bc3c9261ad603194726e3fef50f)
 *   2020-01-14 - [Delay Loop in 6502 Assembly](https://gist.github.com/superjamie/fd80fabadf39199c97de400213f614e9)
 *   2016-04-28 - [Reversing for Dummies - Brisbane SecTalks 0x09](https://gist.github.com/superjamie/7c6f5c1c2ed728f2e06d4b64dc529116)
+*   2015-10-24 - [Raspberry Pi VPN Router](https://gist.github.com/superjamie/ac55b6d2c080582a3e64)
 *   2014-10-31 - [Running a Python script only if it's not already running](https://gist.github.com/superjamie/9c5672722a1f3d84a692)
 *   2014-09-21 - [The 8-Byte Two-Step Redux](https://gist.github.com/superjamie/72f7bf3b6a22371d24f7)
 
