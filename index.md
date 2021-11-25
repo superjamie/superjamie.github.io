@@ -30,6 +30,10 @@ title: superjamie.github.io
 
 ## Open Source Contributions
 
+*   2021-04-15 - libteam, C, Linux network link aggregation  
+    [utils/bond2team: convert resend_igmp to mcast_rejoin.count](https://lists.fedorahosted.org/archives/list/libteam@lists.fedorahosted.org/message/5GCI7UJI325NQZLC4PCZZABAOBBLVAPN/)
+*   2020-11-17 - SystemTap, C, Linux kernel instrumentation  
+    [examples: add timestamp to dropwatch.stp](https://sourceware.org/git/?p=systemtap.git;a=commit;h=c77a9824dc8397973ed4498ce6a8c4e85f15556f)
 *   2019-11-08 - pystray, Python, graphical system tray toolkit  
     [appindicator: remove tempfile on close](https://github.com/moses-palmer/pystray/commit/f6babe2f2b4790ab9dfcaabfe9d5ae22c49e0cf8)
 *   2019 - xsos, bash, sosreport analyser  
@@ -44,6 +48,8 @@ title: superjamie.github.io
     [build: add missing python debian package shlib dependencies](https://github.com/performancecopilot/pcp/commit/be39423ad9273292d1f72b911a09d2fb2484e30e)
 *   2017-04-26 - Linux Kernel, C, Operating system kernel  
     [ipv6: check raw payload size correctly in ioctl](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=105f5528b9bbaa08b526d3405a5bcd2ff0c953c8)
+*   2017-03-23 - lksctp-tools, C, Linux SCTP helper library  
+    [doc: Update Draft RFC docs to released RFCs](https://github.com/sctp/lksctp-tools/commit/0faa8fbf7074a0241a1ebf8223b78e701a4ea847)
 *   2016-09-25 - RetroPie, bash, Raspberry Pi retro gaming distribution  
     [resetromdirs: Actually fix permissions](https://github.com/RetroPie/RetroPie-Setup/commit/0dddc018d7ccd283204eaa17581162a8a9571926)
 *   2016-08-06 - RetroPie, bash, Raspberry Pi retro gaming distribution  
@@ -58,6 +64,8 @@ title: superjamie.github.io
     [libndp: add option flags to send messages](https://github.com/jpirko/libndp/commit/cb1ab5fc8b993f23924385ebee42d52ff45e4e8a)
 *   2015-11-07 - Linux Kernel, C, Operating system kernel  
     [cifs: Ratelimit kernel log messages](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=ec7147a99e33a9e4abad6fc6e1b40d15df045d53)
+*   2015-11-07 - PCP, C/Python/Perl/bash/many, system performance monitor  
+    [bintray: add Debian repo HTTP headers](https://github.com/performancecopilot/pcp/commit/ee3f79c2125d8d179dcc6c3d20e575e42fbc5ccb)
 *   2015-10-11 - blogpy, Python/CSS, static site generator  
     [build: enable MarkdownExtra and CodeHilite plugins](https://github.com/travisred/blogpy/commit/ff761853dc517cd188219782305bbf86f3872ddb)
 *   2015-10-11 - blogpy, Python/CSS, static site generator  
