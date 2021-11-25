@@ -30,6 +30,8 @@ title: superjamie.github.io
 
 ## Open Source Contributions
 
+*   2021-09-22 - GLib, C, GNOME utility library  
+    [gutils: Avoid segfault in g_get_user_database_entry](https://gitlab.gnome.org/GNOME/glib/-/commit/bb40105fe95b5d95e31715ddb210380d381a1e26)
 *   2021-04-15 - libteam, C, Linux network link aggregation  
     [utils/bond2team: convert resend_igmp to mcast_rejoin.count](https://lists.fedorahosted.org/archives/list/libteam@lists.fedorahosted.org/message/5GCI7UJI325NQZLC4PCZZABAOBBLVAPN/)
 *   2020-11-17 - SystemTap, C, Linux kernel instrumentation  
