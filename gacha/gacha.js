@@ -4,7 +4,7 @@ var gacha = (function() {
     /* declarations and types */
 
     var number_of_builds = 0;
-    var build_type = {}, builds = {};
+    var build_type = {}, build_selector = {};
     var build_list = [];
 
     var BuildType = function(){};
@@ -29,14 +29,13 @@ var gacha = (function() {
 
     /* functions */
 
-    function make_thresholds(build_type) {
-        var i = 0;
-
-        console.log("thresh type = " + build_type.name);
-        for (i = 0; i < build_type.rarity.length; i++) {
-            build_type.threshold[i] = build_type.rarity[i];
-            if (i > 0) {
-                build_type.threshold[i] += build_type.threshold[i-1];
+    function make_thresholds(build_list) {
+        for (let build_type of build_list) {
+            for (let i = 0; i < build_type.rarity.length; i++) {
+                build_type.threshold[i] = build_type.rarity[i];
+                if (i > 0) {
+                    build_type.threshold[i] += build_type.threshold[i-1];
+                };
             };
         };
     };
@@ -54,15 +53,12 @@ var gacha = (function() {
 
     /* draw page stuff */
 
-    function draw_selector(div_id, select_id, array, object) {
-        var html = "";
-        var i = 0;
+    function draw_selector(div_id, select_id, array, obj_list) {
+        var html = "<select id=\"" + select_id + "\">"
 
-        html = "<select id=\"" + select_id + "\">"
-
-        for (i = 0; i < array.length; ++i) {
-            html += "<option value=\"" + array[i].name + "\">" + array[i].name + "</option>";
-            object[array[i].name] = array[i];
+        for (let one_obj of array) {
+            html += "<option value=\"" + one_obj.name + "\">" + one_obj.name + "</option>";
+            obj_list[one_obj.name] = one_obj;
         };
 
         html += "</select>";
@@ -72,22 +68,17 @@ var gacha = (function() {
    /* namespace public interfaces */
 
     function init() {
-        var i = 0;
-
         Math.seedrandom();
-        draw_selector("build_sel_div", "build_sel", build_list, builds);
-        for (i = 0; i < build_list.length; i++) {
-            make_thresholds(build_list[i]);
-        };
+        draw_selector("build_sel_div", "build_sel", build_list, build_selector);
+        make_thresholds(build_list);
     };
 
     function build() {
-        var i = 0;
         var html = "<ul>";
 
         /* input */
 
-        build_type = builds[document.getElementById("build_sel").options[build_sel.selectedIndex].value];
+        build_type = build_selector[document.getElementById("build_sel").options[build_sel.selectedIndex].value];
         number_of_builds = parseInt(document.getElementById("input_number_of_builds").value);
 
         if (number_of_builds < 1) {
@@ -96,7 +87,7 @@ var gacha = (function() {
 
         /* build */
 
-        for (i = 0; i < number_of_builds; i++) {
+        for (let i = 0; i < number_of_builds; i++) {
             html += "<li>" + build_one(build_type) + "</li>";
         };
 

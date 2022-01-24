@@ -1,0 +1,46 @@
+Game {
+
+name = "Azur Lane"
+rarity_name = "SR", "E", "R", "C"
+rarity_color: [ "EEE8AA", "DDA0DD", "B0E0E6", "DCDCDC" ]
+spin_name = "Build"
+spins = []
+
+}
+
+Spin {
+
+name = "Light"
+rarity = [ 7, 12, 26, 55 ]
+threshold = 0
+
+name = "Heavy"
+rarity = [ 7, 12, 51, 30 ]
+threshold = 0
+
+name = "Special"
+rarity = [ 7, 12, 51, 30 ]
+threshold = 0
+
+}
+
+----
+
+Game {
+
+name = "Coin Toss"
+rarity_name = "Heads", "Tails"
+rarity_color: [ "gold", "silver" ]
+spin_name = "Flip"
+spins = []
+
+}
+
+Spin {
+
+name = "Flip"
+rarity = [ 50, 50 ]
+threshold = 0
+
+}
+

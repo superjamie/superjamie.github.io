@@ -6,11 +6,56 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <!-- Materialize CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.3/css/materialize.min.css">
 
-        <link rel="stylesheet" href="style.css">
-        <script language="javascript" src="hypercube.js"></script>
+<!--        <style>
+html {
+    font-size: 85%;
+}
+body {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+h3 {
+    margin-top: 1rem;
+}
+
+h5 {
+    margin-top: 1rem;
+}
+
+.row {
+    margin-bottom: 1rem;
+}
+.row .row {
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+[class*="col-"] {
+    padding-top: 1rem;
+    padding-bottom: 0;
+    background-color: rgba(192,192,192,0.2);
+    border: 1px solid rgba(64,64,64,0);
+}
+hr {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+} -->
+
+<style>
+[id^="input_label"], [id^="output1_label"], [id^="output2_label"], [id^="calc_sel"], .inline {
+    display: inline;
+}
+[id^="output0"], [id^="output1_value"], [id^="output2_value"] {
+    display: inline;
+    font-weight: bold;
+}
+</style>
+
+<script language="javascript" src="hypercube.js"></script>
+
     </head>
     <body onload="engage();">
 
@@ -21,18 +66,19 @@
 
             <div class="row"> 
 
-                <div class="col-md-6"> 
-                    <h4>Calculate From: <select id="calc_sel" onchange="engage();">
+                <div class="col s6"> 
+                    <h4>Dimensions</h4>
+                        <p class="inline">Calculate From: <select class="browser-default" id="calc_sel" onchange="engage();">
                             <option value="build_area">Build Area</option>
                             <option value="extrusions">Extrusions</option>
                             <option value="rods">Rods</option>
-                        </select></h4>
-                        <p class="inline">X <div id="input_label_x"></div>: <input type="text" id="input_value_x" maxlength="4" size="5" value="200" onblur="engage();" /></p>
-                        <p class="inline">Y <div id="input_label_y"></div>: <input type="text" id="input_value_y" maxlength="4" size="5" value="200" onblur="engage();" /></p>
-                        <p class="inline">Z <div id="input_label_z"></div>: <input type="text" id="input_value_z" maxlength="4" size="5" value="155" onblur="engage();" /></p>
+                        </select></p>
+                        <p class="inline">X <div id="input_label_x"></div>: <input class="browser-default" type="text" id="input_value_x" maxlength="4" size="5" value="200" onblur="engage();" /></p>
+                        <p class="inline">Y <div id="input_label_y"></div>: <input class="browser-default" type="text" id="input_value_y" maxlength="4" size="5" value="200" onblur="engage();" /></p>
+                        <p class="inline">Z <div id="input_label_z"></div>: <input class="browser-default" type="text" id="input_value_z" maxlength="4" size="5" value="155" onblur="engage();" /></p>
                 </div>
 
-                <div class="col-md-6"> 
+                <div class="col s6"> 
                     <h4>Optional Parts</h4>
                     <p>Extra space under printer: <input type="text" id="extra_area_z" maxlength="4" size="5" value="0" onblur="engage();" /></p>
                     <p>Bed Hole Offset:           <input type="text" id="bed_hole_offset" maxlength="2" size="3" value="9" onblur="engage();" readonly /></p>
@@ -49,33 +95,33 @@
                     </select></p>
                 </div>
 
-                <div class="col-md-12">
+                <div class="col s12">
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col s12">
                             <h4 id="output_header"></h4>
                         </div>
 
-                        <div class="col-md-6">
+                        <div class="col s6">
                             <p class="inline">X <div id="output1_label_x"></div>: <div id="output1_value_x"></div></p>
                             <p class="inline">Y <div id="output1_label_y"></div>: <div id="output1_value_y"></div></p>
                             <p class="inline">Z <div id="output1_label_z"></div>: <div id="output1_value_z"></div></p>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col s6">
                             <p class="inline">X <div id="output2_label_x"></div>: <div id="output2_value_x"></div></p>
                             <p class="inline">Y <div id="output2_label_y"></div>: <div id="output2_value_y"></div></p>
                             <p class="inline">Z <div id="output2_label_z"></div>: <div id="output2_value_z"></div></p>
                         </div>
 
-                        <div class="col-md-6">
+                        <div class="col s6">
                             <p class="inline">Bed X Extrusion  (1x): <div id="output0_ext_bed_x"></div></p>
                             <p class="inline">Bed Y Extrusions (2x): <div id="output0_ext_bed_y"></div></p>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col s6">
                             <p class="inline">Lead Screw:  <div id="output0_leadscrew"  ></div></p>
                             <p class="inline">Belt Length: <div id="output0_belt"></div></p>
                         </div>
 
-                        <div class="col-md-12">
+                        <div class="col s12">
                             <h5>Notes</h5>
                             <ul>
                                 <li>Belt Length is total length for both belts and includes an extra 250mm.</li>

@@ -1,0 +1,42 @@
+html {
+    font-size: 85%;
+}
+body {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+h3 {
+    margin-top: 1rem;
+}
+
+h5 {
+    margin-top: 1rem;
+}
+
+.row {
+    margin-bottom: 1rem;
+}
+.row .row {
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+[class*="col-"] {
+    padding-top: 1rem;
+    padding-bottom: 0;
+    background-color: rgba(192,192,192,0.2);
+    border: 1px solid rgba(64,64,64,0);
+}
+[id^="input_label"], [id^="output1_label"], [id^="output2_label"], .inline {
+    display: inline;
+}
+[id^="output0"], [id^="output1_value"], [id^="output2_value"] {
+    display: inline;
+    font-weight: bold;
+}
+
+hr {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
