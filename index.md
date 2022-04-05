@@ -29,6 +29,8 @@ title: superjamie.github.io
 
 ## Open Source Contributions
 
+*   2022-04-04 - Linux Kernel, C, Operating system kernel
+    [sctp: count singleton chunks in assoc user stats](https://git.kernel.org/pub/scm/linux/kernel/git/netdev/net.git/commit/?id=e3d37210df5c)
 *   2021-09-22 - GLib, C, GNOME utility library  
     [gutils: Avoid segfault in g_get_user_database_entry](https://gitlab.gnome.org/GNOME/glib/-/commit/bb40105fe95b5d95e31715ddb210380d381a1e26)
 *   2021-04-15 - libteam, C, Linux network link aggregation  
