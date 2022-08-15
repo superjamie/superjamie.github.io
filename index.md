@@ -18,7 +18,7 @@ title: superjamie.github.io
 
 ## Posts
 
-*   2022-08-06 = [How to ncursesw (as of 2022)](https://gist.github.com/superjamie/978a760c712c384c937f8b420385d709)
+*   2022-08-06 - [How to ncursesw (as of 2022)](https://gist.github.com/superjamie/978a760c712c384c937f8b420385d709)
 *   2022-08 - [August 2022 Links](https://gist.github.com/superjamie/e955127b65d36e120108deec212b6c56)
 *   2022-05-25 - [C Static Analysis Tools](https://gist.github.com/superjamie/38a021b0c9b2e40b3dfbbc249ea0b76c)
 *   2022-01-24 - [Raspberry Pi OS (Raspbian) Bash PS1 Prompt Explained](https://gist.github.com/superjamie/2b2c73dcf6003f2ebdb8584e65ce9640)
