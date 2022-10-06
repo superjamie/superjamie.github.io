@@ -35,9 +35,9 @@ title: superjamie.github.io
 ## Open Source Contributions
 
 *   2022-08-31 - UMPC Ubuntu Scripts, bash, configuration repo  
-    [micropc: Add Sino Wealth Mouse device](https://github.com/wimpysworld/umpc-ubuntu/pull/44)
+    [micropc: Add Sino Wealth Mouse device](https://github.com/wimpysworld/umpc-ubuntu/commit/4e6ed337cdbbd054a48bcdadfdbb94a83acb93f1)
 *   2022-08-19 - UMPC Ubuntu Scripts, bash, configuration repo  
-    [respin: Install squashfs-tools when needed](https://github.com/wimpysworld/umpc-ubuntu/pull/43)
+    [respin: Install squashfs-tools when needed](https://github.com/wimpysworld/umpc-ubuntu/commit/ca4c945217b45136b63264e1629af5b2b5f08373)
 *   2022-04-06 - Linux Kernel, C, Operating system kernel  
     [qede: confirm skb is allocated before using](https://git.kernel.org/pub/scm/linux/kernel/git/netdev/net.git/commit/?id=4e910dbe3650)
 *   2022-04-04 - Linux Kernel, C, Operating system kernel  
