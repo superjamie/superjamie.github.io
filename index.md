@@ -34,6 +34,8 @@ title: superjamie.github.io
 
 ## Open Source Contributions
 
+*   2022-10-23 - libtcod, C, graphical text console for roguelike games  
+    [tileset.h: Display CP437 "delete" as Unicode House](https://github.com/libtcod/libtcod/commit/33384208e57691d7b8e5975979bd6b3a7f716087)
 *   2022-08-31 - UMPC Ubuntu Scripts, bash, configuration repo  
     [micropc: Add Sino Wealth Mouse device](https://github.com/wimpysworld/umpc-ubuntu/commit/4e6ed337cdbbd054a48bcdadfdbb94a83acb93f1)
 *   2022-08-19 - UMPC Ubuntu Scripts, bash, configuration repo  
