@@ -34,6 +34,9 @@ title: superjamie.github.io
 
 ## Open Source Contributions
 
+*   2022-10-23 - cp437.h, C, header-only library for Unicode text  
+    [cp437.h: Use correct unicode codepoints](https://github.com/Journeyman-dev/cp437.h/commit/42fab17f8b9806e0c2da2f62076b84951282ca0c)  
+    [cp437.h: match libtcod formatting](https://github.com/Journeyman-dev/cp437.h/commit/f26df47ff5bf7af6c8bff6230b4ed95b5bc85967)
 *   2022-10-23 - libtcod, C, graphical text console for roguelike games  
     [tileset.h: Display CP437 "delete" as Unicode House](https://github.com/libtcod/libtcod/commit/33384208e57691d7b8e5975979bd6b3a7f716087)
 *   2022-08-31 - UMPC Ubuntu Scripts, bash, configuration repo  
