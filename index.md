@@ -18,6 +18,7 @@ title: superjamie.github.io
 
 ## Posts
 
+*   2022-11-04 [C Static Analysis Tools - Part 2](https://gist.github.com/superjamie/fe4ef704ee39e73610920b4212707932)
 *   2022-11 - [November 2022 Links](https://gist.github.com/superjamie/32da17f458c416b55b6c8c8a3c4600a6)
 *   2022-10 - [October 2022 Links](https://gist.github.com/superjamie/8edbe49606d642efd8ec771cd59555b1)
 *   2022-09 - [September 2022 Links](https://gist.github.com/superjamie/343b7652a6453a45c0b055ee4817f066)
