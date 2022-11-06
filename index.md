@@ -18,7 +18,7 @@ title: superjamie.github.io
 
 ## Posts
 
-*   2022-11-06 - [SDL 2D Fullscreen and Scaling](https://gist.github.com/superjamie/4746f2873143125f583c4643a4e14ae1)
+*   2022-11-06 - [How to do SDL 2D Fullscreen and Scaling](https://gist.github.com/superjamie/4746f2873143125f583c4643a4e14ae1)
 *   2022-11-04 - [C Static Analysis Tools - Part 2](https://gist.github.com/superjamie/fe4ef704ee39e73610920b4212707932)
 *   2022-11 - [November 2022 Links](https://gist.github.com/superjamie/32da17f458c416b55b6c8c8a3c4600a6)
 *   2022-10 - [October 2022 Links](https://gist.github.com/superjamie/8edbe49606d642efd8ec771cd59555b1)
