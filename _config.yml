@@ -1,14 +1,21 @@
 title: superjamie.github.io
 description: Insert witty tagline
-  #google_analytics: 
+
+author: superjamie
+superjamie:
+  name: Jamie Bainbridge
+  email: jamie.bainbridge@gmail.com
+
 show_downloads: false
-  #theme: jekyll-theme-hacker
+
 gems:
   - jekyll-mentions
 plugins:
   - jekyll-relative-links
   - jekyll-remote-theme
+
 relative_links:
   enabled:     true
   collections: true
+
 remote_theme: pages-themes/hacker@v0.2.0
