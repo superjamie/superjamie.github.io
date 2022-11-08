@@ -1,4 +1,6 @@
-# The 8-Byte Two-Step Redux
+---
+title: The 8-Byte Two-Step Redux
+---
 
 Over [on Hacker News](https://news.ycombinator.com/item?id=8345410), Z posted a fantastic article called [The 8-Byte Two-Step](http://zinascii.com/2014/the-8-byte-two-step.html) where the concept of aligning to byte boundaries was explored.
 
