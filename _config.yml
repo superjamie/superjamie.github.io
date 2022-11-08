@@ -1,8 +1,8 @@
 title: superjamie.github.io
 description: Insert witty tagline
 google_analytics: 
-show_downloads: true
-theme: jekyll-theme-architect
+show_downloads: false
+theme: hacker
 
 gems:
   - jekyll-mentions
