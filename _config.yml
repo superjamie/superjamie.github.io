@@ -12,6 +12,10 @@ relative_links:
   enabled:     true
   collections: true
 
+titles_from_headings:
+  enabled:     true
+  strip_title: true
+
 ##hacker theme, with customisations
 #remote_theme: pages-themes/hacker@v0.2.0
 #author: Jamie Bainbridge
