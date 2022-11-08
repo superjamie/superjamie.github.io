@@ -1,0 +1,7 @@
+main:
+  - title: Home
+    url: /
+  - title: Blog
+    url: /blog/
+  - title: Pages
+    url: /pages/

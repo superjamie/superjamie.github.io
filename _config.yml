@@ -1,13 +1,11 @@
 title: superjamie.github.io
-description: Insert witty tagline
-author: superjamie
-author_name: Jamie Bainbridge
-author_email: jamie.bainbridge@gmail.com
-timezone: Australia/Brisbane
 
+# jekyll config
 show_downloads: false
 show_downloads_button: false
+timezone: Australia/Brisbane
 
+# jekyll extensions
 gems:
   - jekyll-mentions
   - jekyll-include-cache
@@ -15,9 +13,21 @@ plugins:
   - jekyll-remote-theme
   - jekyll-include-cache
 
+# plugin config
 relative_links:
   enabled:     true
   collections: true
 
+# hacker theme, with customisations
 #remote_theme: pages-themes/hacker@v0.2.0
+author: superjamie
+author_name: Jamie Bainbridge
+author_email: jamie.bainbridge@gmail.com
+description: Insert witty tagline
+
+# minimal-mistakes theme
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+minimal_mistakes_skin: "dark"
+subtitle: Insert witty tagline
+url: "https://superjamie.github.io"
+repository: "superjamie/superjamie.github.io"
