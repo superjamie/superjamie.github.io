@@ -1,10 +1,9 @@
 ---
 title: Open Source Contributions
 layout: single
+permalink: /open-source-contributions/
 
 ---
-
-## Open Source Contributions
 
 *   2022-10-23 - cp437.h, C, header-only library for Unicode text  
     [cp437.h: Use correct unicode codepoints](https://github.com/Journeyman-dev/cp437.h/commit/42fab17f8b9806e0c2da2f62076b84951282ca0c)  
