@@ -1,10 +1,7 @@
 title: superjamie.github.io
 description: Insert witty tagline
 
-author: superjamie
-superjamie:
-  name: Jamie Bainbridge
-  email: jamie.bainbridge@gmail.com
+author: [Jamie Bainbridge](mailto:jamie.bainbridge@gmail.com)
 
 show_downloads: false
 
