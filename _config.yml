@@ -2,12 +2,13 @@ title: superjamie.github.io
 
 # jekyll extensions
 gems:
-  - jekyll-mentions
   - jekyll-include-cache
+  - jekyll-mentions
+  - jekyll-paginate
 plugins:
-  - jekyll-remote-theme
   - jekyll-include-cache
   - jekyll-paginate
+  - jekyll-remote-theme
 
 # plugin config
 relative_links:
@@ -61,6 +62,9 @@ author:
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://superjamie.github.io/"
+    - label: "Wiki"
+      icon: "fas fa-fw fa-link"
+      url: "https://github.com/superjamie/lazyweb/wiki"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/superjamie"

@@ -11,6 +11,9 @@ permalink: /pages/
 *   [Open Source Contributions](open-source-contributions.md)  
     Things I have done around the place.
 
+*   [Linux Aleph](https://linuxaleph.blogspot.com/) (2008+)  
+    A blog of Linux hints, tips, and tricks
+
 *   [Which TNG episode?](http://superjamie.github.io/tng) (2015)  
     Randomly picks a Star Trek: The Next Generation episode for you to watch.
 
@@ -19,7 +22,4 @@ permalink: /pages/
 
 *   [Azur Lane Gacha Simulator](http://superjamie.github.io/gacha) (2019)  
     Simulates Azur Lane builds to indicate which rarity will be received.
-
-*   [Linux Aleph](https://linuxaleph.blogspot.com/) (2008+)  
-    A blog of Linux hints, tips, and tricks
 
