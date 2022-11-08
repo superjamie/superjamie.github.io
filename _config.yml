@@ -31,3 +31,24 @@ minimal_mistakes_skin: "dark"
 subtitle: Insert witty tagline
 url: "https://superjamie.github.io"
 repository: "superjamie/superjamie.github.io"
+paginate: 5
+paginate_path: /page:num/
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      author_profile: true
+
+author:
+  name: Jamie Bainbridge
+  bio: "Linux, C, DOS, etc"
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://superjamie.github.io/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/superjamie"

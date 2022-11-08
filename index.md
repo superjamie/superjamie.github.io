@@ -1,5 +1,6 @@
 ---
 title: superjamie.github.io
+layout: home
 sidebar:
   nav: "main"
 

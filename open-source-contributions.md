@@ -1,6 +1,7 @@
 ---
-layout: default
 title: Open Source Contributions
+layout: single
+
 ---
 
 ## Open Source Contributions
