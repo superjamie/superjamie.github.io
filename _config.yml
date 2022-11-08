@@ -1,6 +1,6 @@
 title: superjamie.github.io
 description: Insert witty tagline
-author: Jamie Bainbridge
+author: superjamie
 author_name: Jamie Bainbridge
 author_email: jamie.bainbridge@gmail.com
 
@@ -10,7 +10,6 @@ show_downloads_button: false
 gems:
   - jekyll-mentions
 plugins:
-  - jekyll-relative-links
   - jekyll-remote-theme
 
 relative_links:

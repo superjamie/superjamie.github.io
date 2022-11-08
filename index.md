@@ -16,6 +16,16 @@ title: superjamie.github.io
 *   [HyperCube Calculator](http://superjamie.github.io/hypercube)  
     A calculator to scale the HyperCube 3D Printer by Tech2C.
 
+## Blog
+
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
 ## Posts
 
 *   2022-11-06 - [How to do SDL 2D Fullscreen and Scaling](https://gist.github.com/superjamie/4746f2873143125f583c4643a4e14ae1)
