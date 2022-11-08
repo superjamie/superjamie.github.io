@@ -10,6 +10,7 @@ show_downloads_button: false
 
 gems:
   - jekyll-mentions
+  - jekyll-include-cache
 plugins:
   - jekyll-remote-theme
   - jekyll-include-cache
