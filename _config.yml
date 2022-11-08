@@ -3,7 +3,6 @@ title: superjamie.github.io
 # jekyll config
 show_downloads: false
 show_downloads_button: false
-timezone: Australia/Brisbane
 
 # jekyll extensions
 gems:
@@ -35,11 +34,17 @@ paginate: 5
 paginate_path: /page:num/
 
 defaults:
-  # _posts
+  # home
+  - scope:
+      path: ""
+      type: home
+    values:
+      author_profile: true
   - scope:
       path: ""
       type: posts
     values:
+      layout: single
       author_profile: true
 
 author:
