@@ -20,3 +20,6 @@ permalink: /pages/
 *   [Azur Lane Gacha Simulator](http://superjamie.github.io/gacha) (2019)  
     Simulates Azur Lane builds to indicate which rarity will be received.
 
+*   [Linux Aleph](https://linuxaleph.blogspot.com/) (2008+)  
+    A blog of Linux hints, tips, and tricks
+
