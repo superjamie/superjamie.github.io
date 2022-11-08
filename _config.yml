@@ -1,13 +1,10 @@
 title: superjamie.github.io
 
 # jekyll extensions
-gems:
-  - jekyll-include-cache
-  - jekyll-mentions
-  - jekyll-paginate
 plugins:
   - jekyll-include-cache
-  - jekyll-paginate
+  - jekyll-mentions
+  - jekyll-paginate-v2
   - jekyll-remote-theme
 
 # plugin config
