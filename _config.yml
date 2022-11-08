@@ -1,8 +1,7 @@
 title: superjamie.github.io
 
 # jekyll config
-show_downloads: false
-show_downloads_button: false
+exclude: [ "delta", "gacha", "hypercube", "tng" ]
 
 # jekyll extensions
 gems:
@@ -19,10 +18,12 @@ relative_links:
 
 # hacker theme, with customisations
 #remote_theme: pages-themes/hacker@v0.2.0
-author: superjamie
+author: Jamie Bainbridge
 author_name: Jamie Bainbridge
 author_email: jamie.bainbridge@gmail.com
 description: Insert witty tagline
+show_downloads: false
+show_downloads_button: false
 
 # minimal-mistakes theme
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
@@ -43,17 +44,17 @@ defaults:
       author_profile: true
   - scope:
       path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+  - scope:
+      path: ""
       type: posts
     values:
       layout: single
       author_profile: true
       read_time: true
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: single
-      author_profile: true
 
 author:
   name: Jamie Bainbridge

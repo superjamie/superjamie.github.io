@@ -8,15 +8,15 @@ permalink: /pages/
 *   [superjamie's lazyweb](https://github.com/superjamie/lazyweb/wiki)  
     A collection of internet advice and general interesting notes.
 
-*   [Which TNG episode?](http://superjamie.github.io/tng)  
+*   [Open Source Contributions](open-source-contributions.md)  
+    Things I have done around the place.
+
+*   [Which TNG episode?](http://superjamie.github.io/tng) (2015)  
     Randomly picks a Star Trek: The Next Generation episode for you to watch.
 
-*   [Azur Lane Gacha Simulator](http://superjamie.github.io/gacha)  
-    Simulates Azur Lane builds to indicate which rarity will be received.
-
-*   [HyperCube Calculator](http://superjamie.github.io/hypercube)  
+*   [HyperCube Calculator](http://superjamie.github.io/hypercube) (2017)  
     A calculator to scale the HyperCube 3D Printer by Tech2C.
 
-*   [Open Source Contributions](open-source-contributions.md)
-    Things I have done around the place.
+*   [Azur Lane Gacha Simulator](http://superjamie.github.io/gacha) (2019)  
+    Simulates Azur Lane builds to indicate which rarity will be received.
 
