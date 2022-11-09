@@ -1,68 +1,35 @@
-title: superjamie.github.io
+################################################################################
+# site.x settings
+baseurl: ""
+################################################################################
+# my solarized theme
+name: "superjamie.github.io"
+title: "superjamie.github.io"
+description: "Insert witty tagline"
+url: "https://superjamie.github.io"
 
-# jekyll extensions
+author_bio: "Linux, C, DOS, etc. Australia. he/him"
+author_github: "superjamie"
+author_instagram: "msdosfloppy"
+author_mastodon_url: "https://fosstodon.org/suprjami"
+author_twitter: "suprjami"
+
+permalink: /:year/:month/:day/:title
+
 plugins:
-  - jekyll-include-cache
-  - jekyll-mentions
-  - jekyll-paginate-v2
-  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-mentions 
+  - jekyll-relative-links
+  - jemoji
 
-# plugin config
+################################################################################
+# jekyll-feed
+author: Jamie Bainbridge
+feed:
+  path: /feed.atom
+################################################################################
+# https://github.com/benbalter/jekyll-relative-links
 relative_links:
   enabled:     true
   collections: true
-
-##hacker theme, with customisations
-#remote_theme: pages-themes/hacker@v0.2.0
-#author: Jamie Bainbridge
-#author_name: Jamie Bainbridge
-#author_email: jamie.bainbridge@gmail.com
-#description: Insert witty tagline
-#show_downloads: false
-#show_downloads_button: false
-
-# minimal-mistakes theme
-remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-minimal_mistakes_skin: "dark"
-subtitle: Insert witty tagline
-url: "https://superjamie.github.io"
-repository: "superjamie/superjamie.github.io"
-paginate: 5
-paginate_path: /page:num/
-
-include: ["_pages"]
-
-defaults:
-  - scope:
-      path: ""
-      type: home
-    values:
-      author_profile: true
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: single
-      author_profile: true
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-
-author:
-  name: Jamie Bainbridge
-  bio: "Linux, C, DOS, etc"
-  links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://superjamie.github.io/"
-    - label: "Wiki"
-      icon: "fas fa-fw fa-link"
-      url: "https://github.com/superjamie/lazyweb/wiki"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/superjamie"
-
+################################################################################

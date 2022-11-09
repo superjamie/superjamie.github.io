@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  {% if page.title %}
+    <title>{{ page.title }} | {{ site.title }}</title>
+  {% else %}
+    <title>{{ site.title }}</title>
+  {% endif %}
+  <meta name="viewport" content="width=device-width">
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link href="/assets/css/style.css" rel="stylesheet" />
+  <link href="/assets/css/colors-dark.css" rel="stylesheet" />
+
+  <link href="/assets/fontawesome/css/fontawesome.css" rel="stylesheet" />
+  <link href="/assets/fontawesome/css/brands.css" rel="stylesheet" />
+  <link href="/assets/fontawesome/css/solid.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <header id="header">
+    <h1><a href="/">{{ site.name }}</a></h1>
+    <h4>{{ site.description }}</h4>
+  </header>
+
+  <div id="page">
+
+    <div id="sidebar">
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/links">Links</a></li>
+        </ul>
+
+        <hr>
+        <p><b>{{ site.author }}</b><br>
+        {{ site.author_bio }}</p>
+
+        <ul>
+          <li><a href="https://github.com/{{ site.author_github }}">GitHub</a> <i class="fa-brands fa-github"></i></li>
+          <li><a href="{{ site.author_mastodon_url }}">Mastodon</a> <i class="fa-brands fa-mastodon"></i></li>
+          <li><a href="https://instagram.com/{{ site.author_instagram }}">Instagram</a> <i class="fa-brands fa-instagram"></i></li>
+          <li><a href="https://twitter.com/{{ site.author_twitter }}">Twitter</a> <i class="fa-brands fa-twitter"></i></li>
+          <li><a href="/feed.xml">RSS</a> <i class="fa-solid fa-square-rss"></i></li>
+        </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div id="content">
+      {{ content }}
+    </div>
+
+  </div>
+
+  <footer id="footer">
+    <p class="copyright">Copyright &copy; {{ site.time | date: '%Y' }} {{ site.author }}. Powered by <a href="http://jekyllrb.com">Jekyll</a>, theme based on <a href="https://github.com/mattvh/solar-theme-jekyll">Solar</a></p>
+  </footer>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script src="/assets/js/jquery.mobilemenu.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $('#sidebar nav ul').mobileMenu({'topOptionText': 'Menu', 'prependTo': '#sidebar nav'});
+    });
+  </script>
+
+</body>
+</html>

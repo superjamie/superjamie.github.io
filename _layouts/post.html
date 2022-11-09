@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<article class="post">
+  {% if page.external-url %}
+    <h2>
+      <a href="{{ page.external-url }}">{{ page.title }}</a>
+      {% comment %}
+      <a class="anchor" href="{{ page.url }}"><i class="fa-solid fa-anchor"></i></a>
+      {% endcomment %}
+    </h2>
+  {% else %}
+    <h2>
+      <a href="{{ page.url }}">{{ page.title }}</a>
+    </h2>
+  {% endif %}
+
+  <p class="meta">
+  <span class="postdate">{{ page.date | date: "%Y-%m-%d" }} | {% include reading-time.html %}</span>
+  
+  </p>
+
+  <div class="post-content">{{ content }}</div>
+
+</article>

@@ -1,0 +1,293 @@
+@import url(http://fonts.googleapis.com/css?family=Fira+Code);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans);
+
+:root {
+  --S_base03: #002b36;
+  --S_base02: #073642;
+  --S_base01: #586e75;
+  --S_base00: #657b83;
+  --S_base0:  #839496;
+  --S_base1:  #93a1a1;
+  --S_base2:  #eee8d5;
+  --S_base3:  #fdf6e3;
+
+  --S_yellow: #b58900;
+  --S_orange: #cb4b16;
+  --S_red:    #dc322f;
+  --S_magenta:#d33682;
+  --S_violet: #6c71c4;
+  --S_blue:   #268bd2;
+  --S_cyan:   #2aa198;
+  --S_green:  #859900;
+
+  --S_foreground: var(--S_base2);
+  --S_background: var(--S_base03);
+}
+
+
+/*** Reset ***/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: disc;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*** Basics ***/
+body {
+	font-family: 'PT Sans', sans-serif;
+	font-size: 1.0em;
+	line-height: 1.7;
+}
+
+code, pre {
+  font-family: 'Fira Code', monospace, sans-serif;
+  font-size: 10pt;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 700;
+}
+
+a, a:active, a:visited {
+	text-decoration: none;
+	border-bottom: 1px solid var(--S_base0);
+	padding-bottom: 2px;
+}
+a:hover {
+	background-color: var(--S_base0);
+	color: #000000;
+}
+
+p { margin-bottom: 15px; }
+ul, ol { padding: 0 0 18px 30px; }
+ol li, ul li { margin-top: 10px; margin-bottom: 10px; }
+em, i { font-style: italic; }
+strong, b { font-weight: bold; }
+small { font-size: 0.85em; }
+sup { vertical-align: super; font-size: 0.85em; }
+sub { vertical-align: sub; font-size: 0.85em; }
+
+blockquote {
+    margin: 22px 22px;
+    padding: 0 20px;
+    border-left: 2px solid var(--S_foreground);
+    font-size: 1.05em;
+    font-style: italic;
+    line-height: 1.25em;
+}
+
+acronym, abbr {
+	cursor: help;
+	letter-spacing: 1px;
+	border-bottom: 1px dashed;
+}
+
+a.anchor {
+  font-size: 50%;
+}
+
+
+h1 {
+  font-size: 1.8em;
+  margin: 0 0 5px 0;
+}
+h2 {
+  font-size: 1.6em;
+  margin: 0 0 5px 0;
+}
+h3 {
+  font-size: 1.4em;
+  margin: 0 0 5px 0;
+}
+h3 {
+  font-size: 1.2em;
+  margin: 0 0 5px 0;
+}
+
+
+/*** Useful Classes ***/
+.clear { clear: both; }
+.float-left { float: left; }
+.float-right { float: right; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+.text-justify { text-align: justify; }
+.img-left { float: left; margin: 4px 10px 4px 0; }
+.img-right { float: right; margin: 4px 0 4px 10px; }
+.img-middle { vertical-align: middle; }
+.nopadding { padding: 0; }
+.nounderline { text-decoration: underline; }
+
+
+/*** Structure ***/
+#page {
+	width: 700px;
+	margin: 0 auto;
+	position: relative;
+}
+
+#header {
+	width: 700px;
+	margin: 40px auto 50px auto;
+}
+#header h1 {
+	font-size: 32px;
+	margin-bottom: 4px;
+}
+#header h1 a {
+	border: none;
+}
+
+#footer {
+	width: 700px;
+	margin: 50px auto 20px auto;
+	padding-top: 10px;
+	font-size: 0.85em;
+	border-top: 1px solid #073642;
+}
+
+#content {
+	width: 700px;
+	margin: 0 auto;
+}
+
+#sidebar {
+	position: absolute;
+	text-align: right;
+	width: 160px;
+	top: 0;
+	left: -240px;
+  font-size: 1.0em;
+}
+
+#sidebar li {
+	list-style: none;
+	margin: 2px 0;
+}
+
+#sidebar a {
+	border: none;
+	padding: 2px 4px;
+}
+
+
+/*** Posts ***/
+article {
+	margin-bottom: 40px;
+}
+
+article h1 {
+  font-size: 1.8em;
+  margin: 0 0 5px 0;
+}
+
+article h1 a {
+	border: none;
+}
+article h1 a.anchor {
+	margin-left: 8px;
+}
+
+article h2 {
+  font-size: 1.6em;
+  margin: 0 0 5px 0;
+}
+
+article h3 {
+  font-size: 1.4em;
+  margin: 0 0 5px 0;
+}
+
+article h4 {
+  font-size: 1.2em;
+  margin: 0 0 5px 0;
+}
+
+article .meta {
+  padding-top: 6px;
+  font-size: 0.9em;
+}
+
+article img {
+	display: block;
+	text-align: center;
+	margin: 0 auto 1em auto;
+}
+
+img.left {
+	float: left;
+	margin: 0 1em 1em 0;
+}
+img.right {
+	float: right;
+	margin: 0 0 1em 1em;
+}
+img.center {
+	display: block;
+	text-align: center;
+	margin: 0 auto 1em auto;
+}
+
+
+/*** Pagination ***/
+.postnavigation {
+	padding-top: 10px;
+    text-align: center;
+    font-size: 0.85em;
+}
+
+.postnavigation .left {
+	float: left;
+}
+
+.postnavigation .right {
+	float: right;
+}
+
+
+/*** Media Queries ***/
+@media all and (max-width: 870px) {
+	#page, #header, #content, #footer {
+		width: inherit;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	#sidebar {
+		position: relative;
+		text-align: left;
+		width: 100%;
+		left: 0;
+		margin: 10px 10px 20px 10px;
+	}
+	#sidebar nav select.mnav {
+		display: block;
+		margin-bottom: 15px;
+	}
+}

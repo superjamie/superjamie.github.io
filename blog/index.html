@@ -1,0 +1,26 @@
+---
+layout: default
+title: Blog
+---
+<div id="blog-archives">
+
+  <h2>All Blog Posts</h2>
+
+  <ul>
+  {% for post in site.posts %}
+    <li>
+      {{ post.date | date: "%Y-%m-%d" }}
+      -
+      {% if post.external-url %}
+          <a href="{{ post.external-url }}">{{ post.title }}</a>
+          {% comment %}
+          <a class="anchor" href="{{ post.url }}"> <i class="fa-solid fa-anchor"></i></i></a> -->
+          {% endcomment %}
+      {% else %}
+          <a href="{{ post.url }}">{{ post.title }}</a></h2>
+      {% endif %}
+    </li>
+  {% endfor %}
+  </ul>
+
+</div>
