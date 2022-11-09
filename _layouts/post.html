@@ -16,7 +16,7 @@ layout: default
   {% endif %}
 
   <p class="meta">
-  <span class="postdate"><i class="fa-regular fa-calendar"></i> <i class="fa-solid fa-calendar"></i> {{ page.date | date: "%Y-%m-%d" }}<br><i class="fa-regular fa-clock"></i> <i class="fa-solid fa-clock"></i> {% include reading-time.html %}</span>
+  <span class="postdate"><i class="fa-regular fa-calendar"></i> {{ page.date | date: "%Y-%m-%d" }}<br><i class="fa-regular fa-clock"></i> {% include reading-time.html %}</span>
   </p>
 
   <div class="post-content">{{ content }}</div>
