@@ -74,6 +74,13 @@
 *   2014-05-07 - stjerm, C, GTK libvte dropdown terminal  
     [Added hide terminal on child exit](https://github.com/stjerm/stjerm/commit/dff865795e8cf223eca9eb87c8a7c1e33e9a543c)
 
+RHEL 8 kernel
+
+~~~
+* Fri May 13 2022 [4.18.0-391.el8]
+- sctp: count singleton chunks in assoc user stats (Jamie Bainbridge) [2073913]
+~~~
+
 RHEL/CentOS 7 kernel
 
 ~~~
