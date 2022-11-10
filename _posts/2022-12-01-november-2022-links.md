@@ -48,3 +48,15 @@ Some good advice, some well-justified opinions, some compiler assertions which d
 
 Picking RGB colors of CRT phosphor wavelengths. Amazing.
 
+## layoffs.fyi
+
+* <https://layoffs.fyi/>
+
+This site has kept track of tech layoffs since the start of 2020. Many let go at Twitter and Facebook this week as tech seems headed towards another bubble pop?
+
+## Strange Loop Conference
+
+* <https://www.youtube.com/c/StrangeLoopConf>
+
+I'd never heard of this before, but some good looking talks, there's a whole track on open source.
+
