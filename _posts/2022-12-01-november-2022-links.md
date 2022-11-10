@@ -58,5 +58,7 @@ This site has kept track of tech layoffs since the start of 2020. Many let go at
 
 * <https://www.youtube.com/c/StrangeLoopConf>
 
-I'd never heard of this before, but some good looking talks, there's a whole track on open source.
+I'd never heard of this before, but some good looking talks, there's a whole track on open source. I enjoyed:
+
+* [Myths and Metaphors of Open Source by Daniel Compton (2019)](https://www.youtube.com/watch?v=uC8Uc_0tlQM)
 
