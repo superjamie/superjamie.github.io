@@ -2,7 +2,7 @@
 title: How to do SDL 2D Fullscreen and Scaling
 ---
 
-While tinkering with roguelike development, I ended up writing my own 2D tile engine in SDL. It takes a [Dwarf Fortress Tileset](https://dwarffortresswiki.org/Tileset_repository) of [Codepage 437](https://en.wikipedia.org/wiki/Code_page_437) symbols, and allows you to create a window on a modern grahical OS which behaves like a DOS text window.
+While tinkering with roguelike development, I ended up writing my own 2D tile engine in SDL. It takes a [Dwarf Fortress Tileset](https://dwarffortresswiki.org/Tileset_repository) of [Codepage 437](https://en.wikipedia.org/wiki/Code_page_437) symbols, and allows you to create a window on a modern graphical OS which behaves like a DOS text window.
 
 If you've done any roguelike dev before this will sound familiar to you, and you probably know that [ncurses](https://invisible-island.net/ncurses/)/[PDCurses](https://pdcurses.org/) do this in the terminal, and at least one of the better grahical alternatives:
 
