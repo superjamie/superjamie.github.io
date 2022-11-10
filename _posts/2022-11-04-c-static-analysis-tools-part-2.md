@@ -30,6 +30,8 @@ Unfortunately I couldn't get it to find an error on the above code, neither with
 
 I emailed David and [logged by bug with GCC](https://gcc.gnu.org/bugzilla/show_bug.cgi?id=107566) for this.
 
+Turns out Compiler Explorer's **gcc (static analysis)** branch was almost 3 years out of date, [logged an Issue](https://github.com/compiler-explorer/compiler-explorer/issues/4256) to fix that too.
+
 ## PVS-Studio
 
 I came across this commercial static analyzer from a series of blog posts about writing good code:
