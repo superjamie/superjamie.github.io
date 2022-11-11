@@ -15,6 +15,8 @@
     [sctp: count singleton chunks in assoc user stats](https://git.kernel.org/pub/scm/linux/kernel/git/netdev/net.git/commit/?id=e3d37210df5c)
 *   2021-09-22 - GLib, C, GNOME utility library  
     [gutils: Avoid segfault in g_get_user_database_entry](https://gitlab.gnome.org/GNOME/glib/-/commit/bb40105fe95b5d95e31715ddb210380d381a1e26)
+*   2021-06-03 - tuned, Python, Linux system tuning profiles  
+    [network-throughput: Remove explicit udp_mem amount](https://github.com/redhat-performance/tuned/commit/89eef3760dff87201563aa523dd07ee9d4a50926)
 *   2021-04-15 - libteam, C, Linux network link aggregation  
     [utils/bond2team: convert resend_igmp to mcast_rejoin.count](https://lists.fedorahosted.org/archives/list/libteam@lists.fedorahosted.org/message/5GCI7UJI325NQZLC4PCZZABAOBBLVAPN/)
 *   2021-04-04 - AlphaMan, QuickBasic/C/Assembly, DOS roguelike game  
