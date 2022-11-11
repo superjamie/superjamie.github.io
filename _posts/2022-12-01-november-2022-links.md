@@ -75,3 +75,9 @@ Huge collection of DOS compilers and binary tools.
 
 First time I've looked at QUIC in detail. It seems awesome. I don't think it will supplant TCP in a hurry but I hope it does. Anybody who's met [Dave "bufferbloat" Taht](https://en.wikipedia.org/wiki/Dave_Taht) knows how much he dislikes TCP now.
 
+## A Cypherpunk's Manifesto
+
+* <https://what.cd/>
+
+How does something about technology written almost 30 years ago only get *more* relevant over time?
+
