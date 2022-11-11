@@ -62,3 +62,9 @@ I'd never heard of this before, but some good looking talks, there's a whole tra
 
 * [Myths and Metaphors of Open Source by Daniel Compton (2019)](https://www.youtube.com/watch?v=uC8Uc_0tlQM)
 
+## ANORMAL's executable tools
+
+* <https://archive.org/details/anormal-executable-tools_202107>
+
+Huge collection of DOS compilers and binary tools.
+
