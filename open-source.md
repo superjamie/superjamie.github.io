@@ -29,6 +29,8 @@
     [statistics: fix packets typo](https://sourceforge.net/p/net-tools/code/ci/bc3d7dc9bd7741527dddfa4d1c1dec89a2b60512/)
 *   2019 - xsos, bash, sosreport analyser  
     [various, I am a co-maintainer](https://github.com/ryran/xsos/commits/master)
+*   2018-10-15 - bpftrace, various, Linux eBPF tracing language  
+    [INSTALL: Add make to Fedora instructions](https://github.com/iovisor/bpftrace/commit/04df8d47c360d72342ad23a1cd0e676c1e38b89f)
 *   2018-10-15 - sos, Python, Linux system troubleshooting tool  
     [networking: Collect NUMA Node of each NIC](https://github.com/sosreport/sos/commit/516d97bbfcd58d665dffff0e02a15b15249dd530)
 *   2018-07-13 - Marlin, C, 3D printer firmware  
@@ -65,6 +67,8 @@
     [css: add default pygments CSS for CodeHilite](https://github.com/travisred/blogpy/commit/66c6c5a56ef281f2f656b57f56fc33b86f08083d)
 *   2015-09-21 - stjerm, C, GTK libvte dropdown terminal  
     [correct manpage case of fixedx and fixedy](https://github.com/stjerm/stjerm/commit/e58ae011dc2a0e04716eab5bdc3604f03059d168)
+*   2015-04-02 - Raspberry Pi B+ Case, laser cut physical object  
+    [Correct Screw Size](https://github.com/diy-electronics/raspberrypi-b-plus-case/commit/643951d2413ed16b7ef27abf016a8612e297d84d)
 *   2014-11-23 - RetroPie, bash, Raspberry Pi retro gaming distribution  
     [Add Memory Split for Model A and B RPi](https://github.com/RetroPie/RetroPie-Setup/commit/8fbbcf11e90397b9e35a3429973ea86fd566102f)
 *   2014-10-31 - pydoc.vim, vimscript, vim Python documentation plugin  
