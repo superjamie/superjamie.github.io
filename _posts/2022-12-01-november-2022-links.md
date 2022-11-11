@@ -68,3 +68,10 @@ I'd never heard of this before, but some good looking talks, there's a whole tra
 
 Huge collection of DOS compilers and binary tools.
 
+## Comparing TCP and QUIC
+
+* <https://www.potaroo.net/ispcol/2022-11/quicvtcp.html>
+* <https://www.rfc-editor.org/rfc/rfc9000.html>
+
+First time I've looked at QUIC in detail. It seems awesome. I don't think it will supplant TCP in a hurry but I hope it does. Anybody who's met [Dave "bufferbloat" Taht](https://en.wikipedia.org/wiki/Dave_Taht) knows how much he dislikes TCP now.
+
