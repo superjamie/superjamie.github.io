@@ -76,7 +76,7 @@ blockquote {
 }
 
 :not(pre) > code {
-  padding: 2px 3px;
+  padding: 3px 4px;
   border-radius: 3px;
   background: var(--S_base02);
 }
