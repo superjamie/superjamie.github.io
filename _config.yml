@@ -1,6 +1,7 @@
 ################################################################################
 # site.x settings
 baseurl: ""
+exclude: ['_local']
 ################################################################################
 # my solarized theme
 name: "superjamie.github.io"
@@ -15,13 +16,13 @@ author_mastodon_url: "https://fosstodon.org/suprjami"
 author_twitter: "suprjami"
 
 permalink: /:year/:month/:day/:title
+paginate: 5
 
 plugins:
   - jekyll-feed
-  - jekyll-mentions 
+  - jekyll-mentions
   - jekyll-relative-links
   - jemoji
-
 ################################################################################
 # jekyll-feed
 author: Jamie Bainbridge

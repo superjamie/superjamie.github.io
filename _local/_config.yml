@@ -1,0 +1,55 @@
+################################################################################
+# github-pages defaults
+lsi: false
+safe: true
+source: .
+incremental: false
+highlighter: rouge
+gist:
+  noscript: false
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+################################################################################
+# site.{property} settings
+baseurl: ""
+################################################################################
+# My own theme based on solar-theme-jekyll
+# https://github.com/mattvh/solar-theme-jekyll
+name: superjamie.github.io
+title: superjamie.github.io
+description: Insert witty tagline
+url: ""
+
+permalink: /:year/:month/:day/:title/
+paginate: 5
+
+plugins:
+  - jekyll-feed
+  - jekyll-mentions
+  - jekyll-relative-links
+  - jemoji
+whitelist:
+  - jekyll-feed
+  - jekyll-mentions
+  - jekyll-relative-links
+  - jemoji
+
+exclude: ['vendor', '_local']
+
+author_bio: C, Linux, DOS, etc. Australia. he/him
+author_github: superjamie
+author_instagram: msdosfloppy
+author_mastodon_url: https://fosstodon.org/suprjami
+author_twitter: suprjami
+################################################################################
+# jekyll-feed
+author: Jamie Bainbridge
+feed:
+  path: /feed.atom
+################################################################################
+# https://github.com/benbalter/jekyll-relative-links
+relative_links:
+  enabled:     true
+  collections: true
+################################################################################
