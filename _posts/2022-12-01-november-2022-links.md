@@ -87,3 +87,9 @@ How does something about technology written almost 30 years ago only get *more* 
 
 I love Laika.
 
+## Why does calloc exist? (2016)
+
+* <https://vorpus.org/blog/why-does-calloc-exist/>
+
+I knew about the mapping to zero-page, but not about the bounds checking. Cool!
+
