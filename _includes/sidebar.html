@@ -1,0 +1,24 @@
+<div id="sidebar">
+  <nav>
+    <ul>
+      <li><a href="/">Home</a> <i class="fa-solid fa-house"></i></li>
+      <li><a href="/blog">Blog Posts</a> <i class="fa-solid fa-book"></i></li>
+      <li><a href="/open-source">Open Source</a> <i class="fa-solid fa-file-code"></i></li>
+      <li><a href="/links">Other Links</a> <i class="fa-solid fa-book"></i></li>
+    </ul>
+
+    <hr>
+    <p><b>{{ site.author }}</b><br>
+    {{ site.author_bio }}</p>
+
+    <ul>
+      <li><a href="https://github.com/{{ site.author_github }}">GitHub</a> <i class="fa-brands fa-github"></i></li>
+      <li><a rel="me" href="{{ site.author_mastodon_url }}">Mastodon</a> <i class="fa-brands fa-mastodon"></i></li>
+      <li><a href="https://instagram.com/{{ site.author_instagram }}">Instagram</a> <i class="fa-brands fa-instagram"></i></li>
+      <li><a href="https://twitter.com/{{ site.author_twitter }}">Twitter</a> <i class="fa-brands fa-twitter"></i></li>
+      <li><a href="/feed.xml">RSS</a> <i class="fa-solid fa-square-rss"></i></li>
+    </ul>
+    </div>
+  </nav>
+</div>
+

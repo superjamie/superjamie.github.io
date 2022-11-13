@@ -23,36 +23,11 @@
 
 <body>
 
-  <header id="header">
-    <h1><a href="/">{{ site.name }}</a></h1>
-    <h4>{{ site.description }}</h4>
-  </header>
+  {% include header.html %}
 
   <div id="page">
 
-    <div id="sidebar">
-      <nav>
-        <ul>
-          <li><a href="/">Home</a> <i class="fa-solid fa-house"></i></li>
-          <li><a href="/blog">Blog Posts</a> <i class="fa-solid fa-book"></i></li>
-          <li><a href="/open-source">Open Source</a> <i class="fa-solid fa-file-code"></i></li>
-          <li><a href="/links">Other Links</a> <i class="fa-solid fa-book"></i></li>
-        </ul>
-
-        <hr>
-        <p><b>{{ site.author }}</b><br>
-        {{ site.author_bio }}</p>
-
-        <ul>
-          <li><a href="https://github.com/{{ site.author_github }}">GitHub</a> <i class="fa-brands fa-github"></i></li>
-          <li><a rel="me" href="{{ site.author_mastodon_url }}">Mastodon</a> <i class="fa-brands fa-mastodon"></i></li>
-          <li><a href="https://instagram.com/{{ site.author_instagram }}">Instagram</a> <i class="fa-brands fa-instagram"></i></li>
-          <li><a href="https://twitter.com/{{ site.author_twitter }}">Twitter</a> <i class="fa-brands fa-twitter"></i></li>
-          <li><a href="/feed.xml">RSS</a> <i class="fa-solid fa-square-rss"></i></li>
-        </ul>
-        </div>
-      </nav>
-    </div>
+    {% include sidebar.html %}
 
     <div id="content">
       {{ content }}
@@ -60,18 +35,9 @@
 
   </div>
 
-  <footer id="footer">
-    <p class="copyright">Copyright &copy; {{ site.time | date: '%Y' }} {{ site.author }}. Powered by <a href="http://jekyllrb.com">Jekyll</a>, theme based on <a href="https://github.com/mattvh/solar-theme-jekyll">Solar</a></p>
-  </footer>
+  {% include footer.html %}
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-  <script src="/assets/js/jquery.mobilemenu.min.js"></script>
-
-  <script>
-    $(document).ready(function(){
-      $('#sidebar nav ul').mobileMenu({'topOptionText': 'Menu', 'prependTo': '#sidebar nav'});
-    });
-  </script>
+  {% include responsive.html %}
 
 </body>
 </html>
