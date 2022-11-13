@@ -147,4 +147,5 @@ So it's a good idea to add as many checks to your code as you reasonably can, bo
 
 ## Part 2
 
-* [C Static Analysis Tools - Part 2](https://gist.github.com/superjamie/fe4ef704ee39e73610920b4212707932)
+* [C Static Analysis Tools - Part 2]({% post_url 2022-11-04-c-static-analysis-tools-part-2 %})
+

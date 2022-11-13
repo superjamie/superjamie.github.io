@@ -2,7 +2,7 @@
 title: C Static Analysis Tools - Part 2
 ---
 
-Earlier in the year I wrote about [static analysis tools for C](https://gist.github.com/superjamie/38a021b0c9b2e40b3dfbbc249ea0b76c) and wanted to cover a couple more.
+Earlier in the year I wrote about [static analysis tools for C]({% post_url 2022-05-24-c-static-analysis-tools %}) and wanted to cover a couple more.
 
 Let's continue with our simple array-out-of-bounds test from the last post:
 
