@@ -1,4 +1,4 @@
-# My Open Source Contributions
+## My Open Source Contributions
 
 *   2022-10-23 - cp437.h, C, header-only library for Unicode text  
     [cp437.h: Use correct unicode codepoints](https://github.com/Journeyman-dev/cp437.h/commit/42fab17f8b9806e0c2da2f62076b84951282ca0c)  
@@ -79,6 +79,8 @@
     [cdp: Print checksum in hex, and print the actual checksum, plus cleanup](https://github.com/the-tcpdump-group/tcpdump/commit/24007a9a1249ed8733ff0039812ba92544a38bbe)
 *   2014-05-07 - stjerm, C, GTK libvte dropdown terminal  
     [Added hide terminal on child exit](https://github.com/stjerm/stjerm/commit/dff865795e8cf223eca9eb87c8a7c1e33e9a543c)
+*   2012-2014 - minecraft-init-script, bash, Runs Minecraft on server, deployed commercially  
+    <https://github.com/superjamie/minecraft-init-script/>
 
 RHEL 8 kernel
 
@@ -130,3 +132,4 @@ RHEL/CentOS 6 kernel
 * Tue Oct 13 2015 [2.6.32-581.el6]
 - [fs] sunrpc: Report connection error values to rpc_tasks on the pending queue (Jamie Bainbridge) [1206555]
 ~~~
+
