@@ -93,3 +93,12 @@ I love Laika.
 
 I knew about the mapping to zero-page, but not about the bounds checking. Cool!
 
+## Light Colour Schemes
+
+* <https://stitcher.io/blog/why-light-themes-are-better-according-to-science>
+* <https://medium.com/codesphere-cloud/should-you-really-be-coding-in-dark-mode-1c34c7cf5f99>
+
+Apparently light schemes are better for cognition and reduce strain?
+
+I think i could live with Solarized Light, but so many other "light" schemes are blaring white with no customisation (eg: Discord), and it feels like there's more effort put into dark schemes these days.
+
