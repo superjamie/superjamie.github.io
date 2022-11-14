@@ -102,3 +102,9 @@ Apparently light schemes are better for cognition and reduce strain?
 
 I think i could live with Solarized Light, but so many other "light" schemes are blaring white with no customisation (eg: Discord), and it feels like there's more effort put into dark schemes these days.
 
+## Programming With DOS Debugger (2003)
+
+* <https://susam.net/blog/programming-with-dos-debugger.html>
+
+Cool walkthrough of `DEBUG.EXE` to assemble and disassemble a basic COM executable.
+
