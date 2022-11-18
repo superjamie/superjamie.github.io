@@ -39,16 +39,20 @@ relative_links:
 tagline: "Linux, C, DOS, etc."
 # logo doesn't seem to do anything?
 logo: "/assets/images/snes-buttons-rounded-256px.png"
-image:
-  path: "/assets/images/snes-buttons-rounded-256px.png"
-  height: 256
-  width: 256
+og:image: "/assets/images/snes-buttons-rounded-256px.png"
 # author
 social:
   name: Jamie Bainbridge
   links:
     - https://github.com/superjamie
     - https://fosstodon.org/@suprjami
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: "/assets/images/snes-buttons-rounded-256px.png"
+      height: 256
+      width: 256
 # generates an exerpt from blogposts, no need to
 # override tagline/description with something like
 # {{ post.content | strip_html | truncatewords: 10 }}
