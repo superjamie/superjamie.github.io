@@ -22,6 +22,7 @@ plugins:
   - jekyll-feed
   - jekyll-mentions
   - jekyll-relative-links
+  - jekyll-seo-tag
   - jemoji
 ################################################################################
 # jekyll-feed
@@ -34,3 +35,13 @@ relative_links:
   enabled:     true
   collections: true
 ################################################################################
+# https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
+tagline: "Linux, C, DOS, etc."
+logo: "/assets/images/snes-buttons-rounded-256px.png"
+# author
+social:
+  name: Jamie Bainbridge
+  links:
+    - https://github.com/superjamie
+    - https://fosstodon.org/@suprjami
+
