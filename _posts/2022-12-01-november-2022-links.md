@@ -108,3 +108,15 @@ I think i could live with Solarized Light, but so many other "light" schemes are
 
 Cool walkthrough of `DEBUG.EXE` to assemble and disassemble a basic COM executable.
 
+## vim-sneak
+
+* <https://github.com/justinmk/vim-sneak>
+
+The first plugin I've added in years. Adds the `s` motion to jump to the next two characters.
+
+## Peer Production License
+
+* <https://wiki.p2pfoundation.net/Peer_Production_License>
+
+A "copyfair" or "copyFARleft" license which denies commercial use, unless by a collective in which the means of production is in the hands of the creators. ☭
+
