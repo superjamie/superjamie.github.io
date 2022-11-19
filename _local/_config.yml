@@ -10,38 +10,39 @@ gist:
 kramdown:
   math_engine: mathjax
   syntax_highlighter: rouge
+
 ################################################################################
 # site.{property} settings
 baseurl: ""
+exclude: ['vendor', '_local']
 ################################################################################
-# My own theme based on solar-theme-jekyll
-# https://github.com/mattvh/solar-theme-jekyll
-name: superjamie.github.io
-title: superjamie.github.io
-description: Insert witty tagline
+# my solarized theme
+name: "superjamie.github.io"
+title: "superjamie.github.io"
+description: "Insert witty tagline"
 url: ""
 
-permalink: /:year/:month/:day/:title/
+author_bio: "Linux, C, DOS, etc. Australia. he/him"
+author_github: "superjamie"
+author_instagram: "msdosfloppy"
+author_mastodon_url: "https://fosstodon.org/suprjami"
+author_twitter: "suprjami"
+
+permalink: /:year/:month/:day/:title
 paginate: 5
 
 plugins:
   - jekyll-feed
   - jekyll-mentions
   - jekyll-relative-links
+  - jekyll-seo-tag
   - jemoji
 whitelist:
   - jekyll-feed
   - jekyll-mentions
   - jekyll-relative-links
+  - jekyll-seo-tag
   - jemoji
-
-exclude: ['vendor', '_local']
-
-author_bio: C, Linux, DOS, etc. Australia. he/him
-author_github: superjamie
-author_instagram: msdosfloppy
-author_mastodon_url: https://fosstodon.org/suprjami
-author_twitter: suprjami
 ################################################################################
 # jekyll-feed
 author: Jamie Bainbridge
@@ -53,3 +54,10 @@ relative_links:
   enabled:     true
   collections: true
 ################################################################################
+# https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
+social:
+  name: Jamie Bainbridge
+  links:
+    - https://github.com/superjamie
+    - https://fosstodon.org/@suprjami
+
