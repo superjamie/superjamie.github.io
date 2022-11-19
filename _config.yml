@@ -38,8 +38,8 @@ relative_links:
 # https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 tagline: "Linux, C, DOS, etc."
 # logo doesn't seem to do anything?
-logo: "/assets/images/snes-buttons-rounded-256px.png"
-og:image: "/assets/images/snes-buttons-rounded-256px.png"
+logo: "/assets/images/snes-buttons-rounded-64px.png"
+og:image: "/assets/images/snes-buttons-rounded-64px.png"
 # author
 social:
   name: Jamie Bainbridge
@@ -50,9 +50,9 @@ defaults:
   - scope:
       path: ""
     values:
-      image: "/assets/images/snes-buttons-rounded-256px.png"
-      height: 256
-      width: 256
+      image: "/assets/images/snes-buttons-rounded-64px.png"
+      height: 64
+      width: 64
 # generates an exerpt from blogposts, no need to
 # override tagline/description with something like
 # {{ post.content | strip_html | truncatewords: 10 }}
