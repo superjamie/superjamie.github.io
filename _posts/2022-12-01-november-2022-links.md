@@ -114,9 +114,27 @@ Cool walkthrough of `DEBUG.EXE` to assemble and disassemble a basic COM executab
 
 The first plugin I've added in years. Adds the `s` motion to jump to the next two characters.
 
+## Octotree
+
+* <https://www.octotree.io/>
+
+Browser plugin which gives GitHub a tree sidebar. So good it should be official.
+
 ## Peer Production License
 
 * <https://wiki.p2pfoundation.net/Peer_Production_License>
 
 A "copyfair" or "copyFARleft" license which denies commercial use, unless by a collective in which the means of production is in the hands of the creators. ☭
+
+## Why no one should use the AT&T syntax ever, for any reason, under any circumstances
+
+* <https://outerproduct.net/2021-02-13_att-asm.html>
+
+🔥
+
+## The 12-bit rainbow palette
+
+* <https://iamkate.com/data/12-bit-rainbow/>
+
+I love colour palettes. I see Kate's work on Mastodon, she makes <https://grid.iamkate.com/> which is some 11/10 pro-level data visualisation.
 
