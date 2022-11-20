@@ -5,9 +5,6 @@ layout: default
   {% if page.external-url %}
     <h2>
       <a href="{{ page.external-url }}">{{ page.title }}</a>
-      {% comment %}
-      <a class="anchor" href="{{ page.url }}"><i class="fa-solid fa-anchor"></i></a>
-      {% endcomment %}
     </h2>
   {% else %}
     <h2>
@@ -16,7 +13,9 @@ layout: default
   {% endif %}
 
   <p class="meta">
-  <span class="postdate"><i class="fa-regular fa-calendar"></i> {{ page.date | date: "%Y-%m-%d" }}<br><i class="fa-regular fa-clock"></i> {% include reading-time.html %}</span>
+  <span class="postdate"><i class="fa-regular fa-calendar"></i> {{ page.date | date: "%Y-%m-%d" }}
+  &nbsp;&nbsp;
+  <i class="fa-regular fa-clock"></i> {% include reading-time.html %}</span>
   </p>
 
   <div class="post-content">{{ content }}</div>
