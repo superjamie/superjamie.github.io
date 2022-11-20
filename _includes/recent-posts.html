@@ -6,9 +6,6 @@
     -
     {% if post.external-url %}
       <a href="{{ post.external-url }}">{{ post.title }}</a>
-      {% comment %}
-      <a class="anchor" href="{{ post.url }}"> <i class="fa-solid fa-anchor"></i></a>
-      {% endcomment %}
     {% else %}
       <a href="{{ post.url }}">{{ post.title }}</a>
     {% endif %}
