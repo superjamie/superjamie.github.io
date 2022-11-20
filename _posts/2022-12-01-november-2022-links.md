@@ -138,3 +138,9 @@ A "copyfair" or "copyFARleft" license which denies commercial use, unless by a c
 
 I love colour palettes. I see Kate's work on Mastodon, she makes <https://grid.iamkate.com/> which is some 11/10 pro-level data visualisation.
 
+## C23 implications for C libraries
+
+* <https://htmlpreview.github.io/?https://icube-forge.unistra.fr/icps/c23-library/-/raw/main/README.html>
+
+Great overview of C23 changes, general and per-header for standard library. Thank you based Jens Gustedt.
+
