@@ -144,3 +144,15 @@ I love colour palettes. I see Kate's work on Mastodon, she makes <https://grid.i
 
 Great overview of C23 changes, general and per-header for standard library. Thank you based Jens Gustedt.
 
+## An introduction to debug events: Learn how to use breakpoints
+
+* <https://developers.redhat.com/articles/2022/11/08/introduction-debug-events-learn-how-use-breakpoints>
+
+TIL you can `b BREAKPOINT if CONDITION` - wow! `commands BREAK-ID` seems useful too.
+
+## The Seven Levels of Busy
+
+* <https://randsinrepose.com/archives/the-seven-levels-of-busy/>
+
+I tend to hover between 2 and 4. Also lol "the weekend" means no commitments. It just means different commitments.
+
