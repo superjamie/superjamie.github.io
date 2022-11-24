@@ -156,3 +156,9 @@ TIL you can `b BREAKPOINT if CONDITION` - wow! `commands BREAK-ID` seems useful 
 
 I tend to hover between 2 and 4. Also lol "the weekend" means no commitments. It just means different commitments.
 
+## How to categorize C programs by behavior - Red Hat Developer Blog
+
+* <https://developers.redhat.com/articles/2022/11/15/how-categorize-c-programs-behavior>
+
+Nice human-readable explanation of correct, implementation-defined, and undefined behaviour.
+
