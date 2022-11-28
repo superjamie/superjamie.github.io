@@ -162,3 +162,21 @@ I tend to hover between 2 and 4. Also lol "the weekend" means no commitments. It
 
 Nice human-readable explanation of correct, implementation-defined, and undefined behaviour.
 
+## A history of ARM, part 2: Everything starts to come together
+
+* <https://arstechnica.com/gadgets/2022/11/a-history-of-arm-part-2-everything-starts-to-come-together/>
+
+Great series. I had no idea Acorn became Element14.
+
+## 10 years of FTL: The making of an enduring spaceship simulator
+
+* <https://arstechnica.com/gaming/2022/11/ten-years-of-ftl-the-making-of-an-enduring-spaceship-simulator/>
+
+I love FTL. These guys are great too, they even replied to an email I had about SDL and scaling.
+
+## GCC undefined behaviors are getting wild
+
+* <http://blog.pkh.me/p/37-gcc-undefined-behaviors-are-getting-wild.html>
+
+My biggest takeaway here was using Ghidra to decompile ones' own logic, to see different ways it can be represented.
+
