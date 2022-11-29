@@ -180,3 +180,10 @@ I love FTL. These guys are great too, they even replied to an email I had about 
 
 My biggest takeaway here was using Ghidra to decompile ones' own logic, to see different ways it can be represented.
 
+## Everything I wish I knew when learning C
+
+* <https://tmewett.com/c-tips/>
+* <https://news.ycombinator.com/item?id=33773043>
+
+A couple of incorrect points (notably suggested array type is `int[5]` not `*int`) but lots of good ones. I've not played with `-Og` before, `-Werror=implicit` seems a good idea.
+
