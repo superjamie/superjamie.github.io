@@ -19,3 +19,8 @@ I love Unix history. This whole channel seems generally Linux-interesting. Lions
 * <https://warsus.github.io/lions-/>
 * <http://www.lemis.com/grog/Documentation/Lions/>
 
+## hxtools
+
+* <https://inai.de/projects/hxtools/>
+
+A collection of random tools and scripts I came across in `apt`. Kind of like [moreutils](https://joeyh.name/code/moreutils/).
