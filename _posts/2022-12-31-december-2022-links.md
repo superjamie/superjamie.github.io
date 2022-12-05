@@ -24,3 +24,10 @@ I love Unix history. This whole channel seems generally Linux-interesting. Lions
 * <https://inai.de/projects/hxtools/>
 
 A collection of random tools and scripts I came across in `apt`. Kind of like [moreutils](https://joeyh.name/code/moreutils/).
+
+## ydiff
+
+* <https://github.com/ymattw/ydiff>
+
+Coloured diff output with side-by-side linked pagers, looks good.
+
