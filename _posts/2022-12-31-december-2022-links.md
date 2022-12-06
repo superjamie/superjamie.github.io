@@ -31,3 +31,9 @@ A collection of random tools and scripts I came across in `apt`. Kind of like [m
 
 Coloured diff output with side-by-side linked pagers, looks good.
 
+## Keep cursor line vertically centered in vim
+
+* <https://stackoverflow.com/questions/64280931/keep-cursor-line-vertically-centered-in-vim>
+
+Saw a tip to try this, achieved with `set scrolloff=999`
+
