@@ -37,3 +37,10 @@ Coloured diff output with side-by-side linked pagers, looks good.
 
 Saw a tip to try this, achieved with `set scrolloff=999`
 
+## gitignore binary files that have no extension
+
+* <https://stackoverflow.com/questions/5711120/gitignore-binary-files-that-have-no-extension>
+* <https://stackoverflow.com/questions/19023550/how-do-i-add-files-without-dots-in-them-all-extension-less-files-to-the-gitign>
+
+This is my default gitignore now.
+
