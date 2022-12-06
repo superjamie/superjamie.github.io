@@ -1,6 +1,6 @@
-@import url(http://fonts.googleapis.com/css?family=Noto+Sans);
-@import url(http://fonts.googleapis.com/css?family=Fira+Code);
-@import url(http://fonts.googleapis.com/css?family=PT+Sans);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700);
+@import url(https://fonts.googleapis.com/css?family=Fira+Code:400,700);
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700);
 
 @font-face {
   font-family: 'IBM VGA 8x16';
@@ -80,7 +80,9 @@ code, pre {
   font-size: 16px;
   line-height: 16px;
 }
-
+:not(p, li, td) > [class^="language"] {
+  margin-bottom: 0.6em;
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'PT Sans', sans-serif;
