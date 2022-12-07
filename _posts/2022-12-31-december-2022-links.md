@@ -50,3 +50,9 @@ This is my default gitignore now.
 
 Great overview of this with lots of good links to follow.
 
+## How I Slack (2022)
+
+* <https://randsinrepose.com/archives/how-i-slack-2022/>
+
+We're moving to Slack at work, this will be useful.
+
