@@ -56,3 +56,9 @@ Great overview of this with lots of good links to follow.
 
 We're moving to Slack at work, this will be useful.
 
+## C23 implications for C libraries (2022)
+
+* <https://gustedt.wordpress.com/2022/12/06/c23-implications-for-c-libraries/>
+
+Jens has finished the earlier version of the draft. Hurry up GCC.
+
