@@ -95,8 +95,8 @@ I knew about the mapping to zero-page, but not about the bounds checking. Cool!
 
 ## Light Colour Schemes
 
-* <https://stitcher.io/blog/why-light-themes-are-better-according-to-science>
-* <https://medium.com/codesphere-cloud/should-you-really-be-coding-in-dark-mode-1c34c7cf5f99>
+* <https://stitcher.io/blog/why-light-themes-are-better-according-to-science> (2020)
+* <https://medium.com/codesphere-cloud/should-you-really-be-coding-in-dark-mode-1c34c7cf5f99> (2021)
 
 Apparently light schemes are better for cognition and reduce strain?
 
@@ -126,7 +126,7 @@ Browser plugin which gives GitHub a tree sidebar. So good it should be official.
 
 A "copyfair" or "copyFARleft" license which denies commercial use, unless by a collective in which the means of production is in the hands of the creators. ☭
 
-## Why no one should use the AT&T syntax ever, for any reason, under any circumstances
+## Why no one should use the AT&T syntax ever, for any reason, under any circumstances (2021)
 
 * <https://outerproduct.net/2021-02-13_att-asm.html>
 
@@ -138,49 +138,49 @@ A "copyfair" or "copyFARleft" license which denies commercial use, unless by a c
 
 I love colour palettes. I see Kate's work on Mastodon, she makes <https://grid.iamkate.com/> which is some 11/10 pro-level data visualisation.
 
-## C23 implications for C libraries
+## C23 implications for C libraries (2022)
 
 * <https://htmlpreview.github.io/?https://icube-forge.unistra.fr/icps/c23-library/-/raw/main/README.html>
 
 Great overview of C23 changes, general and per-header for standard library. Thank you based Jens Gustedt.
 
-## An introduction to debug events: Learn how to use breakpoints
+## An introduction to debug events: Learn how to use breakpoints (2022)
 
 * <https://developers.redhat.com/articles/2022/11/08/introduction-debug-events-learn-how-use-breakpoints>
 
 TIL you can `b BREAKPOINT if CONDITION` - wow! `commands BREAK-ID` seems useful too.
 
-## The Seven Levels of Busy
+## The Seven Levels of Busy (2022)
 
 * <https://randsinrepose.com/archives/the-seven-levels-of-busy/>
 
 I tend to hover between 2 and 4. Also lol "the weekend" means no commitments. It just means different commitments.
 
-## How to categorize C programs by behavior - Red Hat Developer Blog
+## How to categorize C programs by behavior (2022)
 
 * <https://developers.redhat.com/articles/2022/11/15/how-categorize-c-programs-behavior>
 
 Nice human-readable explanation of correct, implementation-defined, and undefined behaviour.
 
-## A history of ARM, part 2: Everything starts to come together
+## A history of ARM, part 2: Everything starts to come together (2022)
 
 * <https://arstechnica.com/gadgets/2022/11/a-history-of-arm-part-2-everything-starts-to-come-together/>
 
 Great series. I had no idea Acorn became Element14.
 
-## 10 years of FTL: The making of an enduring spaceship simulator
+## 10 years of FTL: The making of an enduring spaceship simulator (2022)
 
 * <https://arstechnica.com/gaming/2022/11/ten-years-of-ftl-the-making-of-an-enduring-spaceship-simulator/>
 
 I love FTL. These guys are great too, they even replied to an email I had about SDL and scaling.
 
-## GCC undefined behaviors are getting wild
+## GCC undefined behaviors are getting wild (2022)
 
 * <http://blog.pkh.me/p/37-gcc-undefined-behaviors-are-getting-wild.html>
 
 My biggest takeaway here was using Ghidra to decompile ones' own logic, to see different ways it can be represented.
 
-## Everything I wish I knew when learning C
+## Everything I wish I knew when learning C (2022)
 
 * <https://tmewett.com/c-tips/>
 * <https://news.ycombinator.com/item?id=33773043>

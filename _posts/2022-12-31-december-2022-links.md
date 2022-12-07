@@ -2,13 +2,13 @@
 title: December 2022 Links
 ---
 
-## Slynyrd Pixelblog - 41 - Isometric Pixel art
+## Slynyrd Pixelblog - 41 - Isometric Pixel art (2022)
 
 * <https://www.slynyrd.com/blog/2022/11/28/pixelblog-41-isometric-pixel-art>
 
 This whole blog looks great. Earlier posts have studies on NES Metroid and Castlevania!
 
-## The Untold Unix Story by DJ Ware
+## The Untold Unix Story by DJ Ware (2022)
 
 * <https://www.youtube.com/watch?v=2oU6zEZafnQ>
 
@@ -43,4 +43,10 @@ Saw a tip to try this, achieved with `set scrolloff=999`
 * <https://stackoverflow.com/questions/19023550/how-do-i-add-files-without-dots-in-them-all-extension-less-files-to-the-gitign>
 
 This is my default gitignore now.
+
+## Optimizing web servers for high throughput and low latency (2017)
+
+* <https://dropbox.tech/infrastructure/optimizing-web-servers-for-high-throughput-and-low-latency>
+
+Great overview of this with lots of good links to follow.
 
