@@ -62,3 +62,9 @@ We're moving to Slack at work, this will be useful.
 
 Jens has finished the earlier version of the draft. Hurry up GCC.
 
+## "Uptime of 15,364 days - The Computers of Voyager" hy Aaron Cummings (2019)
+
+* <https://youtu.be/H62hZJVqs2o>
+
+Another great Strange Loop conferencw talk. This guy doesn't even work for NASA or JPL, he's just a fan. That's awesome!
+
