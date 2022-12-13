@@ -73,7 +73,7 @@ p { margin-bottom: 15px; }
 ul, ol { padding: 0 0 0 0; }
 ol li, ul li { margin-top: 0; margin-bottom: 0.5em; }
 em, i { font-style: italic; }
-strong, b { font-weight: 400; }
+strong, b { font-weight: 700; }
 small { font-size: 0.85em; }
 sup { vertical-align: super; font-size: 0.85em; }
 sub { vertical-align: sub; font-size: 0.85em; }
