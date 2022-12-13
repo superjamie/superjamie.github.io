@@ -55,7 +55,7 @@ However, having sorted through the above, two major points stand out to me:
 
 ### Risk of myopia increases with light mode
 
-**Light mode increases risk of myopia.**
+Use of dark mode also builds resilience *against* myopia.
 
 This is the most important to me.
 
