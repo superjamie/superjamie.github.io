@@ -10,7 +10,6 @@ gist:
 kramdown:
   math_engine: mathjax
   syntax_highlighter: rouge
-
 ################################################################################
 # site.{property} settings
 baseurl: ""

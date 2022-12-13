@@ -28,6 +28,7 @@ html, body {
 
 a, a:visited, a:active {
 	color: var(--S_cyan);
+	border-bottom: 1px solid var(--S_base0);
 	border-color: var(--S_base02);
 }
 
@@ -36,6 +37,9 @@ a:hover {
 	border-color: var(--S_base02);
 	color: var(--S_cyan);
 }
+
+strong, b { text-shadow:0px 0px 1px var(--S_foreground); }
+hr { border-color: var(--S_base1); }
 
 h1, h1 a, h1 a:visited, h1 a:active {
   color: var(--S_orange);
@@ -63,7 +67,8 @@ article h1 a.anchor {
 }
 
 blockquote {
-	border-color: var(--S_orange);
+  border-color: var(--S_orange);
+  border-left-color: var(--S_foreground);
 }
 
 #sidebar a:hover {
@@ -76,19 +81,16 @@ blockquote {
 }
 
 :not(pre) > code {
-  padding: 3px 4px;
-  border-radius: 3px;
   background: var(--S_base02);
 }
 
 .highlight{
-  /* border-width: 3px; */
-  /* border-style: solid; */
   border-color: var(--S_base02);
-  border-radius: 10px;
-  overflow: auto;
-  padding: 7px 5px;
-  /* margin: 10px; */
+}
+
+button {
+ background-color: var(--S_base03);
+ border: 1px solid var(--S_base0);
 }
 
 
@@ -118,13 +120,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .c1 { color: #75715e } /* Comment.Single */
 .highlight .cs { color: #75715e } /* Comment.Special */
 .highlight .gd { color: #f92672 } /* Generic.Deleted */
-.highlight .ge { color: #f8f8f2; font-style: italic } /* Generic.Emph */
+.highlight .ge { color: #f8f8f2; } /* Generic.Emph */
 .highlight .gr { color: #f8f8f2 } /* Generic.Error */
 .highlight .gh { color: #f8f8f2 } /* Generic.Heading */
 .highlight .gi { color: #a6e22e } /* Generic.Inserted */
 .highlight .go { color: #66d9ef } /* Generic.Output */
-.highlight .gp { color: #f92672; font-weight: bold } /* Generic.Prompt */
-.highlight .gs { color: #f8f8f2; font-weight: bold } /* Generic.Strong */
+.highlight .gp { color: #f92672; } /* Generic.Prompt */
+.highlight .gs { color: #f8f8f2; } /* Generic.Strong */
 .highlight .gu { color: #75715e } /* Generic.Subheading */
 .highlight .gt { color: #f8f8f2 } /* Generic.Traceback */
 .highlight .kc { color: #66d9ef } /* Keyword.Constant */

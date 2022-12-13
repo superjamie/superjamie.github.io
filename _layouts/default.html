@@ -16,11 +16,18 @@
   <link href="/favicon.ico" rel="icon" type="image/x-icon" />
 
   <link href="/assets/css/style.css" rel="stylesheet" />
-  <link href="/assets/css/colors-dark.css" rel="stylesheet" />
+  <link href="/assets/css/colors-dark.css"  rel="stylesheet" id="sheet_dark" />
+  <link href="/assets/css/colors-light.css" rel="stylesheet" id="sheet_light" disabled />
 
   <link href="/assets/fontawesome/css/fontawesome.css" rel="stylesheet" />
   <link href="/assets/fontawesome/css/brands.css" rel="stylesheet" />
   <link href="/assets/fontawesome/css/solid.css" rel="stylesheet" />
+
+<script src="/assets/js/style.js"></script>
+
+<script type="text/javascript">
+ window.onload = get_style_preference();
+</script>
   {% seo %}
 </head>
 
