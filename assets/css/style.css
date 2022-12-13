@@ -100,8 +100,8 @@ a:hover {
 }
 
 p { margin-bottom: 15px; }
-ul, ol { padding: 0 0 18px 30px; }
-ol li, ul li { margin-top: 10px; margin-bottom: 10px; }
+ul, ol { padding: 0 0 0 0; }
+ol li, ul li { margin-top: 0; margin-bottom: 0.5em; }
 em, i { font-style: italic; }
 strong, b { font-weight: 700; text-shadow:0px 0px 1px var(--S_foreground); }
 small { font-size: 0.85em; }
