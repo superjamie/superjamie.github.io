@@ -68,3 +68,21 @@ Jens has finished the earlier version of the draft. Hurry up GCC.
 
 Another great Strange Loop conferencw talk. This guy doesn't even work for NASA or JPL, he's just a fan. That's awesome!
 
+## sds - Simple Dynamic Strings
+
+* <https://github.com/antirez/sds>
+
+A C string library written by the same author as [Redis](https://en.wikipedia.org/wiki/Redis).
+
+Interesting as it allocates the length of the string *before* the pointer which is returned, so the string functions know the length, but you can also pass an sds string to any of the regular string I/O functions.
+
+Most string libraries include this in the returned pointer, like `struct mystring { size_t len; char *str; );`
+
+## One Thing Well
+
+* <https://onethingwell.org/>
+
+A list of programs which follow the [Unix philosophy](https://en.wikipedia.org/wiki/Unix_philosophy) of doing one thing and doing it well.
+
+This page is a 300+ page Tumblr blog, which is a bit of a read. At least it has tags.
+
