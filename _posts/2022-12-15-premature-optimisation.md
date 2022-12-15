@@ -24,5 +24,5 @@ I then performed the same test drawing a random unicode character and causing th
 
 So, at least for now, this part of my program is not the bottleneck and doesn't need further optimisation.
 
-(the utility of measuring frames per second in a turn-based game engine is an exercise left to the reader)
+<small>(the utility of measuring frames per second in a turn-based game engine is an exercise left to the reader)</small>
 
