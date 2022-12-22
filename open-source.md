@@ -96,6 +96,11 @@ RHEL/CentOS 7 kernel
 ~~~
 # rpm -q --changelog kernel
 
+* Thu Nov 24 2022 [3.10.0-1160.81.1.el7]
+- [netdrv] bnxt: don't lock the tx queue from napi poll (Jamie Bainbridge) [2110869]
+- [netdrv] bnxt_en: reverse order of TX disable and carrier off (Jamie Bainbridge) [2110869]
+- [netdrv] qede: confirm skb is allocated before using (Jamie Bainbridge) [2131145]
+
 * Thu Dec 06 2018 [3.10.0-973.el7]
 - [mm] madvise(madv_dodump): allow hugetlbfs pages (Jamie Bainbridge) [1641227]
 
