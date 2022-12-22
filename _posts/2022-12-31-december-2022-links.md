@@ -68,7 +68,7 @@ Jens has finished the earlier version of the draft. Hurry up GCC.
 
 Another great Strange Loop conferencw talk. This guy doesn't even work for NASA or JPL, he's just a fan. That's awesome!
 
-## sds - Simple Dynamic Strings
+## sds - Simple Dynamic Strings (2014-present)
 
 * <https://github.com/antirez/sds>
 
@@ -85,4 +85,19 @@ Most string libraries include this in the returned pointer, like `struct mystrin
 A list of programs which follow the [Unix philosophy](https://en.wikipedia.org/wiki/Unix_philosophy) of doing one thing and doing it well.
 
 This page is a 300+ page Tumblr blog, which is a bit of a read. At least it has tags.
+
+## NormConf (2022)
+
+* <https://www.youtube.com/@normconf>
+
+I'm not entirely sure what "NormCore" is, but this online-only set of talks about "boring mid-level Data Science" happened. Ones I enjoyed:
+
+* [Don't Do Invisible Work - Chris Albon](https://www.youtube.com/watch?v=HiF83i1OLOM) - I've kept an "activity log" for a while now, it's good
+* [How to name files - Jennifer Bryan](https://www.youtube.com/watch?v=ES1LTlnpLMk) - I do something similar to this but it's good to have it formalised
+
+## Don't Call Yourself A Programmer, And Other Career Advice (2011)
+
+* <https://www.kalzumeus.com/2011/10/28/dont-call-yourself-a-programmer/>
+
+tl;dr - Communicate well, when talking about job worth (eg: hiring) describe your achievements by the value they added, not the tech stack.
 
