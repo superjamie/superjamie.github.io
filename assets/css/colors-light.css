@@ -90,7 +90,8 @@ blockquote {
 
 button {
  background-color: var(--S_base3);
- border: 1px solid var(--S_base00);
+ border-color: var(--S_base01);
+ color: var(--S_foreground);
 }
 
 /**
