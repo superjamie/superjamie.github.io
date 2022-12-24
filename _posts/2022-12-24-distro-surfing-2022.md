@@ -27,7 +27,7 @@ Unusable. Inconsistent theming with dark settings, some windows appear with dark
 * GNOME 42.2 in Ubuntu 22.04
 * GNOME 42.5 in Pop OS 22.04
 
-I dislike the mouse-dependent "activities" flyover paradigm this is going for, it's like it's trying to copy the Mac desktop without actually understanding the ideas behind the desktop. No way to disable desktop icons. No way to center windows. Keyboard settings are very tedious, requiring an extra click to set *every* setting. Some button text overrides its borders. Big ugly top window borders that waste so much space. Side dock taking up unnecessary space, though it can be covered by windows. Top panel taking up more space for minimal functionality, and I dislike top panels as they're an ergonomic anti-pattern. The irony of having "privacy" options which default to the bad settings. I'd be very unhappy if I had to use this.
+I dislike the mouse-dependent "activities" flyover paradigm this is going for, it's like it's trying to copy the Mac desktop without actually understanding the ideas behind the environment. No way to disable desktop icons. No way to center windows. Keyboard settings are very tedious, requiring an extra click to set *every* setting. Some button text overrides its borders. Big ugly top window borders that waste so much space. Side dock taking up unnecessary space, though it can be covered by windows. Top panel taking up more space for minimal functionality, and I dislike top panels as they're an ergonomic anti-pattern. The irony of having "privacy" options which default to the bad settings. I'd be very unhappy if I had to use this.
 
 **Rating: 0 stars**
 
