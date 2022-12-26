@@ -101,3 +101,17 @@ I'm not entirely sure what "NormCore" is, but this online-only set of talks abou
 
 tl;dr - Communicate well, when talking about job worth (eg: hiring) describe your achievements by the value they added, not the tech stack.
 
+## Comic Neue
+
+* <https://www.comicneue.com/>
+* <https://fonts.google.com/specimen/Comic+Neue>
+
+Using Comic Sans in some [other project](https://github.com/superjamie/discord-solarized-dark) for lulz, came across this OFL reimagining of it.
+
+## Signed integer overflow is now defined behaviour in C23
+
+* <https://gustedt.wordpress.com/2022/12/18/checked-integer-arithmetic-in-the-prospect-of-c23/>
+* <https://gustedt.wordpress.com/2022/12/24/dealing-with-overflow/>
+
+Awesome.
+
