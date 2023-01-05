@@ -116,8 +116,8 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .p { color: #f8f8f2 } /* Punctuation */
 .highlight .ch { color: #75715e } /* Comment.Hashbang */
 .highlight .cm { color: #75715e } /* Comment.Multiline */
-.highlight .cp { color: #75715e } /* Comment.Preproc */
-.highlight .cpf { color: #75715e } /* Comment.PreprocFile */
+.highlight .cp { color: #fd971f } /* Comment.Preproc - changed */
+.highlight .cpf { color: #fd971f } /* Comment.PreprocFile - changed */
 .highlight .c1 { color: #75715e } /* Comment.Single */
 .highlight .cs { color: #75715e } /* Comment.Special */
 .highlight .gd { color: #f92672 } /* Generic.Deleted */

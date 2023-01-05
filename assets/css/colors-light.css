@@ -110,8 +110,8 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .x { background-color: #ffffe0 } /* Other */
 .highlight .ch { color: #008800; } /* Comment.Hashbang */
 .highlight .cm { color: #008800; } /* Comment.Multiline */
-.highlight .cp { color: #008800; } /* Comment.Preproc */
-.highlight .cpf { color: #008800; } /* Comment.PreprocFile */
+.highlight .cp { color: #D3852C; } /* Comment.Preproc - custom */
+.highlight .cpf { color: #D3852C; } /* Comment.PreprocFile - custom */
 .highlight .c1 { color: #008800; } /* Comment.Single */
 .highlight .cs { color: #008800; } /* Comment.Special */
 .highlight .gd { color: #2c2cff } /* Generic.Deleted */
