@@ -21,7 +21,7 @@ Then if any step fails, you can jump to a failure case which frees the root obje
 
 However, I wasn't a huge fan of the mixed-case coding style and the 64% standards conformance score didn't inspire confidence, so I kept looking.
 
-I then tried [json-builder](https://github.com/json-parser/json-builder) and its accompanying [json-parser](https://github.com/json-parser/json-builder), which ended up being exactly what I'm after.
+I then tried [json-builder](https://github.com/json-parser/json-builder) and its accompanying [json-parser](https://github.com/json-parser/json-parser), which ended up being exactly what I'm after.
 
 It has a very similar structure to cJSON, with a single data type `json_value` and same memory model.
 
@@ -84,7 +84,7 @@ This gives us a nice JSON object containing a named array:
 If you're unfamiliar with this exit style with `goto`, it's quite common in the Linux kernel and other similar system software. I don't know if there's a name for this but I call them "goto trees". More at:
 
 * [Centralized exiting of functions - Linux kernel coding style](https://www.kernel.org/doc/html/latest/process/coding-style.html#centralized-exiting-of-functions)
-* [Use of Goto in Systems Code - John regehr](https://blog.regehr.org/archives/894)
+* [Use of Goto in Systems Code - John Regehr](https://blog.regehr.org/archives/894)
 
 Anyway, I'm very happy with this, I will use `json-builder` and `json-parser`.
 
