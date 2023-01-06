@@ -54,6 +54,7 @@ code, pre {
   font-family: 'IBM VGA 8x16', 'Fira Code', monospace, sans-serif;
   font-size: 16px;
   line-height: 16px;
+  -webkit-font-smoothing: none;
 }
 :not(p, li, td) > [class^="language"] {
   margin-bottom: 0.6em;
