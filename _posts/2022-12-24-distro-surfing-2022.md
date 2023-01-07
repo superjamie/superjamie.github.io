@@ -2,6 +2,8 @@
 title: Distro Surfing 2022
 ---
 
+*Update: I also have a [Part 2](2023-01-07-distro-surfing-2022-part-2.md)*
+
 I have a preferred desktop setup with [MATE](https://mate-desktop.org/), but I like to go distro surfing every so often to look at what other desktop environments have to offer, know what's out there, and maybe get some new ideas.
 
 Here's what I looked at recently, in no particular order:
