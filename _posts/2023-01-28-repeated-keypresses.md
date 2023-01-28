@@ -88,7 +88,7 @@ Chrome/Chromium doesn't have this as far as I can see. I don't use the Chromium 
 Both browsers support this **Ctrl+L** to focus the address bar where you can:
 
 * Search with your default search engine: type a word and press **Enter**
-* Go to a .com domain: type the domain like "google" and press **Ctrl+Enter**
+* Go to a `.com` domain: type the domain like "google" and press **Ctrl+Enter** to go to `google.com`
 
 Both browsers support searching in the current page with **Ctrl+f**.
 
@@ -116,6 +116,8 @@ I propose to change this to `rofi -combi-modi window,drun,run -show combi` which
 Now you can hit your key, type the partial name of the window you want, and switch to it with **Enter**. Much quicker and better than cycling through **Alt+Tab** until you get there.
 
 This has the added advantage that if the appication isn't already open, it's launched instead!
+
+This is also a much better way to launch applications than clicking a "Start" button and browsing through a menu. I prefer this to the "activities" idea that desktops like GNOME/Pantheon/Unity try to implement.
 
 ## Summary
 
