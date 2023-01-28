@@ -81,7 +81,7 @@ You can cycle through tabs with **Ctrl+Tab** and cycle backwards with **Ctrl+Shi
 
 Firefox (the superior browser) allows tab search in its awesomebar. Hit **Ctrl+L** to focus the address bar and start typing an open tab match. You'll get an option "Switch to Tab", so press down and Enter and you're there!
 
-Firefox also allows you to map **Ctrl+Tab** to "switch to last tab", for easily moving back and forth between two tabs. In Preferences, this is "Ctrl+Tab cycles through tabs in recently used order".
+Firefox also allows you to map **Ctrl+Tab** to "switch to last tab", for easily moving back and forth between two tabs. In Preferences, this is **Ctrl+Tab cycles through tabs in recently used order**.
 
 Chrome/Chromium doesn't have this as far as I can see. I don't use the Chromium family of browsers at all, so I don't know of an option there. Maybe there's an extension? Maybe you should use Firefox.
 
