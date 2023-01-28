@@ -27,22 +27,22 @@ This lets me use one of the motion keys up to three times like `jjj` (to address
 
 To move around text, you can use the `fF` (forward/backward to character) or `tT` (to character) motions, or the `/?` keys (search forward/backward).
 
-You can combine these with editing commands, for example, given the cursor at `|`:
+You can combine these with editing commands, for example, given the cursor at `█`:
 
 ```
-The |quick brown fox jumped over the lazy dog.
+The █quick brown fox jumped over the lazy dog.
 ```
 
 You could delete to "lazy" with `dtl` (delete, to, "l"). This gives us:
 
 ```
-The |lazy dog.
+The █lazy dog.
 ```
 
 What about more difficult text with similar characters?
 
 ```
-She |sells sea shells by the sea shore.
+She █sells sea shells by the sea shore.
 ```
 
 This is where [vim-sneak](https://github.com/justinmk/vim-sneak) becomes useful. It uses the same ideas as the `fFtT` mappings, but matches **two** characters.
@@ -50,7 +50,7 @@ This is where [vim-sneak](https://github.com/justinmk/vim-sneak) becomes useful.
 We could delete up to "shore" with `dzsh;` (delete, zneak, "sh", next match). The "next match" is used because "shells" also starts with "sh". This gives us:
 
 ```
-She |shore.
+She █shore.
 ```
 
 The `zZ` mappings are used in motions because `sS` is more commonly used by [vim-surround](https://github.com/tpope/vim-surround).
@@ -60,7 +60,7 @@ Moving around text normally, you use the `sS` motions.
 To just move to "shore" we would have used `ssh;` (sneak to, sh, next match). This gives us:
 
 ```
-She sells sea shells by the sea |shore.
+She sells sea shells by the sea █shore.
 ```
 
 vim-sneak also adds little coloured annotations so you can see all the "next matches" available on the page, and move to them with one letter. See the [vim-sneak](https://github.com/justinmk/vim-sneak) page for an image of those.
