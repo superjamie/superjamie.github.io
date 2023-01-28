@@ -6,7 +6,11 @@ Repeated keypresses are an application usage anti-pattern. We should try to reco
 
 This whole idea comes from disabling your arrow keys in the Vim editor, because repeatedly pressing **Up,Up,Up,Up** is an inefficient way to use the editor. For that particular movement you could have used `4k` to move up three lines.
 
-There are many others places that repeated keypresses can be removed, here are a few ideas.
+There are many others places that repeated keypresses can be removed, here are a few ideas for:
+
+* Vim
+* Web browsers
+* Desktop Alt+Tab and application launching
 
 ## Vim
 
