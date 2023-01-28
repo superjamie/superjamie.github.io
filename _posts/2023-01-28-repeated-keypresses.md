@@ -75,20 +75,20 @@ If you have 9 or less tabs open, you can move to them with **Alt+number**. For e
 
 You can cycle through tabs with **Ctrl+Tab** and cycle backwards with **Ctrl+Shift+Tab**, but again this is a repeated keypress.
 
-Firefox (the superior browser) allows tab search in its awesomebar. Hit **Ctrl+l** to focus the address bar and start typing an open tab match. You'll get an option "Switch to Tab", so press down and Enter and you're there!
+Firefox (the superior browser) allows tab search in its awesomebar. Hit **Ctrl+L** to focus the address bar and start typing an open tab match. You'll get an option "Switch to Tab", so press down and Enter and you're there!
 
 Firefox also allows you to map **Ctrl+Tab** to "switch to last tab", for easily moving back and forth between two tabs. In Preferences, this is "Ctrl+Tab cycles through tabs in recently used order".
 
 Chrome/Chromium doesn't have this as far as I can see. I don't use the Chromium family of browsers at all, so I don't know of an option there. Maybe there's an extension? Maybe you should use Firefox.
 
-Both browsers support **Ctrl*l** to focus the address bar where you can:
+Both browsers support this **Ctrl+L** to focus the address bar where you can:
 
 * Search with your default search engine: type a word and press **Enter**
 * Go to a .com domain: type the domain like "google" and press **Ctrl+Enter**
 
 Both browsers support searching in the current page with **Ctrl+f**.
 
-Firefox also supports finding clickable text with the **'** (single quote, next to semicolon in US layout) then **Enter** to follow the link. This is great for browsing text-heavy pages like [https://en.wikipedia.org/](Wikipedia). Try it now with **'wiki** in Firefox (the search is not case sensitive).
+Firefox also supports finding clickable text with the **'** (single quote, next to semicolon in US layout) then **Enter** to follow the link. This is great for browsing text-heavy pages like [Wikipedia](https://www.wikipedia.org/). Try it now with **'wiki** in Firefox (the search is not case sensitive).
 
 Generally you should learn your browser keyboard shortcuts:
 
@@ -101,9 +101,9 @@ Here's a spicy one. The pattern of switching through application with repeated *
 
 Tiling window managers like [i3](https://i3wm.org/) and [Sway](https://swaywm.org/) try to avoid this by having applications on different workspaces (virtual desktops) which you can switch to with **Win+number**, or by having applications in a split which you switch to with the Vim direction keys **Win+hjkl**. This is pretty good.
 
-The [rofi](https://davatorium.github.io/rofi/) application launcher allows smart matching of commands or applications to launch.
+The [rofi](https://davatorium.github.io/rofi/) application launcher does smart partial matching of commands or applications to launch, narrowing down options as you type.
 
-So you can `rofi -show drun` and start typing "fir" then just press Enter to launch Firefox.
+So you can `rofi -show drun` and start typing `fir` then just press **Enter** to launch Firefox.
 
 i3 and Sway bind `rofi -show drun` to **Win+d** for this purpose.
 
@@ -119,7 +119,7 @@ Find repeated keypresses in your current workflow and eliminate them.
 
 This will give you a more efficient and more intentioned application usage experience.
 
-Get the computer to do what you actually want, instead of doomscrolling through all available options.
+Get the computer to do what you actually want quickly, instead of doomscrolling through all available options.
 
 What replacements have you found which are useful?
 
