@@ -1,5 +1,7 @@
 ## My Open Source Contributions
 
+*   2023-02-04 - sdl2_vim_syntax, VimScript/Python, Programming language editor syntax  
+    [Update and include latest SDL2 headers](https://github.com/keltar/sdl2_vim_syntax/pull/1)
 *   2023-11-25 - Linux Kernel, C, Operating system kernel  
     [icmp: Add counters for rate limits](https://git.kernel.org/pub/scm/linux/kernel/git/netdev/net-next.git/commit/?id=d0941130c935)
 *   2022-11-14 - Linux Kernel, C, Operating system kernel  
