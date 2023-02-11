@@ -35,6 +35,8 @@ Performance in emulators is good enough for me:
 
 This is a better option than a Raspberry Pi 4 if you're looking for a movie/TV box for Kodi, or something to run emulators on like RetroArch or Lakka or the PC install of RetroPie, or just use with a wireless keyboard and mouse from the couch. It's also still cheaper than even a 5th Gen Celeron Intel NUC goes for these days.
 
+It also supports virtualization CPU extensions, so there's no reason you couldn't run VMs or even a small fleet of container hosts on it, maybe useful for Kubernetes or OpenShift learning.
+
 Overall, I'm very happy with this.
 
 Here's a YouTube video showing the unit and the easy access to the internal components:
