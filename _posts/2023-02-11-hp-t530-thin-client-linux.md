@@ -22,7 +22,7 @@ That's really good for the sort of things I like to play with.
 
 Mine came with some modern Windows and Secure Boot enabled, but that was easy to disable in the BIOS.
 
-Booting Ubuntu 22.04 (kernel v5.15) worked without a problem. It found all the hardware, including the internal speaker, sound output via video, Ethernet, and WiFi. Using Linux on
+Booting Ubuntu 22.04 (kernel v5.15) worked without a problem. It found all the hardware, including the internal speaker, sound output via video, Ethernet, and WiFi. Using Linux on few-year-old hardware is delightfully boring these days, everything just works.
 
 Plugging into a TV with HDMI worked fine with a DisplayPort-to-HDMI cable off eBay. Mine also includes the optional VGA out connector.
 
