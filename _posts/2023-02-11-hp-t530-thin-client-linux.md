@@ -6,7 +6,7 @@ I love collecting gadgets. I recently noticed you can get these thin clients pre
 
 The full specifications are [on HP's website](https://support.hp.com/us-en/document/c05696381) but in summary:
 
-* CPU: AMD GX-215JJ System-on-Chip, dual-core 1.5 GHz (boost to 2.0 GHz)
+* CPU: AMD GX-215JJ System-on-Chip (`x86_64`), dual-core 1.5 GHz (boost to 2.0 GHz)
 * RAM: DDR4 1866 SODIMM, one slot up to 16G
 * GPU: Radeon R2E, roughly equal to HD4550 or GeForce 9400GT
 * Display ports: 2x DisplayPort, can do dual 4K
@@ -32,6 +32,8 @@ Performance in emulators is good enough for me:
 
 * PSX (DuckStation) - 100% speed at 1x scaling, struggled with any more. Tested with Outrun 2006 Coast 2 Coast.
 * PSP (PPSSPP) - 100% speed at 3x scaling (720p), struggled with 5x (1080p). Tested with Wipeout 3 (US).
+
+Sadly PS2 (PCSX2) isn't an option. Gran Turismo 3 ran at ~40% speed even with graphics settings turned down.
 
 This is a better option than a Raspberry Pi 4 if you're looking for a movie/TV box for Kodi, or something to run emulators on like RetroArch or Lakka or the PC install of RetroPie, or just use with a wireless keyboard and mouse from the couch. It's also still cheaper than even a 5th Gen Celeron Intel NUC goes for these days.
 
