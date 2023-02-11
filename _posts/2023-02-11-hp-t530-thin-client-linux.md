@@ -30,8 +30,8 @@ I had a spare SSD lying around, and bought 16G RAM off eBay (ironically, for mor
 
 Performance in emulators is good enough for me:
 
-* PSX (DuckStation) - 100% speed at 1x scaling, struggled with any more. Tested with Outrun 2006 Coast 2 Coast.
-* PSP (PPSSPP) - 100% speed at 3x scaling (720p), struggled with 5x (1080p). Tested with Wipeout 3 (US).
+* PSX (DuckStation) - 100% speed at 3x scaling (720p), struggled with 5x (1080p). Tested with Wipeout 3 (US).
+* PSP (PPSSPP) - 100% speed at 1x scaling, struggled with any more. Tested with Outrun 2006 Coast 2 Coast.
 
 Sadly PS2 (PCSX2) isn't an option. Gran Turismo 3 ran at ~40% speed even with graphics settings turned down.
 
