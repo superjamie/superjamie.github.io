@@ -1,5 +1,7 @@
 ## My Open Source Contributions
 
+*   2023-02-13 -  vim-trailing-whitespace, VimScript, editor syntax plugin  
+    [Don't highlight in terminal buffers](https://github.com/bronson/vim-trailing-whitespace/commit/08bdb05c3d8e1cf52db53ba386be56ee7953e451)
 *   2023-02-04 - sdl2_vim_syntax, VimScript/Python, Programming language editor syntax  
     [Update and include latest SDL2 headers](https://github.com/keltar/sdl2_vim_syntax/pull/1)
 *   2023-11-25 - Linux Kernel, C, Operating system kernel  
