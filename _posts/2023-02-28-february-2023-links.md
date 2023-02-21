@@ -35,3 +35,9 @@ I've procrastinated for years about writing a bunch of shell scripts which do th
 
 An entire open source Diablo-like. Incredible.
 
+## Few lesser known tricks, quirks and features of C (2023)
+
+* <https://blog.joren.ga/less-known-c>
+
+I don't really agree that major language features like designated initialisers are "lesser known" but it's a good reference page.
+
