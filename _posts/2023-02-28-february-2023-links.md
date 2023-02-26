@@ -41,3 +41,9 @@ An entire open source Diablo-like. Incredible.
 
 I don't really agree that major language features like designated initialisers are "lesser known" but it's a good reference page.
 
+## FOSDEM23 - Bizarre and Unusual Uses of DNS
+
+* <https://fosdem.org/2023/schedule/event/dns_bizarre_and_unusual_uses_of_dns/>
+
+Of all the talks they cut this awesome, useful, and amusing talk down to 10 minutes. Anyway, TIL you can `dig ip @dns.toys +short` to get your own IP, faster than `curl` to a web service.
+
