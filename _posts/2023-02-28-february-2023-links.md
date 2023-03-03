@@ -6,7 +6,7 @@ title: February 2023 Links
 
 * <https://github.com/csutils/cscppc>
 
- A compiler wrapper that runs Clang Analyzer, Cppcheck, GCC Analyzer or Smatch in the background
+A compiler wrapper that runs Clang Analyzer, Cppcheck, GCC Analyzer or Smatch in the background
 
 ## How to improve application security using _FORTIFY_SOURCE=3 (2023)
 
@@ -47,3 +47,8 @@ I don't really agree that major language features like designated initialisers a
 
 Of all the talks they cut this awesome, useful, and amusing talk down to 10 minutes. Anyway, TIL you can `dig ip @dns.toys +short` to get your own IP, faster than `curl` to a web service.
 
+## Best aspects of C language (2020)
+
+* <https://blog.joren.ga/best-of-c>
+
+This blog has been doing the rounds lately, eg: [GOTOphobia considered harmful (in C)](https://blog.joren.ga/gotophobia-harmful)
