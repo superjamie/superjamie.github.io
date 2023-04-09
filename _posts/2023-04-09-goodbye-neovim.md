@@ -8,7 +8,7 @@ However, I kept all my config in Vimscript and didn't migrate to Lua for a coupl
 
 First, I need to use Vim on systems where Neovim isn't easily available, and I didn't feel like manually updating the AppImage.
 
-Second, I was being careful in case I found something in Neovim which made in unviable for me.
+Second, I was being careful in case something made Neovim unviable for me.
 
 That day has come with [Neovim's removal of the cscope feature](https://github.com/neovim/neovim/pull/20545) in Neovim 0.9.
 
