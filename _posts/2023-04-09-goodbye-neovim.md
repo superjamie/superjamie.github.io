@@ -16,7 +16,7 @@ LSP is great for small codebases where you can easily do a build or generate the
 
 For that sort of code browsing, it's much better to use [GNU Global](https://www.gnu.org/software/global/) tags and the [gtags-cscope.vim](https://cvs.savannah.gnu.org/viewvc/*checkout*/global/global/gtags-cscope.vim) plugin.
 
-Nothing else in Neovim really made a huge difference to me. The `vim-gtk3` Ubuntu/Debian package supports `set clipboard=unnamedplus` for yank persistence, and supports `:terminal` buffers too.
+Nothing else in Neovim really made a huge difference to me. The `vim-gtk3` Ubuntu/Debian package supports `set clipboard=unnamedplus` for yank persistence, and at least Vim 8 supports `:terminal` buffers too.
 
 Maybe I can finally pull my finger out and get the `t_SI`/`t_SR`/`t_EI` escape sequences working under tmux so Vim has the nice `guicursor` too.
 
