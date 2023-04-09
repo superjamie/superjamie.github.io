@@ -20,4 +20,13 @@ Nothing else in Neovim really made a huge difference to me. The `vim-gtk3` Ubunt
 
 Maybe I can finally pull my finger out and get the `t_SI`/`t_SR`/`t_EI` escape sequences working under tmux so Vim has the nice `guicursor` too.
 
+Edit: Well, that was surprisingly easy, just set the escape sequences (press actual **Ctrl+k** then **Esc**, don't use literal `ESC`).
+
+```
+" https://stackoverflow.com/questions/42377945/vim-adding-cursorshape-support-over-tmux-ssh
+set t_SI=ESC[6\ q
+set t_SR=ESC[4\ q
+set t_EI=ESC[2\ q
+```
+
 Anyway, goodbye Neovim, it was fun while it lasted.
