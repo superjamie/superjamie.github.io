@@ -92,6 +92,18 @@
 *   2012-2014 - minecraft-init-script, bash, Runs Minecraft on server, deployed commercially  
     <https://github.com/superjamie/minecraft-init-script/>
 
+RHEL 9 kernel
+
+~~~
+* Wed Feb 22 2023 [5.14.0-281.el9]
+- icmp: Add counters for rate limits (Jamie Bainbridge) [2155801]
+* Thu Dec 15 2022 [5.14.0-215.el9]
+- tcp: Fix build break when CONFIG_IPV6=n (Jamie Bainbridge) [2143850]
+- tcp: annotate data-race around queue->synflood_warned (Jamie Bainbridge) [2143850]
+- tcp: Add listening address to SYN flood message (Jamie Bainbridge) [2143850]
+- tcp: Fix data-races around sysctl_tcp_syncookies. (Jamie Bainbridge) [2143850]
+~~~
+
 RHEL 8 kernel
 
 ~~~
