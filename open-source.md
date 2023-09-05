@@ -103,6 +103,7 @@ RHEL 9 kernel
 ~~~
 * Wed Feb 22 2023 [5.14.0-281.el9]
 - icmp: Add counters for rate limits (Jamie Bainbridge) [2155801]
+
 * Thu Dec 15 2022 [5.14.0-215.el9]
 - tcp: Fix build break when CONFIG_IPV6=n (Jamie Bainbridge) [2143850]
 - tcp: annotate data-race around queue->synflood_warned (Jamie Bainbridge) [2143850]
@@ -113,6 +114,12 @@ RHEL 9 kernel
 RHEL 8 kernel
 
 ~~~
+* Mon Jan 30 2023 [4.18.0-454.el8]
+- tcp: Fix build break when CONFIG_IPV6=n (Jamie Bainbridge) [2143849]
+- tcp: annotate data-race around queue->synflood_warned (Jamie Bainbridge) [2143849]
+- tcp: Add listening address to SYN flood message (Jamie Bainbridge) [2143849]
+- tcp: Fix data-races around sysctl_tcp_syncookies. (Jamie Bainbridge) [2143849]
+
 * Fri May 13 2022 [4.18.0-391.el8]
 - sctp: count singleton chunks in assoc user stats (Jamie Bainbridge) [2073913]
 ~~~
@@ -121,6 +128,9 @@ RHEL/CentOS 7 kernel
 
 ~~~
 # rpm -q --changelog kernel
+
+* Mon Dec 19 2022 [3.10.0-1160.83.1.el7]
+- [netdrv] i40e: Fix freeing of uninitialized misc IRQ vector (Jamie Bainbridge) [2129248]
 
 * Thu Nov 24 2022 [3.10.0-1160.81.1.el7]
 - [netdrv] bnxt: don't lock the tx queue from napi poll (Jamie Bainbridge) [2110869]
