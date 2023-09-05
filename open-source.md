@@ -1,6 +1,7 @@
 ## My Open Source Contributions
 
-*   2023 - markdown-pages, Make/HTML/CSS/JavaScript, Publish a directory of Markdown pages to a webserver  
+*   2023 - markdown-pages, Make/HTML/CSS/JavaScript  
+    Publish a directory of Markdown pages to a webserver  
     <https://github.com/superjamie/markdown-pages>
 *   2023-07-12 - RetroArch, config file, Video game frontend  
     [Add Sony DS4 USB Wireless Adaptor](https://github.com/libretro/retroarch-joypad-autoconfig/commit/488ef4f1d85ab19523c990319a86bc503dd939a8)
@@ -73,7 +74,8 @@
     [cifs: Ratelimit kernel log messages](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=ec7147a99e33a9e4abad6fc6e1b40d15df045d53)
 *   2015-11-07 - PCP, C/Python/Perl/bash/many, system performance monitor  
     [bintray: add Debian repo HTTP headers](https://github.com/performancecopilot/pcp/commit/ee3f79c2125d8d179dcc6c3d20e575e42fbc5ccb)
-*   2015-2022 - emdee, PHP, A dynamic Markdown renderer  
+*   2015-2022 - emdee, PHP  
+*   A dynamic Markdown renderer  
     <https://github.com/superjamie/emdee>
 *   2015-10-11 - blogpy, Python/CSS, static site generator  
     [build: enable MarkdownExtra and CodeHilite plugins](https://github.com/travisred/blogpy/commit/ff761853dc517cd188219782305bbf86f3872ddb)
@@ -95,7 +97,8 @@
     [cdp: Print checksum in hex, and print the actual checksum, plus cleanup](https://github.com/the-tcpdump-group/tcpdump/commit/24007a9a1249ed8733ff0039812ba92544a38bbe)
 *   2014-05-07 - stjerm, C, GTK libvte dropdown terminal  
     [Added hide terminal on child exit](https://github.com/stjerm/stjerm/commit/dff865795e8cf223eca9eb87c8a7c1e33e9a543c)
-*   2012-2014 - minecraft-init-script, bash, Runs Minecraft on server, deployed commercially  
+*   2012-2014 - minecraft-init-script, bash  
+    Runs Minecraft on server, deployed commercially  
     <https://github.com/superjamie/minecraft-init-script/>
 
 RHEL 9 kernel
@@ -127,8 +130,6 @@ RHEL 8 kernel
 RHEL/CentOS 7 kernel
 
 ~~~
-# rpm -q --changelog kernel
-
 * Mon Dec 19 2022 [3.10.0-1160.83.1.el7]
 - [netdrv] i40e: Fix freeing of uninitialized misc IRQ vector (Jamie Bainbridge) [2129248]
 
@@ -160,8 +161,6 @@ RHEL/CentOS 7 kernel
 RHEL/CentOS 6 kernel
 
 ~~~
-# rpm -q --changelog kernel
-
 * Fri May 12 2017 [2.6.32-704.el6]
 - [net] ipv6: check raw payload size correctly in ioctl (Jamie Bainbridge) [1441909]
 
