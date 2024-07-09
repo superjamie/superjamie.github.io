@@ -125,7 +125,7 @@ scan-build: Removing directory '/tmp/scan-build-2022-05-24-103834-26933-1' becau
 scan-build: No bugs found.
 ```
 
-Oh dear, no bugs found. That's unfortunate. I logged [an Issue](https://github.com/llvm/llvm-project/issues/55668> with the LLVM project.
+Oh dear, no bugs found. That's unfortunate. I logged [an Issue](https://github.com/llvm/llvm-project/issues/55668) with the LLVM project.
 
 This has found other errors for me in the past on larger projects, so don't take this as any suggestion that the Clang Analyzer sucks or doesn't work. As the webpage says, it's still a work in progress.
 
