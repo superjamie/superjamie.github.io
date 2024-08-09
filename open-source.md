@@ -101,7 +101,7 @@
     Runs Minecraft on server, deployed commercially  
     <https://github.com/superjamie/minecraft-init-script/>
 
-RHEL 9 kernel
+RHEL/CentOS Stream 9 kernel
 
 ~~~
 * Wed Feb 22 2023 [5.14.0-281.el9]
@@ -114,9 +114,20 @@ RHEL 9 kernel
 - tcp: Fix data-races around sysctl_tcp_syncookies. (Jamie Bainbridge) [2143850]
 ~~~
 
-RHEL 8 kernel
+RHEL/CentOS Stream 8 kernel
 
 ~~~
+* Fri Jun 21 2024 [4.18.0-553.9.1.el8_10]
+- lan78xx: Fix exception on link speed change (Jamie Bainbridge) [RHEL-33437]
+- net: usb: lan78xx: don't modify phy_device state concurrently (Jamie Bainbridge) [RHEL-33437]
+
+* Thu Jun 06 2024 [4.18.0-553.7.1.el8_10]
+- net: Save and restore msg_namelen in sock_sendmsg (Jamie Bainbridge) [RHEL-35893]
+- net: prevent address rewrite in kernel_bind() (Jamie Bainbridge) [RHEL-35893]
+- net: prevent rewrite of msg_name in sock_sendmsg() (Jamie Bainbridge) [RHEL-35893]
+- net: replace calls to sock->ops->connect() with kernel_connect() (Jamie Bainbridge) [RHEL-35893]
+- net: Avoid address overwrite in kernel_connect (Jamie Bainbridge) [RHEL-35893]
+
 * Mon Jan 30 2023 [4.18.0-454.el8]
 - tcp: Fix build break when CONFIG_IPV6=n (Jamie Bainbridge) [2143849]
 - tcp: annotate data-race around queue->synflood_warned (Jamie Bainbridge) [2143849]
@@ -130,6 +141,10 @@ RHEL 8 kernel
 RHEL/CentOS 7 kernel
 
 ~~~
+* Wed Aug 23 2023 [3.10.0-1160.100.1.el7]
+- bnxt: count Tx drops (Jamie Bainbridge) [2175062]
+- bnxt: make sure xmit_more + errors does not miss doorbells (Jamie Bainbridge) [2175062]
+
 * Mon Dec 19 2022 [3.10.0-1160.83.1.el7]
 - [netdrv] i40e: Fix freeing of uninitialized misc IRQ vector (Jamie Bainbridge) [2129248]
 
