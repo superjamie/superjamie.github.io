@@ -6,7 +6,7 @@
 *   2023-09-09 - allegro-4.2.3.1-xc, C, cross-compile environment for DOS gamedev  
     Rebased to last upstream Allegro version to support DOS  
     <https://github.com/superjamie/allegro-4.2.3.1-xc>
-*   2023 - markdown-pages, Make/HTML/CSS/JavaScript  
+*   2023-09-05 - markdown-pages, Make/HTML/CSS/JavaScript  
     Publish a directory of Markdown pages to a webserver  
     <https://github.com/superjamie/markdown-pages>
 *   2023-07-12 - RetroArch, config file, Video game frontend  
