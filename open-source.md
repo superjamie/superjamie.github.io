@@ -3,9 +3,9 @@
 *   2024-03-01 - ems-flasher, C, GameBoy flash cart  
     Fix bug in header checksum calculation  
     <https://github.com/superjamie/ems-flasher>
-*   2023-09-09 - allegro-4.2-xc, C, cross-compile environment for DOS gamedev  
+*   2023-09-09 - allegro-4.2.3.1-xc, C, cross-compile environment for DOS gamedev  
     Rebased to last upstream Allegro version to support DOS  
-    <https://github.com/superjamie/allegro-4.2-xc>
+    <https://github.com/superjamie/allegro-4.2.3.1-xc>
 *   2023 - markdown-pages, Make/HTML/CSS/JavaScript  
     Publish a directory of Markdown pages to a webserver  
     <https://github.com/superjamie/markdown-pages>
