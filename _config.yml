@@ -9,11 +9,11 @@ title: "superjamie.github.io"
 description: "Insert witty tagline"
 url: "https://superjamie.github.io"
 
-author_bio: "Linux, C, DOS, etc. Australia. he/him"
+author_bio: "C, Linux, Vim, DOS. Australia. he/him"
 author_github: "superjamie"
 author_instagram: "msdosfloppy"
-author_mastodon_url: "https://fosstodon.org/@suprjami"
-author_twitter: "suprjami"
+#author_mastodon_url: "https://fosstodon.org/@suprjami"
+#author_twitter: "suprjami"
 
 permalink: /:year/:month/:day/:title
 paginate: 5
@@ -40,5 +40,5 @@ social:
   name: Jamie Bainbridge
   links:
     - https://github.com/superjamie
-    - https://fosstodon.org/@suprjami
+#   - https://fosstodon.org/@suprjami
 
