@@ -1,5 +1,7 @@
 ## My Open Source Contributions
 
+*   2024-08-23 0 Linux Kernel, C, Operating system kernel  
+    [ethtool: check device is present when getting link settings](https://git.kernel.org/pub/scm/linux/kernel/git/netdev/net.git/commit/?id=a699781c79ec)
 *   2024-03-01 - ems-flasher, C, GameBoy flash cart  
     Fix bug in header checksum calculation  
     <https://github.com/superjamie/ems-flasher>
