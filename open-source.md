@@ -1,6 +1,8 @@
 ## My Open Source Contributions
 
-*   2024-08-23 0 Linux Kernel, C, Operating system kernel  
+*   2024-09-04 - Linux Kernel, C, Operating system kernel  
+    [selftests: net: enable bind tests](https://git.kernel.org/pub/scm/linux/kernel/git/netdev/net.git/commit/?id=e4af74a53b7a)
+*   2024-08-23 - Linux Kernel, C, Operating system kernel  
     [ethtool: check device is present when getting link settings](https://git.kernel.org/pub/scm/linux/kernel/git/netdev/net.git/commit/?id=a699781c79ec)
 *   2024-03-01 - ems-flasher, C, GameBoy flash cart  
     Fix bug in header checksum calculation  
