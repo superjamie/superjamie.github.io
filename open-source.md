@@ -5,8 +5,7 @@
 *   2024-08-23 - Linux Kernel, C, Operating system kernel  
     [ethtool: check device is present when getting link settings](https://git.kernel.org/pub/scm/linux/kernel/git/netdev/net.git/commit/?id=a699781c79ec)
 *   2024-03-01 - ems-flasher, C, GameBoy flash cart  
-    Fix bug in header checksum calculation  
-    <https://github.com/superjamie/ems-flasher>
+    [Calculate header checksum correctly](https://github.com/gheja/ems-flasher/commit/2ff0b1e50e569854285dbd8489517b7921920978)
 *   2023-09-09 - allegro-4.2.3.1-xc, C, cross-compile environment for DOS gamedev  
     Rebased to last upstream Allegro version to support DOS  
     <https://github.com/superjamie/allegro-4.2.3.1-xc>
