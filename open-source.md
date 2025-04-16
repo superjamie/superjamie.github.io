@@ -1,5 +1,7 @@
 ## My Open Source Contributions
 
+*   2025-04-15 - PPSSPP, C++, Console emulator  
+    [SDL audio: Add config slider for audio samples](https://github.com/hrydgard/ppsspp/commit/3d0ef8c6e1f7f21605fae2a510f7f91759851e16)
 *   2024-09-04 - Linux Kernel, C, Operating system kernel  
     [selftests: net: enable bind tests](https://git.kernel.org/pub/scm/linux/kernel/git/netdev/net.git/commit/?id=e4af74a53b7a)
 *   2024-08-23 - Linux Kernel, C, Operating system kernel  
