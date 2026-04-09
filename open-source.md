@@ -1,5 +1,9 @@
 ## My Open Source Contributions
 
+*   2025-09-10 - Linux Kernel, C, Operating system kernel  
+    [qed: Don't collect too many protection override GRC elements](https://git.kernel.org/pub/scm/linux/kernel/git/netdev/net.git/commit/?id=56c0a2a9ddc2)
+*   2025-06-25 - Linux Kernel, C, Operating system kernel  
+    [i40e: When removing VF MAC filters, only check PF-set MAC](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=5a0df02999db)
 *   2025-04-15 - PPSSPP, C++, Console emulator  
     [SDL audio: Add config slider for audio samples](https://github.com/hrydgard/ppsspp/commit/3d0ef8c6e1f7f21605fae2a510f7f91759851e16)
 *   2024-09-04 - Linux Kernel, C, Operating system kernel  
