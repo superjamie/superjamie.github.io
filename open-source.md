@@ -10,7 +10,7 @@
     [selftests: net: enable bind tests](https://git.kernel.org/pub/scm/linux/kernel/git/netdev/net.git/commit/?id=e4af74a53b7a)
 *   2024-08-23 - Linux Kernel, C, Operating system kernel  
     [ethtool: check device is present when getting link settings](https://git.kernel.org/pub/scm/linux/kernel/git/netdev/net.git/commit/?id=a699781c79ec)
-*   2024-03-01 - ems-flasher, C, GameBoy flash cart  
+*   2024-03-01 - ems-flasher, C, GameBoy flash cartridge  
     [Calculate header checksum correctly](https://github.com/gheja/ems-flasher/commit/2ff0b1e50e569854285dbd8489517b7921920978)
 *   2023-09-09 - allegro-4.2.3.1-xc, C, cross-compile environment for DOS gamedev  
     Rebased to last upstream Allegro version to support DOS  
@@ -116,7 +116,89 @@
 
 RHEL/CentOS Stream 9 kernel
 
-~~~
+```
+* Thu Aug 14 2025 [5.14.0-606.el9]
+- i40e: When removing VF MAC filters, only check PF-set MAC (Jamie Bainbridge) [RHEL-98540]
+
+* Mon Nov 11 2024 [5.14.0-528.el9]
+- net: bridge: br_fdb_external_learn_add(): always set EXT_LEARN (Jamie Bainbridge) [RHEL-57739]
+- selftests: net: bridge_vlan_aware: test that other TPIDs are seen as untagged (Jamie Bainbridge) [RHEL-57739]
+- selftests: forwarding: skip if kernel not support setting bridge fdb learning limit (Jamie Bainbridge) [RHEL-57739]
+- net: bridge: mst: Check vlan state for egress decision (Jamie Bainbridge) [RHEL-57739]
+- selftests: forwarding: Make vxlan-bridge-1d pass on debug kernels (Jamie Bainbridge) [RHEL-57739]
+- selftests: libs: Expand "$@" where possible (Jamie Bainbridge) [RHEL-57739]
+- net: bridge: fix an inconsistent indentation (Jamie Bainbridge) [RHEL-57739]
+- selftests: net: lib: set 'i' as local (Jamie Bainbridge) [RHEL-57739]
+- selftests/net: use tc rule to filter the na packet (Jamie Bainbridge) [RHEL-57739]
+- selftests: net: use upstream mtools (Jamie Bainbridge) [RHEL-57739]
+- net: bridge: switchdev: Improve error message for port_obj_add/del functions (Jamie Bainbridge) [RHEL-57739]
+- net: bridge: fix corrupted ethernet header on multicast-to-unicast (Jamie Bainbridge) [RHEL-57739]
+- net: bridge: fix multicast-to-unicast with fraglist GSO (Jamie Bainbridge) [RHEL-57739]
+- selftests: forwarding: add ability to assemble NETIFS array by driver name (Jamie Bainbridge) [RHEL-57739]
+- net: bridge: remove redundant check of f->dst (Jamie Bainbridge) [RHEL-57739]
+- bridge/br_netlink.c: no need to return void function (Jamie Bainbridge) [RHEL-57739]
+- selftests: forwarding: bail_on_lldpad() should SKIP (Jamie Bainbridge) [RHEL-57739]
+- selftests: forwarding: lib.sh: Validate NETIFS (Jamie Bainbridge) [RHEL-57739]
+- selftests: net: Unify code of busywait() and slowwait() (Jamie Bainbridge) [RHEL-57739]
+- selftests: forwarding: Support for performance sensitive tests (Jamie Bainbridge) [RHEL-57739]
+- selftests: forwarding: Convert log_test() to recognize RET values (Jamie Bainbridge) [RHEL-57739]
+- selftests: forwarding: Have RET track kselftest framework constants (Jamie Bainbridge) [RHEL-57739]
+- selftests: lib: Define more kselftest exit codes (Jamie Bainbridge) [RHEL-57739]
+- selftests/net: add variable NS_LIST for lib.sh (Jamie Bainbridge) [RHEL-57739]
+- selftests: forwarding: README: Document customization (Jamie Bainbridge) [RHEL-57739]
+- selftests: forwarding.config.sample: Move overrides to lib.sh (Jamie Bainbridge) [RHEL-57739]
+- selftests: net: libs: Change variable fallback syntax (Jamie Bainbridge) [RHEL-57739]
+- selftests: forwarding: Make VXLAN ECN encap tests more robust (Jamie Bainbridge) [RHEL-57739]
+- selftests: forwarding: Make vxlan-bridge-1q pass on debug kernels (Jamie Bainbridge) [RHEL-57739]
+- selftests: forwarding: Parametrize mausezahn delay (Jamie Bainbridge) [RHEL-57739]
+- net: bridge: Exit if multicast_init_stats fails (Jamie Bainbridge) [RHEL-57739]
+- net: bridge: constify the struct device_type usage (Jamie Bainbridge) [RHEL-57739]
+- bridge: vlan: use synchronize_net() when holding RTNL (Jamie Bainbridge) [RHEL-57739]
+- selftests: forwarding: Add missing multicast routing config entries (Jamie Bainbridge) [RHEL-57739]
+- selftests/net/forwarding: add slowwait functions (Jamie Bainbridge) [RHEL-57739]
+- net: bridge: Use KMEM_CACHE instead of kmem_cache_create (Jamie Bainbridge) [RHEL-57739]
+- selftests: forwarding: Remove duplicated lib.sh content (Jamie Bainbridge) [RHEL-57739]
+- selftests: bonding: Add net/forwarding/lib.sh to TEST_INCLUDES (Jamie Bainbridge) [RHEL-57739]
+- selftests: team: Add shared library scripts to TEST_INCLUDES (Jamie Bainbridge) [RHEL-57739]
+- selftests: forwarding: Redefine relative_path variable (Jamie Bainbridge) [RHEL-57739]
+- selftests: forwarding: Add missing config entries (Jamie Bainbridge) [RHEL-57739]
+- net: bridge: Do not allocate stats in the driver (Jamie Bainbridge) [RHEL-57739]
+
+* Wed Nov 06 2024 [5.14.0-527.el9]
+- net: tcp: accept old ack during closing (Jamie Bainbridge) [RHEL-60572]
+
+* Thu Apr 25 2024 [5.14.0-443.el9]
+- net: lan78xx: fix runtime PM count underflow on link stop (Jamie Bainbridge) [RHEL-33332]
+- net: lan78xx: fix "softirq work is pending" error (Jamie Bainbridge) [RHEL-33332]
+- lan78xx: enable auto speed configuration for LAN7850 if no EEPROM is detected (Jamie Bainbridge) [RHEL-33332]
+- lan78xx: remove redundant statement in lan78xx_get_eee (Jamie Bainbridge) [RHEL-33332]
+- lan78xx: replace deprecated strncpy with strscpy (Jamie Bainbridge) [RHEL-33332]
+- net: usb: lan78xx: reorder cleanup operations to avoid UAF bugs (Jamie Bainbridge) [RHEL-33332]
+- net: usb: lan78xx: Limit packet length to skb->len (Jamie Bainbridge) [RHEL-33332]
+- lan78xx: drop the weight argument from netif_napi_add (Jamie Bainbridge) [RHEL-33332]
+- usb: lan78xx: remove a copy of the NAPI_POLL_WEIGHT define (Jamie Bainbridge) [RHEL-33332]
+- net: usb: lan78xx: Use generic_handle_irq_safe(). (Jamie Bainbridge) [RHEL-33332]
+- net: usb: lan78xx: add Allied Telesis AT29M2-AF (Jamie Bainbridge) [RHEL-33332]
+- net: usb: lan78xx: lan78xx_phy_init(): use PHY_POLL instead of "0" if no IRQ is available (Jamie Bainbridge) [RHEL-33332]
+- lan78xx: Clean up some inconsistent indenting (Jamie Bainbridge) [RHEL-33332]
+- lan78xx: Introduce NAPI polling support (Jamie Bainbridge) [RHEL-33332]
+- lan78xx: Remove hardware-specific header update (Jamie Bainbridge) [RHEL-33332]
+- lan78xx: Re-order rx_submit() to remove forward declaration (Jamie Bainbridge) [RHEL-33332]
+- lan78xx: Introduce Rx URB processing improvements (Jamie Bainbridge) [RHEL-33332]
+- lan78xx: Introduce Tx URB processing improvements (Jamie Bainbridge) [RHEL-33332]
+- lan78xx: Fix memory allocation bug (Jamie Bainbridge) [RHEL-33332]
+- net: lan78xx: fix division by zero in send path (Jamie Bainbridge) [RHEL-33332]
+- lan78xx: Limit number of driver warning messages (Jamie Bainbridge) [RHEL-33332]
+- lan78xx: Fix race condition in disconnect handling (Jamie Bainbridge) [RHEL-33332]
+- lan78xx: Fix race conditions in suspend/resume handling (Jamie Bainbridge) [RHEL-33332]
+- lan78xx: Fix partial packet errors on suspend/resume (Jamie Bainbridge) [RHEL-33332]
+- lan78xx: Fix exception on link speed change (Jamie Bainbridge) [RHEL-33332]
+- lan78xx: Add missing return code checks (Jamie Bainbridge) [RHEL-33332]
+- lan78xx: Remove unused pause frame queue (Jamie Bainbridge) [RHEL-33332]
+- lan78xx: Set flow control threshold to prevent packet loss (Jamie Bainbridge) [RHEL-33332]
+- lan78xx: Remove unused timer (Jamie Bainbridge) [RHEL-33332]
+- lan78xx: Fix white space and style issues (Jamie Bainbridge) [RHEL-33332]
+
 * Wed Feb 22 2023 [5.14.0-281.el9]
 - icmp: Add counters for rate limits (Jamie Bainbridge) [2155801]
 
@@ -125,11 +207,17 @@ RHEL/CentOS Stream 9 kernel
 - tcp: annotate data-race around queue->synflood_warned (Jamie Bainbridge) [2143850]
 - tcp: Add listening address to SYN flood message (Jamie Bainbridge) [2143850]
 - tcp: Fix data-races around sysctl_tcp_syncookies. (Jamie Bainbridge) [2143850]
-~~~
+```
 
 RHEL/CentOS Stream 8 kernel
 
-~~~
+```
+* Thu Sep 19 2024 [4.18.0-553.23.1.el8_10]
+- ethtool: check device is present when getting link settings (Jamie Bainbridge) [RHEL-57002]
+
+* Fri Aug 16 2024 [4.18.0-553.18.1.el8_10]
+- net: tcp: accept old ack during closing (Jamie Bainbridge) [RHEL-52433]
+
 * Fri Jun 21 2024 [4.18.0-553.9.1.el8_10]
 - lan78xx: Fix exception on link speed change (Jamie Bainbridge) [RHEL-33437]
 - net: usb: lan78xx: don't modify phy_device state concurrently (Jamie Bainbridge) [RHEL-33437]
@@ -149,11 +237,11 @@ RHEL/CentOS Stream 8 kernel
 
 * Fri May 13 2022 [4.18.0-391.el8]
 - sctp: count singleton chunks in assoc user stats (Jamie Bainbridge) [2073913]
-~~~
+```
 
 RHEL/CentOS 7 kernel
 
-~~~
+```
 * Wed Aug 23 2023 [3.10.0-1160.100.1.el7]
 - bnxt: count Tx drops (Jamie Bainbridge) [2175062]
 - bnxt: make sure xmit_more + errors does not miss doorbells (Jamie Bainbridge) [2175062]
@@ -184,11 +272,11 @@ RHEL/CentOS 7 kernel
 
 * Wed Nov 11 2015 [3.10.0-329.el7]
 - [net] sctp: Fix race between OOTB responce and route removal (Jamie Bainbridge) [1277309]
-~~~
+```
 
 RHEL/CentOS 6 kernel
 
-~~~
+```
 * Fri May 12 2017 [2.6.32-704.el6]
 - [net] ipv6: check raw payload size correctly in ioctl (Jamie Bainbridge) [1441909]
 
@@ -201,5 +289,5 @@ RHEL/CentOS 6 kernel
 
 * Tue Oct 13 2015 [2.6.32-581.el6]
 - [fs] sunrpc: Report connection error values to rpc_tasks on the pending queue (Jamie Bainbridge) [1206555]
-~~~
+```
 
